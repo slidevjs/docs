@@ -2,7 +2,7 @@
 
 ## Starter Template
 
-> Slidev requires [**Node.js >=14.7**](https://nodejs.org/)
+> Slidev requires [**Node.js >=14.17**](https://nodejs.org/)
 
 The best way to get started is using our official starter template.
 
@@ -29,9 +29,11 @@ If you still prefer to install Slidev manually or would like to integrate it int
 ```bash
 $ npm install @slidev/cli @slidev/theme-default
 ```
+
 ```bash
 $ touch slides.md
 ```
+
 ```bash
 $ npx slidev
 ```
