@@ -29,11 +29,9 @@ If you still prefer to install Slidev manually or would like to integrate it int
 ```bash
 $ npm install @slidev/cli @slidev/theme-default
 ```
-
 ```bash
 $ touch slides.md
 ```
-
 ```bash
 $ npx slidev
 ```
