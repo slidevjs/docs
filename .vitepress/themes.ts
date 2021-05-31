@@ -213,17 +213,24 @@ export const community: ThemeInfo[] = [
       'light',
     ],
   },
-  // Add yours here!
-  {
-    id: '',
-    link: 'https://github.com/slidevjs/docs/edit/main/.vitepress/themes.ts',
-    name: 'Yours?',
-    description: 'Submit your theme to be list here!',
+   {
+    id: 'slidev-theme-penguin',
+    name: 'Penguin',
+    description: 'A Penguin theme for Slidev',
     author: {
-      name: '',
+      name: 'Alvaro Saburido (alvarosaburido)',
+      link: 'https://github.com/alvarosaburido',
     },
+    repo: 'https://github.com/alvarosaburido/slidev-theme-penguin',
     previews: [
-      '/theme-placeholder.png',
+      'https://raw.githubusercontent.com/alvarosaburido/slidev-theme-penguin/master/screenshots/dark/01.png',
+      'https://raw.githubusercontent.com/alvarosaburido/slidev-theme-penguin/master/screenshots/light/02.png',
+      'https://raw.githubusercontent.com/alvarosaburido/slidev-theme-penguin/master/screenshots/light/06.png',
+      'https://raw.githubusercontent.com/alvarosaburido/slidev-theme-penguin/master/screenshots/light/05.png',
+    ],
+    tags: [
+      'dark',
+      'light',
     ],
   },
 ]
