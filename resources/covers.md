@@ -1,14 +1,14 @@
-# Curated Covers
+# Imagens de Capas
 
-We curated a few cover images to demonstrate our starter template.
+Selecionamos algumas imagens de capas para demonstrar o modelo <small>(*template*)</small> inicial
 
 ![](/screenshots/covers.png)
 
 ```yaml
 ---
-# random image from the curated collection
+# imagem aleatória da nossa coleção do Unsplash
 background: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 ```
 
-If you enjoy any of them, check out our [Unsplash collection](https://unsplash.com/collections/94734566/slidev) and find out their authors.
+Se gostaste de alguma, vê a nossa [coleção no Unsplash](https://unsplash.com/collections/94734566/slidev) e descobre os seus autores.

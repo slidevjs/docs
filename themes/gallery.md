@@ -1,4 +1,4 @@
-# Themes Gallery
+# Galeria de Modelos
 
 Browse awesome themes available for Slidev here.
 
