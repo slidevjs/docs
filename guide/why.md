@@ -1,18 +1,20 @@
-# Why Slidev
+# Porque usar **Slidev**
 
-There are a lot of feature-rich, general-purpose, WYSIWYG slides makers like [Microsoft PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) and [Apple Keynote](https://www.apple.com/keynote/). They work pretty well for making nice slides with animations, charts, and many other things, while being very intuitive and easy to learn. So why bother making Slidev?
+Existem diversos criadores de apresentações/slides **WYSIWYG**, ricos em recursos e de uso geral, como [Microsoft PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) e [Apple Keynote](https://www.apple.com/keynote/). Estes funcionam bem para fazer slides com animações, gráficos e outras coisas, ao mesmo tempo que não muito intuitivos e fácil aprendizagem. Então, porque não usar o **Slidev**?
 
-Slidev aims to provide the flexibility and interactivity for developers to make their presentations even more interesting, expressive, and attractive by using the tools and technologies they are already familiar with. 
+O **Slidev** tem como objetivo fornecer flexibilidade e interactividade para que os desenvolvedores possam tornar as suas apresentações ainda mais interessantes e atrativas, recorrendo a ferramentas e tecnologias com as quais já estão familiarizados.
 
-When working with WYSIWYG editors, it is easy to get distracted by the styling options. Slidev remedies that by separating the content and visuals. This allows you to focus on one thing at a time, while also being able to reuse the themes from the community. Slidev does not seek to replace other slide deck builders entirely. Rather, it focuses on catering to the developer community.
+Ao trabalhar com editores **WYSIWYG**, é fácil haver distrações com as opções de estilo, animações, etc.. O **Slidev** corrige isso, separando o conteúdo e os recursos visuais (estilos, etc.). Isto permite concentração numa coisa de cada vez, permitindo a reutilização de temas/modelos da comunidade. O **Slidev** não tem como objetivo substituir inteiramente outros construtores de apresentações/slides, mas sim em focar na comunidade de desenvolvedores.
 
 ## Slidev
 
 ![](/screenshots/cover.png)
 
-Here are a few of the coolest features of Slidev:
+Aqui estão alguns dos recursos mais interessantes do **Slidev**:
 
-## Markdown-based
+## Baseado em Markdown
+
+O **Slidev** usa um formato de Markdown extendido para armazenar todos os teus slides num único ficheiro de texto simples.
 
 Slidev uses an extended Markdown format to store and organize your slides in a single plain text file. This lets you focus on making the content. And since the content and styles are separated, this also made it possible to switch between different themes effortlessly.
 
