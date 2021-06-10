@@ -14,17 +14,15 @@ Aqui estão alguns dos recursos mais interessantes do **Slidev**:
 
 ## Baseado em Markdown
 
-O **Slidev** usa um formato de Markdown extendido para armazenar todos os teus slides num único ficheiro de texto simples.
+O **Slidev** usa um formato de Markdown extendido para armazenar todos os teus slides num único ficheiro de texto simples. Assim consegues estar focado apenas no conteúdo. E como o conteúdo e os estilos estão separados, isso torna possível alternar entre diferentes temas sem esforço.
 
-Slidev uses an extended Markdown format to store and organize your slides in a single plain text file. This lets you focus on making the content. And since the content and styles are separated, this also made it possible to switch between different themes effortlessly.
-
-Learn more about [Slidev's Markdown Syntax](/guide/syntax).
+Leia mais sobre [Sintaxe de Markdown do Slidev](/guide/syntax).
 
 ## Uso de Temas
 
-Themes for Slidev can be shared and installed using npm packages. You then apply them with only one line of config.
+Os temas para o **Slidev** podem ser partilhados e instalados através de *packages* **npm**/**yarn**. Para aplicar apenas é precisa uma linha de configuração.
 
-Check out the [theme gallery](/themes/gallery) or [learn how to write a theme](/themes/write-a-theme).
+Conheça a nossa [galeria de temas][/themes/gallery] ou [saiba como criar o seu tema](/themes/write-a-theme).
 
 ## Developer Friendly
 
@@ -58,15 +56,22 @@ Read more about that in the [exporting docs](/guide/exporting).
 
 Being powered by web technologies, anything that can be done in a web app is also possible with Slidev. For example, WebGL, API requests, iframes, or even live sharing. It's up to your imagination!
 
-## Give it a Try
+## Dá uma chance
 
-Playing around with Slidev will tell you more than a thousand words. You are just one command away:
+Brincar com o **Slidev** vai te dizer mais do que mil palavras. Estás apenas a um comando de distância:
+
 
 ```bash
 $ npm init slidev
 ```
 
-Or have a quick preview of it:
+Ou com **Yarn**:
+
+```bash
+$ yarn create slidev
+```
+
+Ou vê uma pequena preview do **Slidev**:
 
 <div class="aspect-9/16 relative">
 <iframe class="rounded w-full shadow-md border-none" src="https://www.youtube.com/embed/eW7v-2ZKZOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

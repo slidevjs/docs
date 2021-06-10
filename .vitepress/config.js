@@ -49,7 +49,7 @@ const Guide = [
 
 const Theme = [
 	{
-		text: 'Usar Modelo',
+		text: 'Usar Tema',
 		link: '/themes/use',
 	},
 	{
@@ -57,7 +57,7 @@ const Theme = [
 		link: '/themes/gallery',
 	},
 	{
-		text: 'Escrever um Modelo',
+		text: 'Criar Tema',
 		link: '/themes/write-a-theme',
 	},
 ];
@@ -235,7 +235,7 @@ module.exports = {
 				items: Guide,
 			},
 			{
-				text: 'Modelo',
+				text: 'Tema',
 				items: Theme,
 			},
 			{
