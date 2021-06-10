@@ -4,7 +4,7 @@ Existem diversos criadores de apresentações/slides **WYSIWYG**, ricos em recur
 
 O **Slidev** tem como objetivo fornecer flexibilidade e interactividade para que os desenvolvedores possam tornar as suas apresentações ainda mais interessantes e atrativas, recorrendo a ferramentas e tecnologias com as quais já estão familiarizados.
 
-Ao trabalhar com editores **WYSIWYG**, é fácil haver distrações com as opções de estilo, animações, etc.. O **Slidev** corrige isso, separando o conteúdo e os recursos visuais (estilos, etc.). Isto permite concentração numa coisa de cada vez, permitindo a reutilização de temas/modelos da comunidade. O **Slidev** não tem como objetivo substituir inteiramente outros construtores de apresentações/slides, mas sim em focar na comunidade de desenvolvedores.
+Ao trabalhar com editores **WYSIWYG**, é fácil haver distrações com as opções de estilo, animações, etc.. O **Slidev** corrige isso, separando o conteúdo e os recursos visuais (estilos, etc.). Isto permite concentração numa coisa de cada vez, permitindo a reutilização de temas da comunidade. O **Slidev** não tem como objetivo substituir inteiramente outros construtores de apresentações/slides, mas sim em focar na comunidade de desenvolvedores.
 
 ## Slidev
 
@@ -20,7 +20,7 @@ Slidev uses an extended Markdown format to store and organize your slides in a s
 
 Learn more about [Slidev's Markdown Syntax](/guide/syntax).
 
-## Themable
+## Uso de Temas
 
 Themes for Slidev can be shared and installed using npm packages. You then apply them with only one line of config.
 

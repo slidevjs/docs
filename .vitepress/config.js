@@ -53,7 +53,7 @@ const Theme = [
 		link: '/themes/use',
 	},
 	{
-		text: 'Galeria de Modelos',
+		text: 'Galeria de Temas',
 		link: '/themes/gallery',
 	},
 	{
@@ -156,7 +156,7 @@ const slidebars = [
 		children: Guide,
 	},
 	{
-		text: 'Modelos',
+		text: 'Temas',
 		children: Theme,
 	},
 	{

@@ -104,7 +104,7 @@ onMounted(() => {
 		.type('- 📄 Escrever slides com um único ficheiro **Markdown**<br>', {
 			delay: 800,
 		})
-		.type('- 🌈 Modelos, blocos de código e componentes interativos<br>', {
+		.type('- 🌈 Temas, blocos de código e componentes interativos<br>', {
 			delay: 800,
 		})
 		.type('- 😎 Le a documentação para saberes mais!', { delay: 800 })
