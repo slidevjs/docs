@@ -183,7 +183,7 @@ const slidebars = [
  */
 module.exports = {
 	title: 'Slidev',
-	description: 'Presentation slides for developers',
+	description: 'Apresentações para desenvolvedores',
 	head: [
 		['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
 		['meta', { name: 'author', content: 'Anthony Fu' }],
