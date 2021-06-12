@@ -239,7 +239,7 @@ module.exports = {
 				items: Theme,
 			},
 			{
-				text: 'Customize',
+				text: 'Personalização',
 				items: Customizations,
 			},
 			{

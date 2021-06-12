@@ -30,21 +30,22 @@ Slidev provides first-class support for code snippets for developers. It support
 
 Learn more about [highlighters](/custom/highlighters) and [Monaco configuration](/custom/config-monaco).
 
-## Fast
+## Rápido
 
-Slidev is powered by [Vite](https://vitejs.dev/), [Vue 3](https://v3.vuejs.org/) and [Windi CSS](https://windicss.org/), which give you the most wonderful authoring experience. Every change you made will reflect to your slides **instantly**.
+O **Slidev** conta com [Vite](https://vitejs.dev/), [Vue 3](https://v3.vuejs.org/) e [Windi CSS](https://windicss.org/), proporcionando uma experiência maravilhosa. Todas as alterações realizadas nos teus slides são refletivas **instantaneamente**.
 
-Find more about [our tech stack](/guide/#tech-stack).
+
+Saiba mais sobre a [stack tecnológica utilizada](/guide/#tech-stack).
 
 ## Interactive & Expressive
 
 You can write custom Vue components and use them directly inside your markdown file. You can also interact with them inside the presentation to express your idea in a more interesting and intuitive way.
 
-## Recording Support
+## Suporta Gravação
 
-Slidev provides built-in recording and camera view. You can share your presentation with your camera view inside, or record and save them separately for your screen and camera. All with one go, no additional tools are needed.
+O **Slidev** conta com gravação integrada, bem como visualização da câmera. Assim podes partilhar a tua apresentação com a visualização da tua câmara interna. Tudo de uma só vez, sem necessidade de nenhuma ferramenta adicional.
 
-Learn more about [recording here](/guide/recording).
+Sabe mais sobre [gravação da tua apresentação aqui](/guide/recording).
 
 ## Portable
 
