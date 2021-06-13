@@ -4,7 +4,7 @@
 
 First of all, thank you for being interested in contributing to translations!
 
-You can find the repositories for each existing translation above. To help improve them, simply sending a Pull Request to their repo.
+You can find the repositories for each existing translation in [README.md](./README.md). To help improve them, simply sending a Pull Request to their repo.
 
 If the language you want to contribute isn't on the list, join [our Discord server](https://chat.sli.dev), and find the `#translations` channel to see if someone is already working on the language you want, consider joining them and translate together. If not, you can start a new translation project with the following steps.
 
