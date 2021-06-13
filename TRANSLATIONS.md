@@ -66,7 +66,7 @@ In case it's already been translated but you're wondering how to maintain it, sk
 - [ ] The site is live, and we will send a shout-out tweet on [our Twitter account](https://twitter.com/Slidevjs).
 ## Maintaining the translations up-to-date
 - `docschina-bot` will periodically submit merge requests from the `slidev/docs` repository. Switch to the branch created in the pull request, make any changes necessary and merge it.
-- Sometimes it will occur that a merge request is made and you haven't merged the previous one The latest PR always checks your main branch against the English one; so you can just close the previous PR(s), move your work to the latest one and merge it.
+- Sometimes it will occur that a merge request is made and you haven't merged the previous one. The latest PR always checks your main branch against the English one; so you can just close the previous PR(s), move your work to the latest one and merge it.
 
 
 [Working-in-progress translation list](https://discord.com/channels/851817370623410197/851822360955977760/852614294017146900)
