@@ -1,9 +1,4 @@
-export type Tag =
-  | 'official'
-  | 'dark'
-  | 'light'
-  | 'colorful'
-  | 'minimalism'
+export type Tag = 'official' | 'dark' | 'light' | 'colorful' | 'minimalism'
 
 export interface ThemeInfo {
   id: string
@@ -35,12 +30,7 @@ export const official: ThemeInfo[] = [
       'https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/06.png?raw=true',
       'https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/08.png?raw=true',
     ],
-    tags: [
-      'official',
-      'minimalism',
-      'dark',
-      'light',
-    ],
+    tags: ['official', 'minimalism', 'dark', 'light'],
   },
   {
     id: '@slidev/theme-seriph',
@@ -57,12 +47,7 @@ export const official: ThemeInfo[] = [
       'https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/03.png?raw=true',
       'https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/08.png?raw=true',
     ],
-    tags: [
-      'official',
-      'minimalism',
-      'dark',
-      'light',
-    ],
+    tags: ['official', 'minimalism', 'dark', 'light'],
   },
   {
     id: '@slidev/theme-apple-basic',
@@ -78,11 +63,7 @@ export const official: ThemeInfo[] = [
       'https://i.imgur.com/dE1r2bg.png',
       'https://i.imgur.com/gnB4oa8.png',
     ],
-    tags: [
-      'minimalism',
-      'dark',
-      'light',
-    ],
+    tags: ['minimalism', 'dark', 'light'],
   },
 ]
 
@@ -90,7 +71,8 @@ export const community: ThemeInfo[] = [
   {
     id: 'slidev-theme-flayyer',
     name: 'Flayyer',
-    description: 'This theme is inspired by the layout of Flayyer and the way that it works.',
+    description:
+      'This theme is inspired by the layout of Flayyer and the way that it works.',
     author: {
       name: 'Daniel Esteves',
       link: 'https://github.com/danestves',
@@ -102,15 +84,12 @@ export const community: ThemeInfo[] = [
       'https://i.imgur.com/mj42LcL.png',
       'https://i.imgur.com/41QWv3c.png',
     ],
-    tags: [
-      'dark',
-      'light',
-    ],
+    tags: ['dark', 'light'],
   },
   {
     id: 'slidev-theme-geist',
     name: 'Vercel',
-    description: 'A theme based on Vercel\'s design system.',
+    description: "A theme based on Vercel's design system.",
     author: {
       name: 'Nico Bachner',
       link: 'https://github.com/nico-bachner',
@@ -123,15 +102,13 @@ export const community: ThemeInfo[] = [
       'https://github.com/nico-bachner/slidev-theme-geist/blob/main/example-export/04.png?raw=true',
       'https://github.com/nico-bachner/slidev-theme-geist/blob/main/example-export/05.png?raw=true',
     ],
-    tags: [
-      'dark',
-      'light',
-    ],
+    tags: ['dark', 'light'],
   },
   {
     id: 'slidev-theme-light-icons',
     name: 'Light Icons',
-    description: 'A simple, light and elegant theme for Slidev, combined together with creative layouts, custom components & fonts',
+    description:
+      'A simple, light and elegant theme for Slidev, combined together with creative layouts, custom components & fonts',
     author: {
       name: 'Pulkit Aggarwal',
       link: 'https://github.com/BashCloud',
@@ -147,10 +124,7 @@ export const community: ThemeInfo[] = [
       'https://github.com/lightvue/slidev-theme-light-icons/blob/master/screenshot/9-layout-dynamic-image-light.png?raw=true',
       'https://github.com/lightvue/slidev-theme-light-icons/blob/master/screenshot/10-layout-left-image-light.png?raw=true',
     ],
-    tags: [
-      'dark',
-      'light',
-    ],
+    tags: ['dark', 'light'],
   },
   {
     id: 'slidev-theme-purplin',
@@ -167,10 +141,7 @@ export const community: ThemeInfo[] = [
       'https://i.imgur.com/fwm2785.png',
       'https://i.imgur.com/m8eemKt.png',
     ],
-    tags: [
-      'dark',
-      'light',
-    ],
+    tags: ['dark', 'light'],
   },
   {
     id: 'slidev-theme-unicorn',
@@ -187,10 +158,7 @@ export const community: ThemeInfo[] = [
       'https://raw.githubusercontent.com/Dawntraoz/slidev-theme-unicorn/master/screenshots/dark-theme-image-centered.png',
       'https://raw.githubusercontent.com/Dawntraoz/slidev-theme-unicorn/master/screenshots/dark-theme-center-without-header-footer.png',
     ],
-    tags: [
-      'dark',
-      'light',
-    ],
+    tags: ['dark', 'light'],
   },
   {
     id: 'slidev-theme-zhozhoba',
@@ -208,12 +176,9 @@ export const community: ThemeInfo[] = [
       'https://github.com/thatoranzhevyy/slidev-theme-zhozhoba/blob/master/slides-export/03.png?raw=true',
       'https://github.com/thatoranzhevyy/slidev-theme-zhozhoba/blob/master/slides-export/04.png?raw=true',
     ],
-    tags: [
-      'dark',
-      'light',
-    ],
+    tags: ['dark', 'light'],
   },
-   {
+  {
     id: 'slidev-theme-penguin',
     name: 'Penguin',
     description: 'A Penguin theme for Slidev',
@@ -228,10 +193,7 @@ export const community: ThemeInfo[] = [
       'https://raw.githubusercontent.com/alvarosaburido/slidev-theme-penguin/master/screenshots/light/06.png',
       'https://raw.githubusercontent.com/alvarosaburido/slidev-theme-penguin/master/screenshots/light/05.png',
     ],
-    tags: [
-      'dark',
-      'light',
-    ],
+    tags: ['dark', 'light'],
   },
   // Add yours here!
   {
@@ -242,8 +204,6 @@ export const community: ThemeInfo[] = [
     author: {
       name: '',
     },
-    previews: [
-      '/theme-placeholder.png',
-    ],
+    previews: ['/theme-placeholder.png'],
   },
 ]

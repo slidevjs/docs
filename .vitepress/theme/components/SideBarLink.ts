@@ -40,12 +40,10 @@ export const SideBarLink: FunctionalComponent<{
 }
 
 function resolveLink(base: string, path?: string): string | undefined {
-  if (path === undefined)
-    return path
+  if (path === undefined) return path
 
   // keep relative hash to the same page
-  if (path.startsWith('#'))
-    return path
+  if (path.startsWith('#')) return path
 
   return joinUrl(base, path)
 }
@@ -75,20 +73,17 @@ function resolveHeaders(headers: Header[]): DefaultTheme.SideBarItem[] {
 }
 
 function groupHeaders(headers: Header[]): HeaderWithChildren[] {
-  headers = headers.map(h => Object.assign({}, h))
+  headers = headers.map((h) => Object.assign({}, h))
   let lastH2: HeaderWithChildren
   headers.forEach((h) => {
-    if (h.level === 2)
-      lastH2 = h
-
-    else if (lastH2)
-      (lastH2.children || (lastH2.children = [])).push(h)
+    if (h.level === 2) lastH2 = h
+    else if (lastH2) (lastH2.children || (lastH2.children = [])).push(h)
   })
-  return headers.filter(h => h.level === 2)
+  return headers.filter((h) => h.level === 2)
 }
 
 function mapHeaders(headers: HeaderWithChildren[]): DefaultTheme.SideBarItem[] {
-  return headers.map(header => ({
+  return headers.map((header) => ({
     text: header.title,
     link: `#${header.slug}`,
     children: header.children ? mapHeaders(header.children) : undefined,

@@ -22,8 +22,7 @@ export function useEditLink() {
 
     const { relativePath } = page.value
 
-    if (!showEditLink || !relativePath || !repo)
-      return null
+    if (!showEditLink || !relativePath || !repo) return null
 
     return createUrl(repo, docsRepo, docsDir, docsBranch, relativePath)
   })
@@ -62,9 +61,8 @@ function createGitHubUrl(
     : `https://github.com/${docsRepo}`
 
   return (
-    `${base.replace(endingSlashRE, '')
-    }/edit`
-    + `/${docsBranch}/${
+    `${base.replace(endingSlashRE, '')}/edit` +
+    `/${docsBranch}/${
       docsDir ? `${docsDir.replace(endingSlashRE, '')}/` : ''
     }${path}`
   )
@@ -80,11 +78,9 @@ function createBitbucketUrl(
   const base = isExternal(docsRepo) ? docsRepo : repo
 
   return (
-    `${base.replace(endingSlashRE, '')
-    }/src`
-    + `/${docsBranch}/${
+    `${base.replace(endingSlashRE, '')}/src` +
+    `/${docsBranch}/${
       docsDir ? `${docsDir.replace(endingSlashRE, '')}/` : ''
-    }${path
-    }?mode=edit&spa=0&at=${docsBranch}&fileviewer=file-view-default`
+    }${path}?mode=edit&spa=0&at=${docsBranch}&fileviewer=file-view-default`
   )
 }

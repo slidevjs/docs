@@ -12,15 +12,8 @@
     "resolveJsonModule": true,
     "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
-    "types": [
-      "vite/client",
-      "node"
-    ]
+    "types": ["vite/client", "node"]
   },
-  "include": [
-    "./*.ts",
-    "./.vitepress/**/*.ts",
-    "./.vitepress/**/*.vue",
-  ],
+  "include": ["./*.ts", "./.vitepress/**/*.ts", "./.vitepress/**/*.vue"],
   "exclude": ["**/dist/**", "node_modules"]
 }

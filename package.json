@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "vitepress",
     "build": "vitepress build",
+    "format": "prettier --write **/*.{js,ts,json}",
     "postinstall": "node .vitepress/scripts/prepare.js"
   },
   "devDependencies": {
@@ -14,6 +15,7 @@
     "@types/fs-extra": "^9.0.11",
     "@types/node": "^15.12.0",
     "fs-extra": "^10.0.0",
+    "prettier": "^2.3.1",
     "typescript": "^4.3.2",
     "vite-plugin-components": "^0.10.4",
     "vite-plugin-icons": "^0.6.1",

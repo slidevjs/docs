@@ -11,6 +11,7 @@ specifiers:
   '@types/node': ^15.12.0
   '@vueuse/core': ^4.11.2
   fs-extra: ^10.0.0
+  prettier: ^2.3.1
   typeit: ^7.0.4
   typescript: ^4.3.2
   vite-plugin-components: ^0.10.4
@@ -33,6 +34,7 @@ devDependencies:
   '@types/fs-extra': 9.0.11
   '@types/node': 15.12.0
   fs-extra: 10.0.0
+  prettier: 2.3.1
   typescript: 4.3.2
   vite-plugin-components: 0.10.4
   vite-plugin-icons: 0.6.1_@iconify+json@1.1.348
@@ -1713,6 +1715,12 @@ packages:
 
   /prettier/2.3.0:
     resolution: {integrity: sha512-kXtO4s0Lz/DW/IJ9QdWhAf7/NmPWQXkFr/r/WkR3vyI+0v8amTDxiaQSLzs8NBlytfLWX/7uQUMIW677yLKl4w==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
+  /prettier/2.3.1:
+    resolution: {integrity: sha512-p+vNbgpLjif/+D+DwAZAbndtRrR0md0MwfmOVN9N+2RgyACMT+7tfaRnT+WDPkqnuVwleyuBIG2XBxKDme3hPA==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true

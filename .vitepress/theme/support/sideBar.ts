@@ -28,8 +28,7 @@ export function getSideBarConfig(
   sidebar: DefaultTheme.SideBarConfig | DefaultTheme.MultiSideBarConfig,
   path: string,
 ): DefaultTheme.SideBarConfig {
-  if (isSideBarConfig(sidebar))
-    return sidebar
+  if (isSideBarConfig(sidebar)) return sidebar
 
   // get the very first segment of the path to compare with nulti sidebar keys
   // and make sure it's surrounded by slash
@@ -39,8 +38,7 @@ export function getSideBarConfig(
 
   for (const dir of Object.keys(sidebar)) {
     // make sure the multi sidebar key is surrounded by slash too
-    if (path === ensureSlash(dir))
-      return sidebar[dir]
+    if (path === ensureSlash(dir)) return sidebar[dir]
   }
 
   return 'auto'

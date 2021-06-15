@@ -9,15 +9,14 @@ const config: UserConfig = {
     alias: {
       '@slidev/client': resolve(__dirname, '.vitepress/@slidev/client'),
       '@slidev/parser': resolve(__dirname, '.vitepress/@slidev/parser'),
-      '@slidev/theme-default': resolve(__dirname, '.vitepress/@slidev/theme-default'),
+      '@slidev/theme-default': resolve(
+        __dirname,
+        '.vitepress/@slidev/theme-default',
+      ),
     },
   },
   optimizeDeps: {
-    exclude: [
-      'vue-demi',
-      '@vueuse/shared',
-      '@vueuse/core',
-    ],
+    exclude: ['vue-demi', '@vueuse/shared', '@vueuse/core'],
   },
   server: {
     hmr: {
@@ -30,7 +29,7 @@ const config: UserConfig = {
         '.vitepress/theme/components',
         '.vitepress/@slidev/client/builtin',
       ],
-      customLoaderMatcher: id => id.endsWith('.md'),
+      customLoaderMatcher: (id) => id.endsWith('.md'),
       customComponentResolvers: [
         ViteIconsResolver({
           componentPrefix: '',
@@ -45,21 +44,19 @@ const config: UserConfig = {
       name: 'code-block-escape',
       enforce: 'post',
       transform(code, id) {
-        if (!id.endsWith('.md'))
-          return
-        return code.replace(/\/\/```/mg, '```')
+        if (!id.endsWith('.md')) return
+        return code.replace(/\/\/```/gm, '```')
       },
     },
     {
       name: 'virtual-modules',
-      resolveId(id){
+      resolveId(id) {
         return id === '/@slidev/configs' ? id : null
       },
       load(id) {
-        if(id !== '/@slidev/configs')
-        return
+        if (id !== '/@slidev/configs') return
         return 'export default {}'
-      }
+      },
     },
   ],
 }

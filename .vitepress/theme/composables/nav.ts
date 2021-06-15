@@ -10,13 +10,11 @@ export function useLocaleLinks() {
     const theme = site.value.themeConfig as DefaultTheme.Config
     const locales = theme.locales
 
-    if (!locales)
-      return null
+    if (!locales) return null
 
     const localeKeys = Object.keys(locales)
 
-    if (localeKeys.length <= 1)
-      return null
+    if (localeKeys.length <= 1) return null
 
     // handle site base
     const siteBase = inBrowser ? site.value.base : '/'

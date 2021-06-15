@@ -9,12 +9,10 @@ export default defineConfig({
       '.vitepress/@slidev/client/internals/SlideContainer.vue',
       '.vitepress/@slidev/client/layouts/*.vue',
       '.vitepress/@slidev/theme-default/layouts/*.vue',
-    ]
+    ],
   },
   attributify: true,
-  plugins: [
-    aspectRatio,
-  ],
+  plugins: [aspectRatio],
   shortcuts: {
     'bg-main': 'bg-white dark:bg-[#111]',
   },
@@ -27,7 +25,7 @@ export default defineConfig({
         },
       },
       fontFamily: {
-        mono: '\'IBM Plex Mono\', source-code-pro, Menlo, Monaco, Consolas, \'Courier New\', monospace',
+        mono: "'IBM Plex Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
       },
     },
   },

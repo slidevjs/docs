@@ -16,8 +16,7 @@ export function isExternal(path: string): boolean {
 }
 
 export function isActive(route: any, path?: string): boolean {
-  if (path === undefined)
-    return false
+  if (path === undefined) return false
 
   const routePath = normalize(route.path)
   const pagePath = normalize(path)
@@ -33,11 +32,9 @@ export function joinUrl(base: string, path: string): string {
   const baseEndsWithSlash = base.endsWith('/')
   const pathStartsWithSlash = path.startsWith('/')
 
-  if (baseEndsWithSlash && pathStartsWithSlash)
-    return base.slice(0, -1) + path
+  if (baseEndsWithSlash && pathStartsWithSlash) return base.slice(0, -1) + path
 
-  if (!baseEndsWithSlash && !pathStartsWithSlash)
-    return `${base}/${path}`
+  if (!baseEndsWithSlash && !pathStartsWithSlash) return `${base}/${path}`
 
   return base + path
 }
@@ -50,8 +47,7 @@ export function joinUrl(base: string, path: string): string {
 export function getPathDirName(path: string): string {
   const segments = path.split('/')
 
-  if (segments[segments.length - 1])
-    segments.pop()
+  if (segments[segments.length - 1]) segments.pop()
 
   return ensureEndingSlash(segments.join('/'))
 }

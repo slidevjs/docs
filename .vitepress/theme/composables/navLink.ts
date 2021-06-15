@@ -17,23 +17,22 @@ export function useNavLink(item: Ref<DefaultTheme.NavItemWithLink>) {
     let active = false
     if (item.value.activeMatch) {
       active = new RegExp(item.value.activeMatch).test(routePath)
-    }
-    else {
+    } else {
       const itemPath = normalizePath(withBase(link))
-      active
-        = itemPath === '/'
+      active =
+        itemPath === '/'
           ? itemPath === routePath
           : routePath.startsWith(itemPath)
     }
 
     return {
-      'class': {
+      class: {
         active,
         isExternal,
       },
-      'href': isExternal ? link : withBase(link),
-      'target': item.value.target || isExternal ? '_blank' : null,
-      'rel': item.value.rel || isExternal ? 'noopener noreferrer' : null,
+      href: isExternal ? link : withBase(link),
+      target: item.value.target || isExternal ? '_blank' : null,
+      rel: item.value.rel || isExternal ? 'noopener noreferrer' : null,
       'aria-label': item.value.ariaLabel,
     }
   })
@@ -45,8 +44,10 @@ export function useNavLink(item: Ref<DefaultTheme.NavItemWithLink>) {
 }
 
 function interpret(path = '') {
-  return path
-    .replace(/{{pathname}}/, typeof window === 'undefined' ? '/' : location.pathname)
+  return path.replace(
+    /{{pathname}}/,
+    typeof window === 'undefined' ? '/' : location.pathname,
+  )
 }
 
 function normalizePath(path: string): string {

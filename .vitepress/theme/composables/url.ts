@@ -4,8 +4,7 @@ export function useUrl() {
   const site = useSiteData()
 
   function withBase(path: string): string {
-    if (!path)
-      return ''
+    if (!path) return ''
     return joinPath(site.value.base, path)
   }
 

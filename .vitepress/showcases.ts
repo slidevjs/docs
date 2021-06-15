@@ -44,7 +44,8 @@ export const showcases: ShowCaseInfo[] = [
       name: '',
     },
     at: 'Submit your talk/presentation to be list here!',
-    slidesLink: 'https://github.com/slidevjs/docs/edit/main/.vitepress/showcases.ts',
+    slidesLink:
+      'https://github.com/slidevjs/docs/edit/main/.vitepress/showcases.ts',
     cover: `${import.meta.env.BASE_URL}theme-placeholder.png`,
     datetime: '2021-04-29',
   },
