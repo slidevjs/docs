@@ -52,7 +52,8 @@ export const showcases: ShowCaseInfo[] = [
   {
     title: 'Simply Publish Your Package to npm',
     author: {
-      name: 'Lucky Dewa Satria
+      name: 'Lucky Dewa Satria',
+      link: 'https://github.com/lucky401',
     },
     at: 'Weekly sharing',
     slidesLink: 'https://masukin.link/talks/simply-publish-your-package-to-npm',
