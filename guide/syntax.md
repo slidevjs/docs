@@ -62,6 +62,20 @@ This is a default page without any additional metadata.
 
 Refer to [customization](/custom/) for more details.
 
+## Referencing images and other static assets
+
+Adding images as referenced files is just plain HTML:
+
+```html
+<img src="/mypic.jpg" ... />  # mind the leading "/" to reference files in the root directy
+```
+
+If you wanted to reference images from a subdirectory you would do instead:
+
+```html
+<img src="/mydirectory/mypic.jpg" ... />
+```
+
 ## Code Blocks
 
 One big reason I am building Slidev is needing to make my code look just right in the slides. So just as you expected, you can use Markdown flavored code block to highlight your code.
