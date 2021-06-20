@@ -29,13 +29,23 @@ $ slidev export --format png
 
 ## Single-Page Application (SPA)
 
-You can also build the slides into a self-hostable SPA:
+You can also build the slides into a self-hostable SPA. The generic command is:
 
 ```bash
 $ slidev build
 ```
 
-The generated application will be available under `dist/` and then you can host it on [GitHub Pages](https://pages.github.com/), [Netlify](https://netlify.app/), [Vercel](https://vercel.com/), or whatever you want. Now you can share your slides with the rest of the world with a single link.
+The generated application will be available under `dist/`. 
+
+However you will often want to host the SPA under a subroute. This is typically the case when hosting on popular platforms like [GitHub Pages](https://pages.github.com/), [Netlify](https://netlify.app/), or [Vercel](https://vercel.com/). In that case you will want to use the `--base` option for building, to ensure that internal references are preserved.
+
+Example: if you want to host the SPA on a GitHub repository with URL `https://github.com/why-not-try-calmer/Hackathon2021`, you will need to build with:
+
+```bash
+$ slidev build --base /Hackathon2021/   # mind the trailing "/"
+```
+
+Now you can share your slides with the rest of the world with a single link.
 
 ### Base Path
 
