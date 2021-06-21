@@ -62,20 +62,6 @@ This is a default page without any additional metadata.
 
 Refer to [customization](/custom/) for more details.
 
-## Referencing images and other static assets
-
-Adding images as referenced files is just plain HTML:
-
-```html
-<img src="/mypic.jpg" ... />  # mind the leading "/" to reference files in the root directy
-```
-
-If you wanted to reference images from a subdirectory you would do instead:
-
-```html
-<img src="/mydirectory/mypic.jpg" ... />
-```
-
 ## Code Blocks
 
 One big reason I am building Slidev is needing to make my code look just right in the slides. So just as you expected, you can use Markdown flavored code block to highlight your code.
@@ -162,6 +148,28 @@ blockquote {
   }
 }
 </style>
+```
+
+## Static Assets
+
+Just like you would do in markdown, you can use images pointing to a remote or local url.
+
+For remote assets, the built-in [`vite-plugin-remote-assets`](https://github.com/antfu/vite-plugin-remote-assets) will cache them into the disk at the first run so you can have instant loading even for large images later on.
+
+```md
+![Remote Image](https://sli.dev/favicon.png)
+```
+
+For local assets, put them into the [`public` folder](/custom/directory-structure.html#public) and reference them with **leading slash**.
+
+```md
+![Local Image](/pic.png)
+```
+
+For you want to apply custom sizes or styles, you can convert them to the `<img>` tag 
+
+```html
+<img src="/pic.png" class="m-40 h-40 rounded shadow" />
 ```
 
 ## Notes
