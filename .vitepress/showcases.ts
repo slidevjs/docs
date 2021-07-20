@@ -81,7 +81,7 @@ export const showcases: ShowCaseInfo[] = [
     at: 'Presentation of my college final project',
     slidesLink: 'https://beapt-presentation.netlify.app',
     sourceLink: 'https://github.com/TutoDS/lei-project/tree/master/presentation',
-    cover: 'https://github.com/TutoDS/lei-project/tree/master/presentation/cover.png',
+    cover: 'https://i.ibb.co/V3q6s2x/cover.png',
     datetime: '2021-07-20',
   },
   // Add yours here!
