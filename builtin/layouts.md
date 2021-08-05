@@ -4,9 +4,6 @@
 
 > As themes may override layouts behaviour, the best way to know exactly the usage, parameters and examples is referring their documentation.
 
-### `404`
-
-Shows a 404 page to not found resources.
 
 ### `center`
 
