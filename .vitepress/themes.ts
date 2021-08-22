@@ -314,6 +314,7 @@ export const community: ThemeInfo[] = [
     tags: [
       'light',
     ],
+  },
   // Add yours here!
   {
     id: '',
