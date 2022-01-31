@@ -1,8 +1,8 @@
 # [sli.dev](https://sli.dev)
 
-Documentation for [Slidev](https://github.com/slidevjs/slidev)
+[Slidev](https://github.com/slidevjs/slidev)の日本語ドキュメントです
 
-## Translations
+## 翻訳一覧
 
 | | Repo | Site | Maintainers |
 |---|---|---:|---|
@@ -16,7 +16,7 @@ Documentation for [Slidev](https://github.com/slidevjs/slidev)
 | Português (BR) | [docs-br](https://github.com/slidevjs/docs-br) | [br.sli.dev](https://br.sli.dev) | [@luisfelipesdn12](https://github.com/luisfelipesdn12) |
 | Ελληνικά | [docs-el](https://github.com/slidevjs/docs-el) | [el.sli.dev](https://el.sli.dev) | [@GeopJr](https://github.com/GeopJr) |
 
-## Start Server Locally
+## ローカルでサーバーを立ち上げる
 
 ```
 npm i -g pnpm
@@ -25,10 +25,11 @@ pnpm i
 pnpm run dev
 ```
 
-And then visit `http://localhost:3000`
+コマンドを実行したら `http://localhost:3000` にアクセスしてください。
 
-Or install the [Vite extension for VS Code](https://marketplace.visualstudio.com/items?itemName=antfu.vite) to edit side-by-side.
+または [Vite extension for VS Code](https://marketplace.visualstudio.com/items?itemName=antfu.vite)
+をインストールすると、サイドバイサイドで編集できます。
 
-## Help on Translating
+## 翻訳に貢献する
 
-See [TRANSLATIONS.md](/TRANSLATIONS.md)
+[TRANSLATIONS.md](/TRANSLATIONS.md) をご一読ください
