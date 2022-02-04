@@ -1,63 +1,63 @@
 # FAQ
 
-## Grids
+## グリッド
 
-Since Slidev is based on the Web, you can apply any grid layouts as you want. [CSS Grids](https://css-tricks.com/snippets/css/complete-guide-grid/), [flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), or even [Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/), you get the full controls.
+SlidevはWebをベースにしているので、グリッドレイアウトを自由に適用することができます。[CSS Grids](https://css-tricks.com/snippets/css/complete-guide-grid/)、[flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)、あるいは[Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/)で制御することができます。
 
-Since we have [Windi CSS](https://windicss.org/) built-in, here is one simple way for you to reference:
+また[Windi CSS](https://windicss.org/)が内蔵されているので、参考までにそれを使った簡単な方法を紹介します：
 
 ```html
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-The first column
+最初のカラム
 
 </div>
 <div>
 
-The second column
+2番目のカラム
 
 </div>
 </div>
 ```
 
-Go further, you can customize the size of each column like:
+さらに、各カラムのサイズをカスタマイズすることも可能です。:
 
 ```html
 <div class="grid grid-cols-[200px,1fr,10%] gap-4">
 <div>
 
-The first column (200px)
+最初のカラム (200px)
 
 </div>
 <div>
 
-The second column (auto fit)
+2番目のカラム (自動調整)
 
 </div>
 <div>
 
-The third column (10% width to parent container)
+3番目のカラム (親のコンテナに対して10%)
 
 </div>
 </div>
 ```
 
-Learn more about [Windi CSS Grids](https://windicss.org/utilities/grid.html).
+詳細は[Windi CSS Grids](https://windicss.org/utilities/grid.html)を参照してください。
 
-## Positioning
+## ポジショニング
 
-Slides are defined in fixed sizes (default `980x552px`) and scale to fit with the user screen. You can safely use absolute position in your slides as they will scale along with the screen.
+スライドは固定サイズ（デフォルトは`980x552px`）で定義され、ユーザーのスクリーンに合わせて拡大・縮小されます。画面に合わせて拡大・縮小されるため、absolute positionを使用しても安全です。
 
-For example:
+例:
 
 ```html
 <div class="absolute left-30px bottom-30px">
-This is a left-bottom aligned footer
+これは左下寄せのフッターです
 </div>
 ```
 
-To change the canvas' actual size, you can pass the `canvasWidth` options in your first frontmatter:
+キャンバスの実際の大きさを変更するには、最初のフロントマターで`canvasWidth`オプションを指定します。
 
 ```yaml
 ---
@@ -65,16 +65,16 @@ canvasWidth: 800
 ---
 ```
 
-## Font Size
+## フォントサイズ
 
-If you feel the font size in your slides are too small, you can adjust it in a few ways:
+スライドのフォントサイズが小さすぎると感じる場合、いくつかの方法で調整することができます:
 
-### Override Local Style
+### ローカルスタイルをオーバーライドする
 
-You can override styles for each slide with the inlined `<style>` tag.
+インライン`<style>`タグで、各スライドごとのスタイルをオーバーライドすることができます。
 
 ```md
-# Page 1
+# ページ 1
 
 <style>
 h1 {
@@ -84,16 +84,16 @@ h1 {
 
 ---
 
-# Page 2
+# ページ 2
 
-This will not be affected.
+ここには適用されません
 ```
 
-Learn more: [Embedded Styles](/guide/syntax.html#embedded-styles)
+詳細: [埋め込みスタイル](/guide/syntax.html#埋め込みスタイル)
 
-### Override Global Style
+### グローバルスタイルをオーバーライドする
 
-You can provide custom global styles by creating `./style.css`, for example
+カスタムグローバルスタイルを定義するには、次のように`./style.css`を作成します。
 
 ```css
 /* style.css */ 
@@ -103,29 +103,29 @@ h1 {
 }
 ```
 
-Learn more: [Global Style](/custom/directory-structure.html#style)
+詳細: [グローバルスタイル](/custom/directory-structure.html#style)
 
-### Scale the Canvas
+### キャンバスの拡大・縮小
 
-Changing the canvas' actual size will scale all your contents(text, images, components, etc.) and slides
+キャンバスの実寸を変更すると、すべてのコンテンツ（テキスト、画像、コンポーネントなど）とスライドが拡大・縮小されます。
 
 ```yaml
 ---
 # default: 980
-# since the canvas gets smaller, the visual size will become larger
+# キャンバスが小さくなれば、視覚的なサイズは大きくなります。
 canvasWidth: 800
 ---
 ```
 
-### Use Transform
+### Transformの使用
 
-We provide a built-in component `<Transform />`, which is a thin wrapper of CSS transform property.
+CSSのtransformプロパティの薄いラッパーである、ビルトインコンポーネント`<Transform />`を提供しています。
 
 ```md
 <Transform :scale="1.4">
 
-- Item 1
-- Item 2
+- 項目 1
+- 項目 2
 
 </Transform>
 ```
