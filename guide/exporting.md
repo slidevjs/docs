@@ -1,29 +1,29 @@
-# Exporting
+# エクスポート
 
 ## PDF
 
-> Exporting to PDF or PNG relies on [Playwright](https://playwright.dev) for rendering. You will therefore need to install [`playwright-chromium`](https://playwright.dev/docs/installation#download-single-browser-binary) to use this feature.
-> If you are doing exporting in a CI environment, [the playwright CI guide](https://playwright.dev/docs/ci) can be helpful.
+> PDFもしくはPNGへのエクスポートはレンダリングのために[Playwright](https://playwright.dev)に依存しています。したがって、この機能を使用するためには[`playwright-chromium`](https://playwright.dev/docs/installation#download-single-browser-binary)をインストールする必要があります。
+> CI環境でエクスポートを行う場合は、[the playwright CI guide](https://playwright.dev/docs/ci)が参考になります。
 
-Install `playwright-chromium`
+`playwright-chromium`のインストール
 
 ```bash
 $ npm i -D playwright-chromium
 ```
 
-Now export your slides to PDF using the following command
+次のコマンドを使用してスライドをPDFにエクスポートします。
 
 ```bash
 $ slidev export
 ```
 
-After a few seconds, your slides will be ready at `./slides-exports.pdf`.
+しばらくすると、スライドが`./slides-exports.pdf`に出力されます。
 
-### Export Clicks Steps
+### クリックステップをエクスポートする
 
-> Available since v0.21
+> v0.21から使用可能です
 
-By default, Slidev exports one page per slide with clicks animations disabled. If you want export slides with multiple steps into multiple pages, pass the `--with-clicks` options.
+デフォルトでは、Slidevはクリックアニメーションを無効にして、スライド単位で1ページをエクスポートします。複数のステップがあるスライドを複数のページにエクスポートしたい場合は、`--with-clicks`オプションを指定します。
 
 ```bash
 $ slidev export --with-clicks
@@ -31,12 +31,12 @@ $ slidev export --with-clicks
 
 ## PNGs
 
-When passing in the `--format png` option, Slidev will export PNG images for each slide instead of a PDF.
+`--format png`オプションを指定した場合、Slidevは各スライドをPDFの代わりにPNG画像として出力します。
 
 ```bash
 $ slidev export --format png
 ```
 
-## Single-Page Application (SPA)
+## シングルページアプリケーション (SPA)
 
-See [Static Hosting](/guide/hosting).
+[静的ホスティング](/guide/hosting)を参照してください。
