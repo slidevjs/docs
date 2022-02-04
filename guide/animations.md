@@ -1,22 +1,22 @@
-# Animations
+# アニメーション
 
-## Click Animations
+## クリックアニメーション
 
 ### `v-click`
 
-To apply "click animations" for elements, you can use the `v-click` directive or `<v-click>` components
+要素に対して"クリックアニメーション"を適用するには、`v-click`ディレクティブか`<v-click>`コンポーネントを使用することができます。
 
 ```md
 # Hello
 
-<!-- Component usage: this will be invisible until you press "next" -->
+<!-- コンポーネントの使用方法: "次へ"を押すまで、ここから下の内容は表示されません -->
 <v-click>
 
 Hello World
 
 </v-click>
 
-<!-- Directive usage: this will be invisible until you press "next" the second time -->
+<!-- ディレクティブの使用方法: 2回目の"次へ"を押すまで、ここから下の内容は表示されません -->
 <div v-click class="text-xl p-2">
 
 Hey!
@@ -26,18 +26,18 @@ Hey!
 
 ### `v-after`
 
-The usage of `v-after` is similar to `v-click` but it will turn the element visible when the previous `v-click` is triggered.
+`v-after`は`v-click`に似ていますが、直前の`v-click`がトリガーされたときに要素を可視化します。
 
 ```md
 <div v-click>Hello</div>
 <div v-after>World</div>
 ```
 
-When you click the "next" button, both `Hello` and `World` will show up together.
+"次へ"ボタンを押した時に、`Hello`と`World`の両方が一緒に表示されます。 
 
 ### `v-click-hide`
 
-Same as `v-click` but instead of making the element appear, it makes the element invisible after clicking.
+`v-click`と同じですが、要素を表示するのではなく、クリックした後に要素を非表示にします。
 
 ```md
 <div v-click-hide>Hello</div>
@@ -45,35 +45,35 @@ Same as `v-click` but instead of making the element appear, it makes the element
 
 ### `v-clicks`
 
-`v-clicks` is only provided as a component. It's a shorthand to apply the `v-click` directive to all its child elements. It is especially useful when working with lists.
+`v-clicks`はコンポーネントとしてのみ提供されています。これは`v-click`ディレクティブをそのすべての子要素に適用するためのショートハンドです。特にリストを扱う場合に便利です。
 
 ```md
 <v-clicks>
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
+- 項目 1
+- 項目 2
+- 項目 3
+- 項目 4
 
 </v-clicks>
 ```
 
-An item will become visible each time you click "next".
+"次へ"をクリックするたびに、項目が表示されるようになります。
 
-### Custom Clicks Count
+### カスタムクリックカウント
 
-By default, Slidev counts how many steps are needed before going to the next slide. You can override this setting by passing the `clicks` frontmatter option:
+デフォルトでは、Slidevは次のスライドに行く前に必要なステップ数をカウントします。`clicks`というフロントマターオプションを記述することで、この設定をオーバーライドできます。
 
 ```yaml
 ---
-# 10 clicks in this slide, before going to the next
+# このスライドでは、次のスライドに行くまでに10回クリックする
 clicks: 10
 ---
 ```
 
-### Ordering
+### 並び替え
 
-Passing the click index to your directives, you can customize the order of the revealing
+ディレクティブにクリックインデックスを渡すことで、公開する順番をカスタマイズすることができます。
 
 ```md
 <div v-click>1</div>
@@ -82,7 +82,7 @@ Passing the click index to your directives, you can customize the order of the r
 ```
 
 ```md
-<!-- the order is reversed -->
+<!-- 順番が逆転する -->
 <div v-click="3">1</div>
 <div v-click="2">2</div>
 <div v-click="1">3</div>
@@ -93,30 +93,30 @@ Passing the click index to your directives, you can customize the order of the r
 clicks: 3
 ---
 
-<!-- visible after 3 clicks -->
+<!-- 3回クリックした後に見えるようになる -->
 <v-clicks at="3">
   <div>Hi</div>
 </v-clicks>
 ```
 
-### Element Transitions
+### 要素のトランジション
 
-When you apply the `v-click` directive to your elements, it will attach the class name `slidev-vclick-target` to it. When the elements are hidden, the class name `slidev-vclick-hidden` will also be attached. For example:
-
-```html
-<div class="slidev-vclick-target slidev-vclick-hidden">Text</div>
-```
-
-After a click, it will become
+要素に`v-click`ディレクティブを適用すると、`slidev-vclick-target`というクラス名が付与されます。要素が非表示になった場合、クラス名`slidev-vclick-hidden`が付与されます。例：
 
 ```html
-<div class="slidev-vclick-target">Text</div>
+<div class="slidev-vclick-target slidev-vclick-hidden">テキスト</div>
 ```
 
-By default, a subtle opacity transition is applied to those classes:
+クリックすると、以下のようになります
+
+```html
+<div class="slidev-vclick-target">テキスト</div>
+```
+
+デフォルトでは、これらのクラスにはわずかな透明度のトランジションが適用されます。
 
 ```css
-// the default
+// デフォルト
 
 .slidev-vclick-target {
   transition: opacity 100ms ease;
@@ -128,9 +128,9 @@ By default, a subtle opacity transition is applied to those classes:
 }
 ```
 
-You can override them to customize the transition effects in your custom stylesheets. 
+トランジション効果をカスタマイズするために、カスタムスタイルシートでそれらをオーバーライドすることができます。
 
-For example, you can achieve the scaling up transitions by: 
+例えば、スケールアップのトランジションは次のようにして実現することができます：
 
 ```css
 // styles.css
@@ -144,7 +144,7 @@ For example, you can achieve the scaling up transitions by:
 }
 ```
 
-To specify animations for only certain slide or layout
+特定のスライドもしくはレイアウトにのみアニメーションを適用する場合
 
 ```scss
 .slidev-page-7,
@@ -159,11 +159,11 @@ To specify animations for only certain slide or layout
 }
 ```
 
-Learn more about [customizing styles](/custom/directory-structure#style).
+詳細は[スタイルのカスタマイズ](/custom/directory-structure#style)を参照してください。
 
-## Motion
+## モーション
 
-Slidev has [@vueuse/motion](https://motion.vueuse.org/) built-in. You can use the `v-motion` directive to any elements to make apply motion on them. For example
+Slidevは[@vueuse/motion](https://motion.vueuse.org/)を内蔵しています。任意の要素にモーションを適用するために`v-motion`ディレクティブを使用することができます。例：
 
 ```html
 <div
@@ -174,9 +174,9 @@ Slidev has [@vueuse/motion](https://motion.vueuse.org/) built-in. You can use th
 </div>
 ```
 
-The text `Slidev` will move from `-80px` to its original position on initialization.
+`Slidev`というテキストは初期化時に`-80px`から元の位置へ移動します。
 
-> Note: Slidev preloads the next slide for performance, which means the animations might start before you navigate to the page. To get it works properly, you can disable the preloading for the particular slide
+> 注: Slidevはパフォーマンスのために次のスライドをプリロードします、つまり、ページに遷移する前にアニメーションが始まる可能性があります。正しく動作させるために、特定のスライドに対してプリロードを無効にすることができます。
 >
 > ```md
 > ---
@@ -184,7 +184,7 @@ The text `Slidev` will move from `-80px` to its original position on initializat
 > ---
 > ```
 >
-> Or control the element life-cycle with `v-if` to have fine-grained controls
+> もしくは要素のライフサイクルを`v-if`で制御することで、きめ細やかな制御を行うこともできます。
 >
 > ```html
 > <div
@@ -196,8 +196,8 @@ The text `Slidev` will move from `-80px` to its original position on initializat
 > </div>
 > ```
 
-Learn mode: [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/directive-usage.html) | [Presets](https://motion.vueuse.org/presets.html)
+詳細: [デモ](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/directive-usage.html) | [Presets](https://motion.vueuse.org/presets.html)
 
-## Pages Transitions
+## ページのトランジション
 
-> Built-in support for slides is NOT YET provided in the current version. We are planning to add support for them in the next major version. Before that, you can still use your custom styles and libraries to do that.
+> 現在のバージョンでは、スライドのビルトインサポートはまだ提供されていません。次のメジャーバージョンでサポートする予定です。それまでは、カスタムスタイルやライブラリを使ってスライドを作成することができます。
