@@ -18,7 +18,7 @@ const Guide = [
     link: '/guide/syntax',
   },
   {
-    text: 'Navigation',
+    text: 'ナビゲーション',
     link: '/guide/navigation',
   },
   {
