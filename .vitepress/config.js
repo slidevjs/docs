@@ -26,7 +26,7 @@ const Guide = [
     link: '/guide/animations',
   },
   {
-    text: 'Exporting',
+    text: 'エクスポート',
     link: '/guide/exporting',
   },
   {
