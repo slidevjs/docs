@@ -14,7 +14,7 @@ const Guide = [
     link: '/guide/install',
   },
   {
-    text: 'Markdown Syntax',
+    text: 'Markdownシンタックス',
     link: '/guide/syntax',
   },
   {
