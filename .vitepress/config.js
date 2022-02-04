@@ -22,7 +22,7 @@ const Guide = [
     link: '/guide/navigation',
   },
   {
-    text: 'Animations',
+    text: 'アニメーション',
     link: '/guide/animations',
   },
   {
