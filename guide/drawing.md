@@ -1,20 +1,20 @@
-# Drawing & Annotations
+# 描画と注釈
 
-> Available since v0.23
+> v0.23から使用可能です
 
-We have [drauu](https://github.com/antfu/drauu) built-in for drawing and annotation that could enhance your presentation further.
+描画や注釈を行うための[drauu](https://github.com/antfu/drauu)を内蔵しており、プレゼンテーションをさらに充実させることができます。
 
-To start, click the <carbon-pen class="inline-icon-btn"/> icon in the toolbar and start drawing. It's also available in the [Presenter Mode](/guide/presenter-mode). Drawings and annotations you created will be **synced up** automatically across all instances in real-time.
+ツールバーの<carbon-pen class="inline-icon-btn"/>アイコンをクリックして、描画を開始します。 [プレゼンターモード](/guide/presenter-mode)でも使用可能です。作成した描画や注釈は、リアルタイムに全インスタンスでリアルタイムに**同期**されます。
 
 <Tweet id="1424027510342250499" />
 
-## Use with Stylus Pen
+## スタイライスペンとともに使用する
 
-When using a stylus pen on a tablet (for example, iPad with Apple Pencil), Slidev could smartly detect the input type. You can directly draw on your slides with the pen without turning on the drawing mode, while having your fingers or mouse control the navigation.
+タブレットでスタイラスペンを使用する場合（例えば、iPadとApple Pencil）、Slidevは入力をスマートに検出することができます。描画モードをオンにすることなく、指やマウスでナビゲーションをコントロールしながら、ペンで直接スライドに描画することができます。
 
-## Persist Drawings
+## 描画を保存する
 
-The following frontmatter configuration allows you to persist your drawings as SVGs under `.slidev/drawings` directory and have them inside your exported pdf or hosted site.
+以下のフロントマターの設定により、描画した内容はSVGとして`.slidev/drawings`ディレクトリ配下に保存され、エクスポートしたPDFやホスティングしたサイト内に表示させることができます。
 
 ```md
 ---
@@ -23,9 +23,9 @@ drawings:
 ---
 ```
 
-## Disable Drawings
+## 描画を非表示にする
 
-Entirely:
+全体に対して:
 
 ```md
 ---
@@ -34,7 +34,7 @@ drawings:
 ---
 ```
 
-Only in Development:
+開発環境でのみ:
 
 ```md
 ---
@@ -43,7 +43,7 @@ drawings:
 ---
 ```
 
-Only in Presenter Mode:
+プレゼンテーションモードでのみ:
 
 ```md
 ---
@@ -52,9 +52,9 @@ drawings:
 ---
 ```
 
-## Drawing Syncing
+## 描画を同期させる
 
-By default, Slidev syncs up your drawings across all instances. If you are sharing your slides with others, you might want to disable the syncing by:
+デフォルトでは、Slidevはすべてのインスタンスで描画を同期します。もし他の誰かとスライドを共有している場合は、同期を無効にした方がいいかもしれません：
 
 ```md
 ---
@@ -63,6 +63,6 @@ drawings:
 ---
 ```
 
-With this config, only the drawing from the presenter instance will be able to sync with others.
+この設定により、プレゼンターのインスタンスからの描画のみ、他のインスタンスと同期することができるようになります。
 
 

@@ -42,7 +42,7 @@ const Guide = [
     link: '/guide/presenter-mode',
   },
   {
-    text: 'Drawing & Annotations',
+    text: '描画と注釈',
     link: '/guide/drawing',
   },
   {
