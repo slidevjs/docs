@@ -1,70 +1,70 @@
-# Why Slidev
+# なぜSlidevを使うのか
 
-There are a lot of feature-rich, general-purpose, WYSIWYG slides makers like [Microsoft PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) and [Apple Keynote](https://www.apple.com/keynote/). They work pretty well for making nice slides with animations, charts, and many other things, while being very intuitive and easy to learn. So why bother making Slidev?
+[Microsoft PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint)や[Apple Keynote](https://www.apple.com/keynote/)など、機能豊富で汎用的なWYSIWYGのスライド作成ツールがたくさんあります。これらは非常に直感的で簡単に学ぶことができる一方で、アニメーションやチャート、その他の多くの機能を使った素晴らしいスライドを作成するのに非常によく機能します。では、なぜわざわざSlidevを作ったのでしょうか？
 
-Slidev aims to provide the flexibility and interactivity for developers to make their presentations even more interesting, expressive, and attractive by using the tools and technologies they are already familiar with. 
+Slidevの目的は、開発者が既に慣れ親しんでいるツールや技術を使って、プレゼンテーションをさらに面白く、表現力豊かに、そして魅力的にするための柔軟性と対話性を提供することです。
 
-When working with WYSIWYG editors, it is easy to get distracted by the styling options. Slidev remedies that by separating the content and visuals. This allows you to focus on one thing at a time, while also being able to reuse the themes from the community. Slidev does not seek to replace other slide deck builders entirely. Rather, it focuses on catering to the developer community.
+WYSIWYGエディタで作業していると、スタイリングオプションに気を取られがちです。Slidevはコンテンツとビジュアルを分離することでそれを改善します。これによって、一度に1つのことに集中できるようになり、同時にコミュニティのテーマを再利用できるようになります。Slidevは他のスライドデッキビルダーに完全に取って代わろうとはしていません。むしろ、開発者コミュニティに応えることに重点をおいています。
 
 ## Slidev
 
 ![](/screenshots/cover.png)
 
-Here are a few of the coolest features of Slidev:
+ここでは、いくつかのSlidevのクールな機能を紹介します：
 
-## Markdown-based
+## Markdownベース
 
-Slidev uses an extended Markdown format to store and organize your slides in a single plain text file. This lets you focus on making the content. And since the content and styles are separated, this also made it possible to switch between different themes effortlessly.
+Slidevは拡張されたMarkdown形式を使用して、スライドを単一のプレーンテキストファイルに保存し、整理します。これにより、コンテンツの作成に集中することができます。またコンテンツとスタイルが分離されているので、異なるテーマに楽に切り替えることが可能です。
 
-Learn more about [Slidev's Markdown Syntax](/guide/syntax).
+詳しくは[SlidevのMarkdownシンタックス](/guide/syntax)を参照してください。
 
-## Themable
+## テーマブル
 
-Themes for Slidev can be shared and installed using npm packages. You then apply them with only one line of config.
+Slidevのテーマは、npmパッケージを使用して共有とインストールができます。そして1行設定するだけでテーマを適用することができます。
 
-Check out the [theme gallery](/themes/gallery) or [learn how to write a theme](/themes/write-a-theme).
+[テーマギャラリー](/themes/gallery)や[テーマの書き方を学ぶ](/themes/write-a-theme)をチェックしてみてください。
 
-## Developer Friendly
+## デベロッパーフレンドリー
 
-Slidev provides first-class support for code snippets for developers. It supports both [Prism](https://prismjs.com/) and [Shiki](https://github.com/shikijs/shiki) to get pixel perfect syntax highlighting, while still being able to modify the code at any time. With [Monaco editor](https://microsoft.github.io/monaco-editor/) built-in, it also empowers you to do live coding / demonstration in your presentation with autocompletion, type hovering, and even TypeScript type check support.
+Slidevは開発者のためにコード巣にペットのファーストクラスのサポートを提供します。[Prism](https://prismjs.com/)と[Shiki](https://github.com/shikijs/shiki)の両方をサポートし、ピクセルパーフェクトなシンタックスハイライトを実現しつつ、いつでもコードを修正することができます。[Monaco editor](https://microsoft.github.io/monaco-editor/) を内蔵し、オートコンプリート、タイプホバーリング、TypeScriptの型チェックサポートにより、プレゼンテーションでのライブコーディングやデモも可能になります。
 
-Learn more about [highlighters](/custom/highlighters) and [Monaco configuration](/custom/config-monaco).
+詳しくは[ハイライター](/custom/highlighters)と[Monacoの設定](/custom/config-monaco)を参照してください。
 
-## Fast
+## 高速
 
-Slidev is powered by [Vite](https://vitejs.dev/), [Vue 3](https://v3.vuejs.org/) and [Windi CSS](https://windicss.org/), which give you the most wonderful authoring experience. Every change you made will reflect to your slides **instantly**.
+Slidevは[Vite](https://vitejs.dev/)、[Vue 3](https://v3.vuejs.org/)、そして[Windi CSS](https://windicss.org/)を利用しており、もっとも素晴らしいオーサリング体験を提供しています。あなたが行ったすべての変更は、**即時に**あなたのスライドに反映されます。
 
-Find more about [our tech stack](/guide/#tech-stack).
+詳しくは[技術スタック](/guide/#tech-stack)をご覧ください。
 
-## Interactive & Expressive
+## インタラクティブ & エクスプレッシブ
 
-You can write custom Vue components and use them directly inside your markdown file. You can also interact with them inside the presentation to express your idea in a more interesting and intuitive way.
+Markdownファイルの中に直接Vueのカスタムコンポーネントを記述することができます。また、プレゼンテーションの中でそれらとやりとりすることで、より面白く、より直感的にアイデアを表現することができます。
 
-## Recording Support
+## レコーディングサポート
 
-Slidev provides built-in recording and camera view. You can share your presentation with your camera view inside, or record and save them separately for your screen and camera. All with one go, no additional tools are needed.
+Slidevはビルトインのレコーディング機能とカメラービューを提供します。カメラービューを含めたプレゼンテーションを共有したり、画面とカメラで別々に録画・保存することも可能です。すべてSlidevだけで完結しており、追加のツールは必要ありません。
 
-Learn more about [recording here](/guide/recording).
+詳しくは[レコーディング](/guide/recording)を参照してください。
 
-## Portable
+## ポータブル
 
-Export your slides into PDF, PNGs, or even a hostable Single-page Application (SPA) with a single command, and share them anywhere.
+コマンド1つでスライドをPDF、PNG、あるいはホスティング可能なSPAとしてエクスポートでき、どこへでも共有することができます。
 
-Read more about that in the [exporting docs](/guide/exporting).
+詳しくは[エクスポート](/guide/exporting)を参照してください。
 
-## Hackable
+## ハッカブル
 
-Being powered by web technologies, anything that can be done in a web app is also possible with Slidev. For example, WebGL, API requests, iframes, or even live sharing. It's up to your imagination!
+Web技術を使用していることにより、WebアプリでできることはSlidevでも実現可能です。例えば、WebGL、APIリクエスト、iframe、あるいはライブシェアリングなどが利用可能です。あなたの想像力次第でなんでもできます！
 
-## Give it a Try
+## 試してみる
 
-Playing around with Slidev will tell you more than a thousand words. You are just one command away:
+百聞は一件にしかずということで、実際にSlidevを使ってみましょう。 コマンドを実行：
 
 ```bash
 $ npm init slidev
 ```
 
-Or have a quick preview of it:
+またはプレビュー:
 
 <div class="aspect-9/16 relative">
 <iframe class="rounded w-full shadow-md border-none" src="https://www.youtube.com/embed/eW7v-2ZKZOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
