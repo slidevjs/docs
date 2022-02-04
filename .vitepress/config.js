@@ -2,11 +2,11 @@
 
 const Guide = [
   {
-    text: 'Why Slidev',
+    text: 'なぜSlidevを使うのか',
     link: '/guide/why',
   },
   {
-    text: 'Getting Started',
+    text: 'はじめに',
     link: '/guide/',
   },
   {
