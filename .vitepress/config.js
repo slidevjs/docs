@@ -46,7 +46,7 @@ const Guide = [
     link: '/guide/drawing',
   },
   {
-    text: 'Editor Integrations',
+    text: 'エディタサポート',
     link: '/guide/editors',
   },
   {
