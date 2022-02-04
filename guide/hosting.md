@@ -1,28 +1,28 @@
-# Static Hosting
+# 静的ホスティング
 
-## Build Single Page Applications (SPA)
+## シングルページアプリケーション(SPA)を構築する 
 
-You can also build the slides into a self-hostable SPA:
+スライドをセルフホスティング可能なSPAとして構築することができます：
 
 ```bash
 $ slidev build
 ```
 
-The generated application will be available under `dist/` and then you can host it on [GitHub Pages](https://pages.github.com/), [Netlify](https://netlify.app/), [Vercel](https://vercel.com/), or whatever you want. Now you can share your slides with the rest of the world with a single link.
+生成されたアプリケーションは`dist/`の配下に配置され、[GitHub Pages](https://pages.github.com/)、[Netlify](https://netlify.app/)、[Vercel](https://vercel.com/)など、好きな場所にホストすることができます。これでリンク1つで世界中の人とスライドを共有することできます。
 
-### Base Path
+### ベースパス
 
-To deploy your slides under sub-routes, you will need to pass the `--base` option. For example:
+サブルート下にスライドをデプロイするには、`--base`オプションを指定する必要があります。例：
 
 ```bash
 $ slidev build --base /talks/my-cool-talk/
 ```
 
-Refer to [Vite's documentation](https://vitejs.dev/guide/build.html#public-base-path) for more details.
+詳細は[Viteのドキュメント](https://vitejs.dev/guide/build.html#public-base-path)を参照してください。
 
-### Provide Downloadable PDF
+### ダウンロード可能なPDFを提供する
 
-You can provide a downloadable PDF to the viewers of your SPA with the following config:
+以下の設定により、SPAの閲覧者向けにダウンロード可能なPDFを提供することができます：
 
 ```md
 ---
@@ -30,9 +30,9 @@ download: true
 ---
 ```
 
-Slidev will generate a pdf file along with the build, and a download button will be displayed in the SPA.
+SLidevはビルドと一緒にPDFファイルを生成し、SPAにダウンロードボタンが表示されます。
 
-You can also provide a custom url to the PDF. In that case, the rendering process will be skipped.
+またPDFに対してカスタムURLを指定することもできます。その場合、レンダリング処理はスキップされます。
 
 ```md
 ---
@@ -40,24 +40,24 @@ download: 'https://myside.com/my-talk.pdf'
 ---
 ```
 
-## Examples
+## サンプル
 
-Here are a few examples of the exported SPA:
+以下はSPAとしてエクスポートされた例です:
 
 - [Starter Template](https://sli.dev/demo/starter)
 - [Composable Vue](https://talks.antfu.me/2021/composable-vue) by [Anthony Fu](https://github.com/antfu)
 
-For more, check out [Showcases](/showcases).
+詳しくは[Showcases](/showcases)を参照してください。
 
-## Hosting
+## ホスティング
 
-We recommend to use `npm init slidev@lastest` to scaffolding your project, which contains the necessary configuration files for hosting services out-of-box.
+`npm init slidev@lastest`を使って、サービスをそのままホスティングするために必要な設定ファイルが含まれたプロジェクトの雛形を生成することを推奨します。
 
 ### Netlify
 
 - [Netlify](https://netlify.com/)
 
-Create `netlify.toml` in your project root with the following content.
+プロジェクトルートに以下の内容で`netlify.toml`を作成します。
 
 ```ts
 [build.environment]
@@ -73,13 +73,13 @@ Create `netlify.toml` in your project root with the following content.
   status = 200
 ```
 
-Then go to your Netlify dashboard, create new site with the repository.
+Netlifyのダッシュボードを開き、リポジトリを指定して新しいサイトを作成してください。
 
 ### Vercel
 
 - [Vercel](https://vercel.com/)
 
-Create `vercel.json` in your project root with the following content.
+プロジェクトルートに以下の内容で`vercel.json`を作成します。
 
 ```json
 {
@@ -89,13 +89,13 @@ Create `vercel.json` in your project root with the following content.
 }
 ```
 
-Then go to your Vercel dashboard, create new site with the repository.
+Vercelのダッシュボードを開き、リポジトリを指定して新しいサイトを作成してください。
 
 ## GitHub Pages
 
 - [GitHub Pages](https://pages.github.com/)
 
-Create `.github/workflows/deploy.yml` with following content to deploy your slides to GitHub Pages via GitHub Actions.
+GitHub Actionsを使用してGitHub Pagesにスライドをデプロイするために、以下の内容で`.github/workflows/deploy.yml`を作成してください。
 
 ```yaml
 name: Deploy pages
