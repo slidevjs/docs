@@ -34,7 +34,7 @@ const Guide = [
     link: '/guide/hosting',
   },
   {
-    text: 'Record Presentation',
+    text: 'レコーディング',
     link: '/guide/recording',
   },
   {

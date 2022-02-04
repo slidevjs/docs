@@ -1,17 +1,17 @@
-# Recording
+# レコーディング
 
-Slidev has a built-in recording and camera view. You can use them to record your presentation easily in one place.
+Slidevにはレコーディング機能とカメラビューが内蔵されています。これらを使って一箇所で簡単にプレゼンテーションをレコーディングすることができます。
 
-## Camera View
+## カメラビュー
 
-Click the <carbon-user-avatar class="inline-icon-btn"/> button in the navigation panel to show your camera view in the presentation. You can drag to move it, and use the handler on the right bottom corner to resize it. The size and position will persist in `localStorage` and will therefore be consistent across multiple refreshes, so no need to worry about that.
+カメラビューをプレゼンテーションで有効にするには、ナビゲーションパネルの<carbon-user-avatar class="inline-icon-btn"/>ボタンをクリックしてください。ドラッグで移動、右下のハンドラでサイズ変更も可能です。サイズと位置は`localStorage`に保存され、リフレッシュされても維持されるため、心配する必要はありません。
 
 <Tweet id="1395006771027120133" />
 
-## Recording
+## レコーディング
 
-Clicking the <carbon-video class="inline-icon-btn"/> button in the navigation panel will bring up a dialog for you. Here you can choose to either record your camera embedded in your slides or to separate them into two video files.
+ナビゲーションパネルの<carbon-video class="inline-icon-btn"/>ボタンをクリックすると、ダイアログが表示されます。ここでは、スライドにカメラを埋め込んで録画するか、2つの動画ファイルに分離して録画するかを選択することができます。
 
-This feature is powered by [RecordRTC](https://github.com/muaz-khan/RecordRTC) and uses the [WebRTC API](https://webrtc.org/).
+この機能は[RecordRTC](https://github.com/muaz-khan/RecordRTC)によって提供され、[WebRTC API](https://webrtc.org/)を使用しています。
 
 ![](/screenshots/recording.png)
