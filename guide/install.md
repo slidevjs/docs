@@ -1,30 +1,30 @@
-# Installation
+# インストール
 
-## Starter Template
+## スターターテンプレート
 
-> Slidev requires [**Node.js >=14.0**](https://nodejs.org/)
+> Slidevは[**Node.js >=14.0**](https://nodejs.org/)で動作します
 
-The best way to get started is using our official starter template.
+まずは公式スターターテンプレートを利用してみてください。
 
-With NPM:
+NPMで使用する：
 
 ```bash
 $ npm init slidev@latest
 ```
 
-With Yarn:
+Yarnで使用する：
 
 ```bash
 $ yarn create slidev
 ```
 
-Follow the prompts and it will open up the slideshow at http://localhost:3030/ automatically for you.
+表示されるプロンプトに従って操作をすると、スライドショーが http://localhost:3030/ で自動的に立ち上がります。
 
-It also contains the basic setup and a short demo with instructions on how to get started with Slidev.
+スターターテンプレートには基本的な設定やSlidevの使い方を説明した短いデモも収録されています。
 
-## Install Manually
+## マニュアルインストール
 
-If you still prefer to install Slidev manually or would like to integrate it into your existing projects, you can do:
+Slidevを手動でインストールしたい、または既存のプロジェクトに統合したい場合は、次のようにします：
 
 ```bash
 $ npm install @slidev/cli @slidev/theme-default
@@ -36,32 +36,32 @@ $ touch slides.md
 $ npx slidev
 ```
 
-> Please note if you are using [pnpm](https://pnpm.io), you will need to enable [shamefully-hoist](https://pnpm.io/npmrc#shamefully-hoist) option for Slidev to work properly:
+> [pnpm](https://pnpm.io)を使用している場合、Slidevを正しく動作させるために[shamefully-hoist](https://pnpm.io/npmrc#shamefully-hoist)オプションを有効にする必要があることに注意してください。
 >
 > ```bash
 > echo 'shamefully-hoist=true' >> .npmrc
 > ```
 
-## Install Globally
+## グローバルインストール
 
-> Available since v0.14
+> v0.14から使用可能です
 
-You can install Slidev globally with the following command
+以下のコマンドで、Slidevをグローバルにインストール可能です。
 
 ```bash
 $ npm i -g @slidev/cli
 ```
 
-And then use `slidev` everywhere without creating a project every time.
+毎回プロジェクトを作成することなく、どこでも`slidev`コマンドを使用できるようになります。
 
 ```bash
 $ slidev
 ```
 
-This command will also try to use local `@slidev/cli` if it has been found in the `node_modules`.
+このコマンドはローカルの`@slidev/cli`が`node_modules`にあれば、それを実行します。
 
-## Install on Docker
+## Docker上にインストールする
 
-If you need a rapid way to run a presentation with containers, you can use the prebuilt [docker](https://hub.docker.com/r/stig124/slidev) image maintained by [stig124](https://github.com/Stig124), or build your own.
+コンテナでプレゼンテーションを迅速に実行する必要がある場合、あらかじめ組み込まれている[docker](https://hub.docker.com/r/stig124/slidev)イメージ（メンテナー：[stig124](https://github.com/Stig124)）を使うか、あるいは自分でビルドします。
 
-Refer to the [slidevjs/container repo](https://github.com/slidevjs/container) for more details.
+詳しくは[slidevjs/container repo](https://github.com/slidevjs/container)を参照してください。
