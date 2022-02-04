@@ -1,8 +1,8 @@
-# Markdown Syntax
+# Markdownシンタックス
 
-Slides are written within **a single markdown file** (by default `./slides.md`). 
+スライドは **一つのマークダウンファイル** (デフォルト： `./slides.md`) の中に記述されます。 
 
-You can use [the Markdown features](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) as you normally would, with the additional support of inlined HTML and Vue Components. Styling using [Windi CSS](https://windicss.org) is also supported. Use `---` padded with a new line to separate your slides. 
+[Markdownの機能](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)は通常通り使用することができ、インラインHTMLとVueコンポーネントが追加でサポートされています。[Windi CSS](https://windicss.org)を使ったスタイリングもサポートされています。スライドを区切るには改行で囲まれた`---`を使用してください。 
 
 ~~~md
 # Slidev
@@ -11,9 +11,9 @@ Hello, World!
 
 ---
 
-# Page 2
+# ページ 2
 
-Directly use code blocks for highlighting
+コードブロックを直接使用してハイライト表示する
 
 //```ts
 console.log('Hello, World!')
@@ -21,18 +21,18 @@ console.log('Hello, World!')
 
 ---
 
-# Page 3
+# ページ 3
 
-You can directly use Windi CSS and Vue components to style and enrich your slides.
+Windi CSSとVueコンポーネントを直接使用して、スライドをスタイリングし、リッチにすることができます。
 
 <div class="p-3">
   <Tweet id="20" />
 </div>
 ~~~
 
-## Front Matter & Layouts
+## フロントマター & レイアウト
 
-Specify layouts and other metadata for each slide by converting the separators into [front matter blocks](https://jekyllrb.com/docs/front-matter/). Each frontmatter starts with a triple-dash and ends with another. Texts between them are data objects in [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) format. For example:
+スライドのセパレータを[フロントマターブロック](https://jekyllrb.com/docs/front-matter/)に変換して、各スライドのレイアウトやその他のメタデータを指定します。各フロントマターはトリプルダッシュで始まり、トリプルダッシュで終わります。その間にあるテキストは[YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/)形式のデータオブジェクトになります。例：
 
 ~~~md
 ---
@@ -41,7 +41,7 @@ layout: cover
 
 # Slidev
 
-This is the cover page.
+これはカバーページです。
 
 ---
 layout: center
@@ -49,22 +49,22 @@ background: './images/background-1.png'
 class: 'text-white'
 ---​
 
-# Page 2
+# ページ 2
 
-This is a page with the layout `center` and a background image.
+これはレイアウト`center`とバックグラウンドイメージが指定されたページです。
 
 ---
 
-# Page 3
+# ページ 3
 
-This is a default page without any additional metadata.
+これはいかなる追加のメタデータもない、デフォルトのページです。
 ~~~
 
-Refer to [customization](/custom/) for more details.
+詳細は[カスタマイズ](/custom/)を参照してください。
 
-## Code Blocks
+## コードブロック
 
-One big reason I am building Slidev is needing to make my code look just right in the slides. So just as you expected, you can use Markdown flavored code block to highlight your code.
+Slidevを構築した大きな理由の1つは、自分のコードをスライド上で正しく見せる必要があるためです。SlidevではMarkdownフレーバーなコードブロックを使って、期待通りコードをハイライトすることができます。
 
 ~~~ts
 //```ts
@@ -72,11 +72,11 @@ console.log('Hello, World!')
 //```
 ~~~
 
-We support [Prism](http://prismjs.com) and [Shiki](https://github.com/shiki/shiki) as syntax highlighters. Refer to [the highlighters section](/custom/highlighters) for more details.
+Slidevはシンタックスハイライターとして[Prism](http://prismjs.com)と[Shiki](https://github.com/shiki/shiki)をサポートしています。詳細は[コードハイライト](/custom/highlighters)を参照してください。
 
-### Line Highlighting
+### 行のハイライト
 
-To highlight specific lines, simply add line numbers within bracket `{}`. Line numbers start counting from 1.
+特定の行をハイライトするためには、ブラケット`{}`の中に単純に行番号を追加するだけです。行番号のカウントは1から始まります。
 
 ~~~ts
 //```ts {2,3}
@@ -89,7 +89,7 @@ function add(
 //```
 ~~~
 
-To change the highlight in multiple steps, you can use `|` to separate them. For example
+ハイライトを複数ステップに分けて変更するには、`|`を使用して行番号を分割してください。例：
 
 ~~~ts
 //```ts {2-3|5|all}
@@ -102,11 +102,11 @@ function add(
 //```
 ~~~
 
-This will first highlight `a: Ref<number> | number` and `b: Ref<number> | number`, and then `return computed(() => unref(a) + unref(b))` after one click, and lastly, the whole block. Learn more in the [clicks animations guide](/guide/animations).
+このサンプルでは、はじめに`a: Ref<number> | number`と`b: Ref<number> | number`を、次にクリックがされた後に`return computed(() => unref(a) + unref(b))`を、最後にコードブロック全体をハイライトします。詳細は[クリックアニメーションガイド](/guide/animations)を参照してください。
 
-### Monaco Editor
+### Monacoエディタ
 
-Whenever you want to do some modification in the presentation, simply add `{monaco}` after the language id — it turns the block into a fully-featured Monaco editor!
+プレゼンテーション中になんらかの変更を加えたいときは、言語名の後ろに`{monaco}`を追加するだけで、ブロックが完全なMonacoエディタに切り替わります！
 
 ~~~ts
 //```ts {monaco}
@@ -114,14 +114,14 @@ console.log('HelloWorld')
 //```
 ~~~
 
-Learn more about [configuring Monaco](/custom/config-monaco).
+詳細は[Monacoの設定](/custom/config-monaco)を参照してください。
 
-## Embedded Styles
+## 埋め込みスタイル
 
-You can use `<style>` tag in your Markdown directly to override styles for the **current slide**.
+Markdownで直接`<style>`タグを使用すると、**現在のスライド**のスタイルをオーバーライドすることができます。
 
 ```md
-# This is Red
+# このページはRed
 
 <style>
 h1 {
@@ -131,12 +131,12 @@ h1 {
 
 ---
 
-# Next slide is not affected
+# 次のスライドには適用されない
 ```
 
-`<style>` tag in Markdown is always [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html). To have global style overrides, check out the [customization section](/custom/directory-structure#style).
+Markdown内の`<style>`タグは常に[scoped](https://vue-loader.vuejs.org/guide/scoped-css.html)です。グローバルにスタイルをオーバーライドする場合は、[カスタマイズセクション](/custom/directory-structure#style)を参照してください。
 
-Powered by [Windi CSS](https://windicss.org), you can directly use nested css and [directives](https://windicss.org/features/directives.html) (e.g. `@apply`)
+[Windi CSS](https://windicss.org)を搭載しているため、 ネストしたCSSや[directives](https://windicss.org/features/directives.html) (e.g. `@apply`)を直接利用することができます。
 
 ```md
 # Slidev
@@ -152,76 +152,76 @@ blockquote {
 </style>
 ```
 
-## Static Assets
+## 静的アセット
 
-Just like you would do in markdown, you can use images pointing to a remote or local url.
+Markdownで書くのと同じように、リモートまたはローカルのURLを指定して画像を使用することができます。
 
-For remote assets, the built-in [`vite-plugin-remote-assets`](https://github.com/antfu/vite-plugin-remote-assets) will cache them into the disk at the first run so you can have instant loading even for large images later on.
-
-```md
-![Remote Image](https://sli.dev/favicon.png)
-```
-
-For local assets, put them into the [`public` folder](/custom/directory-structure.html#public) and reference them with **leading slash**.
+リモートのアセットについては、ビルトインの[`vite-plugin-remote-assets`](https://github.com/antfu/vite-plugin-remote-assets)が初回実行時にディスクにキャッシュするため、あとで大きなサイズの画像を読み込み場合でもすぐに読み込むことができます。
 
 ```md
-![Local Image](/pic.png)
+![リモートの画像](https://sli.dev/favicon.png)
 ```
 
-For you want to apply custom sizes or styles, you can convert them to the `<img>` tag 
+ローカルのアセットについては、[`public`フォルダ](/custom/directory-structure.html#public)に格納し、**頭にスラッシュ**をつけて参照します。
+
+```md
+![ローカルの画像](/pic.png)
+```
+
+カスタムサイズやスタイルを適用したい場合は、`<img>`タグに変換することもできます。
 
 ```html
 <img src="/pic.png" class="m-40 h-40 rounded shadow" />
 ```
 
-## Notes
+## ノート
 
-You can also take notes for each slide. They will show up in [Presenter Mode](/guide/presenter-mode) for you to reference during presentations.
+各スライドにメモを取ることもできます。メモは[プレゼンターモード](/guide/presenter-mode)に表示され、プレゼンテーションの際に参照することができます。
 
-In Markdown, the last comment block in each slide will be treated as a note.
+Markdownでは、各スライドの最後のコメントブロックはノートとして扱われます。
 
 ~~~md
 ---
 layout: cover
 ---
 
-# Page 1
+# ページ 1
 
-This is the cover page.
+これはカバーページです。
 
-<!-- This is a note -->
+<!-- これはノートです -->
 
 ---
 
-# Page 2
+# ページ 2
 
-<!-- This is NOT a note because it precedes the content of the slide -->
+<!-- これは、スライドの内容より前にあるため、ノートではありません。 -->
 
-The second page
+2ページ目
 
 <!--
-This is another note
+これもまたノートです
 -->
 ~~~
 
-## Icons
+## アイコン
 
-Slidev allows you to have the accessing to almost all the popular open-source iconsets **directly** in your markdown. Powered by [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) and [Iconify](https://iconify.design/).
+Slidevを使用すると、Markdownの中でほとんどすべての人気のあるオープンソースのアイコンセットに**直接**アクセスすることができます。[`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons)と[Iconify](https://iconify.design/)によって提供されています。
 
-The naming follows [Iconify](https://iconify.design/)'s conversion `{collection-name}-{icon-name}`. For example:
+命名は[Iconify](https://iconify.design/)の`{collection-name}-{icon-name}`の形式に従います。例：
 
 - `<mdi-account-circle />` - <mdi-account-circle /> from [Material Design Icons](https://github.com/Templarian/MaterialDesign)
 - `<carbon-badge />` - <carbon-badge /> from [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons)
 - `<uim-rocket />` - <uim-rocket /> from [Unicons Monochrome](https://github.com/Iconscout/unicons)
 - `<twemoji-cat-with-tears-of-joy />` - <twemoji-cat-with-tears-of-joy /> from [Twemoji](https://github.com/twitter/twemoji)
 - `<logos-vue />` - <logos-vue /> from [SVG Logos](https://github.com/gilbarbara/logos)
-- And much more...
+- その他にも。..
 
-Browse and search for all the icons available with [Icônes](https://icones.js.org/).
+利用可能なすべてのアイコンは[Icônes](https://icones.js.org/)で閲覧・検索できます。
 
-### Styling Icons
+### アイコンのスタイリング
 
-You can style the icons just like other HTML elements. For example:
+他のHTML同様にアイコンをスタイルすることができます。例：
 
 ```html
 <uim-rocket />
@@ -233,13 +233,13 @@ You can style the icons just like other HTML elements. For example:
 <uim-rocket class="text-3xl text-red-400 mx-2" />
 <uim-rocket class="text-3xl text-orange-400 animate-ping ml-2" />
 
-## Slots
+## スロット
 
-> Available since v0.18
+> v0.18から使用可能です
 
-Some layouts can provide multiple contributing points using [Vue's named slots](https://v3.vuejs.org/guide/component-slots.html).
+[名前付きスロット](https://v3.ja.vuejs.org/guide/component-slots.html#%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AB%E3%83%8F%E3%82%99%E3%83%83%E3%82%AF%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84)を使用して、複数のコントリビュートポイントを提供できるレイアウトもあります。
 
-For example, in [`two-cols` layout](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts/two-cols.vue), you can have two columns left (`default` slot) and right (`right` slot) side by side.
+例えば、[`two-cols`レイアウト](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts/two-cols.vue)では、左 (`default`スロット）と右 (`right` スロット）の2つのカラムを並べることができるようになります。
 
 ```md
 ---
@@ -248,50 +248,50 @@ layout: two-cols
 
 <template v-slot:default>
 
-# Left
+# 左
 
-This shows on the left
+これは左側に表示されます。
 
 </template>
 <template v-slot:right>
 
-# Right
+# 右
 
-This shows on the right
+これは右側に表示されます。
 
 </template>
 ```
 
 <div class="grid grid-cols-2 rounded border border-gray-400 border-opacity-50 px-10 pb-4">
 <div>
-<h3>Left</h3>
-<p>This shows on the left</p>
+<h3>左</h3>
+<p>これは左側に表示されます。</p>
 </div>
 <div>
-<h3>Right</h3>
-<p>This shows on the right</p>
+<h3>右</h3>
+<p>これは右側に表示されます。</p>
 </div>
 </div>
 
-We also provide a shorthand syntax sugar `::name::` for slot name. The following example works exactly the same as the previous one.
+またスロット名のショートハンドシンタックスシュガー`::name::`も用意されています。次の例は前に示した例と全く同じように動作します。
 
 ```md
 ---
 layout: two-cols
 ---
 
-# Left
+# 左
 
-This shows on the left
+これは左側に表示されます。
 
 ::right::
 
-# Right
+# 右
 
-This shows on the right
+これは右側に表示されます。
 ```
 
-You can also explicitly specify the default slot and provide in the custom order
+またデフォルトのスロットを明示的に指定し、カスタムオーダーで提供することも可能です。
 
 ```md
 ---
@@ -300,20 +300,20 @@ layout: two-cols
 
 ::right::
 
-# Right
+# 右
 
-This shows on the right
+これは右側に表示されます。
 
 ::default::
 
-# Left
+# 左
 
-This shows on the left
+これは左側に表示されます。
 ```
 
-## Configurations
+## 設定
 
-All configurations needed can be defined in the Markdown file. For example:
+必要な設定はすべてMarkdownファイルで定義することができます。 例：
 
 ```md
 ---
@@ -324,29 +324,28 @@ background: 'https://source.unsplash.com/1600x900/?nature,water'
 
 # Slidev
 
-This is the cover page.
+これはカバーページです。
 ```
 
-Learn more about [frontmatter configurations](/custom/#frontmatter-configures).
+詳細は[フロントマターの設定](/custom/#frontmatter-configures)を参照してください。
 
 ## LaTeX
 
-Slidev comes with LaTeX support out-of-box, powered by [KaTeX](https://katex.org/).
+Slidevは[KaTeX](https://katex.org/)によってLaTeXをサポートしています。
 
 <Tweet id="1392246507793915904" />
 
-### Inline
+### インライン
 
-Surround your LaTeX with a single `$` on each side for inline rendering.
+インラインで表示する場合は、LaTeXの両側を1つの`$`で囲います。
 
 ```md
 $\sqrt{3x-1}+(1+x)^2$
 ```
 
-### Block
+### ブロック
 
-Use two (`$$`) for block rendering. This mode uses bigger symbols and centers
-the result.
+ブロックで表示するには、2つの (`$$`)を使います。このモードではより大きな記号を使用し、結果を中央に配置します。
 
 ```md
 $$
@@ -363,13 +362,13 @@ $$
 $$
 ```
 
-Learn more: [Demo](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.org/) | [`markdown-it-katex`](https://github.com/waylonflinn/markdown-it-katex)
+詳細： [デモ](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.org/) | [`markdown-it-katex`](https://github.com/waylonflinn/markdown-it-katex)
 
-## Diagrams
+## 図形
 
-You can also create diagrams / graphs from textual descriptions in your Markdown, powered by [Mermaid](https://mermaid-js.github.io/mermaid).
+[Mermaid](https://mermaid-js.github.io/mermaid)を利用して、Markdownのテキスト記述から図 / グラフを作成することも可能です。
 
-Code blocks marked as `mermaid` will be converted to diagrams, for example:
+`mermaid`として指定されたコードブロックは図形に変換されます。 例：
 
 ~~~md
 //```mermaid
@@ -379,7 +378,7 @@ sequenceDiagram
 //```
 ~~~
 
-You can further pass an options object to it to specify the scaling and theming. The syntax of the object is a JavaScript object literal, you will need to add quotes (`'`) for strings and use comma (`,`) between keys.
+さらにオプションオブジェクトを渡すことで、スケーリングやテーマを指定することができます。オブジェクトのシンタックスはJavaScriptのオブジェクトリテラルで、文字列には引用符（`'`)を、キーの間には（`,`)を追加する必要があります。
 
 ~~~md
 //```mermaid {theme: 'neutral', scale: 0.8}
@@ -390,40 +389,40 @@ C -->|Two| E[Result 2]
 //```
 ~~~
 
-Learn more: [Demo](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)
+詳細： [デモ](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)
 
-## Multiple Entries
+## マルチプルエントリー
 
-> Available since v0.15
+> v0.15から使用可能です
 
-You can split your `slides.md` into multiple files and organize them as you want.
+slides.md`を複数のファイルに分割して、好きなように整理することができます。
 
 `slides.md` :
 
 ```md
-# Page 1
+# ページ 1
 
-This is a normal page
+これは通常のページです。
 
 ---
 src: ./subpage2.md
 ---
 
-<!-- this page will be loaded from './subpage2.md' -->
-Inline content will be ignored
+<!-- このページは'./subpage2.md'から読み込まれます -->
+インラインコンテンツは無視されます
 ```
 
 `subpage2.md` :
 
 ```md
-# Page 2
+# ページ 2
 
-This page is from another file
+このページは別のファイルのものです
 ```
 
-### Frontmatter Merging
+### フロントマターのマージ
 
-You can provide frontmatters from both your main entry and external markdown pages. If there are the same keys in them, the ones from the **main entry have the higher priority**. For example
+フロントマターはメインのエントリーと外部のMarkdownページの両方から指定することができます。もし同じキーがある場合は、**メインエントリに記載されている内容がより優先度が高くなります**。例：
 
 `slides.md` :
 
@@ -443,12 +442,12 @@ layout: cover
 background: https://sli.dev/foo.png
 ---
 
-# Cover
+# カバー
 
-Cover Page
+カバーページ
 ```
 
-They will end up being equivalent of the following page:
+以下のページと同じように評価されます：
 
 ```md
 ---
@@ -457,14 +456,14 @@ background: https://sli.dev/bar.png
 class: text-center
 ---
 
-# Cover
+# カバー
 
-Cover Page
+カバーページ
 ```
 
-### Page Reusing
+### ページの再利用
 
-With the multi-entries support, reusing pages could be straightforward. For example:
+マルチエントリーにより、ページの再利用が用意になります。例：
 
 ```yaml
 ---
