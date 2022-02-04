@@ -30,7 +30,7 @@ const Guide = [
     link: '/guide/exporting',
   },
   {
-    text: 'Static Hosting',
+    text: '静的ホスティング',
     link: '/guide/hosting',
   },
   {
