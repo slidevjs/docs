@@ -1,18 +1,18 @@
-# Editor Support
+# エディタサポート
 
-Since Slidev is using Markdown as the source entry, you can use ANY editors you love to write it.
+Slidevはソースの入力にMarkdownを使用しているので、あなたが好きなエディタで書くことができます。
 
-If you want some high-level management to your slides, we have provided the following editor integrations for you!
+スライドを高度に管理したい場合、以下のエディタインテグレーションを使用することができます。
 
-## Integrated Editor
+## 統合エディタ
 
-Slidev comes with an integrated [CodeMirror](https://codemirror.net/) editor that will instantly reload and save the changes to your file. 
+Slidevには[CodeMirror](https://codemirror.net/)というエディタが統合されており、ファイルの変更を即座に再読み込みして保存してくれます。 
 
-Click the <carbon-edit class="inline-icon-btn"/> button to open it.
+起動するためには<carbon-edit class="inline-icon-btn"/>ボタンを押してください。
 
 ![](/screenshots/integrated-editor.png)
 
-## VS Code Extension
+## VS Code拡張機能
 
 <p align="center">
     <a href="https://github.com/slidevjs/slidev" target="_blank">
@@ -28,15 +28,15 @@ Click the <carbon-edit class="inline-icon-btn"/> button to open it.
     </a>
 </p>
 
-The VS Code extension provides some features to help you better organize your slides and have a quick overview of them.
+VS Code拡張機能はスライドをよりよく整理し、その概要を素早く把握するための機能を提供します。
 
-### Features
+### 機能
 
-- View slides in the side panel
-- Go to next / prev buttons
-- Re-ordering slides
-- Folding for slide blocks
-- Convert Markdown to HTML
+- スライドをサイドパネルで各人
+- 次へ / 戻る ボタン
+- スライドの順序入れ替え
+- スライドブロックのための折り畳み機能
+- MarkdownをHTMLに変換
 
 ![](https://user-images.githubusercontent.com/11247099/116809994-cc2caa00-ab73-11eb-879f-60585747c3c9.png)
 
