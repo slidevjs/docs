@@ -110,7 +110,7 @@ const Translations = [
 
 const Customizations = [
   {
-    text: 'Customizations',
+    text: 'カスタマイズ',
     link: '/custom/',
   },
   {
