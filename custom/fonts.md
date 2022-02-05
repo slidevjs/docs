@@ -1,10 +1,10 @@
-# Fonts
+# フォント
 
-> Available since v0.20
+> v0.20から使用可能です
 
-While you can use HTML and CSS to custom the fonts and style for your slides as you want, Slidev also provides a convenient way to use them effortlessly.
+HTMLやCSSを使ってスライドのフォントやスタイルを自由にカスタマイズすることができますが、Slidevはそれらを楽に扱うための便利な方法も提供しています。
 
-In your frontmatter, configure as following
+フロントマターで、以下のように設定します。
 
 ```yaml
 ---
@@ -18,44 +18,42 @@ fonts:
 ---
 ```
 
-And that's all.
+フォントは**[Google Fonts](https://fonts.google.com/)から自動的にインポート**されます。つまり、Google Fontsで利用可能なフォントを直接利用することができます。
 
-Fonts will be **imported automatically from [Google Fonts](https://fonts.google.com/)**. That means you can use any fonts available on Google Fonts directly.
+## ローカルフォント
 
-## Local Fonts
-
-By default, Slidev assumes all the fonts specified via `fonts` configurations come from Google Fonts. If you want to use local fonts, specify the `fonts.local` to opt-out the auto-importing. 
+デフォルトでは、Slidevは`fonts`で指定されたすべてのフォントはGoogle Fontsのものとして認識します。ローカルのフォントを使用したい場合は、`fonts.local`を指定して、自動インポートを無効にします。 
 
 ```yaml
 ---
 fonts:
-  # like font-family in css, you can use `,` to separate multiple fonts for fallback
+  # CSSにおけるfont-familyの指定のように、`,`を使用することでフォールバックのためのフォントを複数指定できます。
   sans: 'Helvetica Neue,Robot'
-  # mark 'Helvetica Neue' as local font
+  # 'Helvetica Neue'をローカルフォントとして指定します。
   local: 'Helvetica Neue'
 ---
 ```
 
-## Weights & Italic
+## 太さと斜体
 
-By default, Slidev imports three weights `200`,`400`,`600` for each font. You can configure them by:
+デフォルトでは、Slidevは各フォントに対して、`200`、`400`、`6000`の3つの太さをインポートします。次のように指定することができます：
 
 ```yaml
 ---
 fonts:
   sans: 'Robot'
-  # default
+  # デフォルト
   weights: '200,400,600'
-  # import italic fonts, default `false`
+  # デフォルトで`false`になっている斜体フォントをインポートします。
   italic: false
 ---
 ```
 
-This configuration applies to all web fonts. For more fine-grained controls of each font's weights, you will need to manually import them with [HTML](/custom/directory-structure.html#index-html) and CSS.
+この設定はすべてのWebフォントに適用されます。各フォントの太さをより細かく制御するには、[HTML](/custom/directory-structure.html#index-html)とCSSで手動でインポートする必要があります。
 
-## Fallback Fonts
+## フォントのフォールバック
 
-For most of the scenarios, you only need to specify the "special font" and Slidev will append the fallback fonts for you, for example:
+ほとんどのケースでは、"特別なフォント"を指定するだけで、Slidevがフォールバックフォントを追加してくれます。例：
 
 ```yaml
 ---
@@ -66,7 +64,7 @@ fonts:
 ---
 ```
 
-will result in 
+これは次のようになります 
 
 ```css
 .font-sans {
@@ -80,7 +78,7 @@ will result in
 }
 ```
 
-If you want to disable the fallback fonts, configure as following
+フォールバックフォントを無効化するには、次のように設定します。
 
 ```yaml
 ---
@@ -90,12 +88,12 @@ fonts:
 ---
 ```
 
-## Providers
+## プロバイダー
 
-- Options: `google` | `none`
-- Default: `google`
+- オプション： `google` | `none`
+- デフォルト： `google`
 
-Currently, only Google Fonts is supported, we are planned to add more providers in the future. Specify to `none` will disable the auto-importing feature entirely and treat all the fonts local.
+現時点ではGoogleフォントのみをサポートしていますが、将来的にはほかのプロバイダーも追加する予定です。`none`を指定すると、自動インポート機能を完全に無効にし、すべてのフォントをローカルに扱えるようになります。
 
 ```yaml
 ---

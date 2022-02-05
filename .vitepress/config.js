@@ -118,7 +118,7 @@ const Customizations = [
     link: '/custom/directory-structure',
   },
   {
-    text: 'Fonts',
+    text: 'フォント',
     link: '/custom/fonts',
   },
   {
