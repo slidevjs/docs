@@ -1,8 +1,8 @@
-# Configure Mermaid
+# Mermaidの設定
 
 <Environment type="client" />
 
-Create `./setup/mermaid.ts` with the following content:
+以下の内容で`./setup/mermaid.ts`を作成します：
 
 ```ts
 import { defineMermaidSetup } from '@slidev/types'
@@ -14,4 +14,4 @@ export default defineMermaidSetup(() => {
 })
 ```
 
-With the setup, you can provide a custom default setting for [Mermaid](https://mermaid-js.github.io/). Refer to the type definitions and its documentation for more details.
+セットアップにより、[Mermaid](https://mermaid-js.github.io/)のカスタムデフォルト設定を使用することができます。詳細については、型の定義とドキュメントを参照してください。
