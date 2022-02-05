@@ -1,18 +1,18 @@
-# Global Layers
+# グローバルレイヤー
 
-> Available since v0.17
+> v0.17から使用可能です
 
-Global layers allow you to have custom components that **persistent** across slides. This could be useful for having footers, cross-slides animations, global effects, etc.
+グローバルレイヤーを使用すると、スライド間で**永続的な**カスタムコンポーネントを持つことができます。これはフッター、スライドをまたぐアニメーション、グローバルエフェクトなどに便利です。
 
-Slidev provides two layers for this usage, create `global-top.vue` or `global-bottom.vue` under your project root and it will pick up automatically.
+Slidevはこのために2つのレイヤーを提供しています。プロジェクトのルートに`global-top.vue`や`global-bottom.vue`を作成すると、自動的にピックアップされます。
 
-Layers relationship:
+レイヤーの関係性：
 
-- Global Top (`global-top.vue`)
-- Slides
-- Global Bottom (`global-bottom.vue`)
+- グローバルトップ (`global-top.vue`)
+- スライド
+- グローバルボトム (`global-bottom.vue`)
 
-## Example
+## 例
 
 ```html
 <!-- global-top.vue -->
@@ -21,12 +21,12 @@ Layers relationship:
 </template>
 ```
 
-The text `Your Name` will appear to all your slides.
+`Your Name`という文字はすべてのスライドに表示されます。
 
-To enabled it conditionally, you can apply it with the [Vue Global Context](/custom/vue-context).
+条件付きで有効にするには、[Vueグローバルコンテキスト](/custom/vue-context)を使用して適用します。
 
 ```html
-<!-- hide the footer from Page 4 -->
+<!-- Page 4からフッターを隠します-->
 <template>
   <footer
     v-if="$slidev.nav.currentPage !== 4"
@@ -38,7 +38,7 @@ To enabled it conditionally, you can apply it with the [Vue Global Context](/cus
 ```
 
 ```html
-<!-- hide the footer from "cover" layout -->
+<!-- "cover"レイアウトからフッターを隠します -->
 <template>
   <footer
     v-if="$slidev.nav.currentLayout !== 'cover'"
@@ -50,7 +50,7 @@ To enabled it conditionally, you can apply it with the [Vue Global Context](/cus
 ```
 
 ```html
-<!-- an example footer for pages -->
+<!-- ページ用フッターの一例 -->
 <template>
   <footer
     v-if="$slidev.nav.currentLayout !== 'cover'"
