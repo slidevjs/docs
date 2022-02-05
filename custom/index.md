@@ -1,71 +1,71 @@
-# Customizations
+# カスタマイズ
 
-Slidev is fully customizable, from styling to tooling configurations. It allows you to configure the tools underneath ([Vite](/custom/config-vite), [Windi CSS](/custom/config-windicss), [Monaco](/custom/config-monaco), etc.)
+Slidevは、スタイリングからツールの設定まで、フルカスタマイズが可能です。Slidevの配下にあるツール（[Vite](/custom/config-vite)、[Windi CSS](/custom/config-windicss)、 [Monaco](/custom/config-monaco)など）を設定することが可能です。
 
-## Frontmatter Configures
+## フロントマターの設定
 
-You can configure Slidev in the frontmatter of your first slide, the following shows the default value for each option.
+最初のスライドのフロントマターで、Slidevの設定をすることができます。以下に各オプションのデフォルト値を示しています。
 
 ```yaml
 ---
-# theme id or package name
+# テーマのIDもしくはパッケージ名
 theme: 'default'
-# title of your slide, will auto infer from the first header if not specified
+# スライドのタイトル 指定されていない場合、最初のヘッダーから自動的に推測されます。
 title: ''
-# titleTemplate for the webpage, `%s` will be replaced by the page's title
+# webページのタイトルテンプレート `%s`は各ページのタイトルで置き換えられます。
 titleTemplate: '%s - Slidev'
 
-# enabled pdf downloading in SPA build, can also be a custom url
+# SPAビルドにおけるPDFダウンロードを有効化します。カスタムURLを使用することも可能です。 
 download: true
-# syntax highlighter, can be 'prism' or 'shiki'
+# シンタックスハイライト 'prism'か'shiki'が選択可能です。
 highlighter: 'prism'
-# show line numbers in code blocks
+# コードブロックに行番号を表示します。
 lineNumbers: false
-# enable monaco editor, default to dev only
+# Monacoエディタを有効化します。デフォルトでは開発環境のみ有効です。
 monaco: 'dev'
 
-# force color schema for the slides, could be 'auto', 'light', or 'dark'
+# スライドのカラースキーマを変更します。'auto'、'light'または'dark'を指定可能です。
 colorSchema: 'auto'
-# router mode for vue-router, could be "history" or "hash"
+# vue-routerのためのrouterModeを指定します。"history"または"hash"が指定可能です。
 routerMode: 'history'
-# aspect ratio for the slides
+# スライドのアスペクト比を指定します。
 aspectRatio: '16/9'
-# real width of the canvas, unit in px
+# canvasの実際の横幅を指定します。単位はpxです。
 canvasWidth: 980
 
-# fonts will be auto imported from Google fonts
-# Learn more: https://sli.dev/custom/fonts
+# フォントはGoogle Fontsから自動的にimportされます。
+# 詳細: https://sli.dev/custom/fonts
 fonts:
   sans: 'Roboto'
   serif: 'Roboto Slab'
   mono: 'Fira Code'
 
-# default frontmatter applies to all slides
+# デフォルトのフロントマターはすべてのスライドに適用されます。
 defaults:
   layout: 'default'
   # ...
 
-# information for your slides, can be a markdown string
+# スライドの情報をMarkdownで記述することができます。
 info: |
   ## Slidev
   My first [Slidev](http://sli.dev/) presentations!
 ---
 ```
 
-Check out the [type definitions](https://github.com/slidevjs/slidev/blob/main/packages/types/src/config.ts) for more options.
+より詳しいオプションは[type definitions](https://github.com/slidevjs/slidev/blob/main/packages/types/src/config.ts)を参照してください。
 
-## Directory Structure
+## ディレクトリ構造
 
-Slidev uses directory structure conventions to minimalize the configuration surface and make extensions in functionality flexible and intuitive.
+Slidevはディレクトリ構造の規約を利用して、設定を最小化し、機能の拡張を柔軟かつ直感的に行えるようにしています。
 
-Refer to the [Directory Structure](/custom/directory-structure) section.
+[ディレクトリ構造](/custom/directory-structure)のセクションを参照してください。
 
-## Config Tools
+## ツールを設定する
 
-- [Highlighters](/custom/highlighters)
-- [Configure Vue](/custom/config-vue)
-- [Configure Vite](/custom/config-vite)
-- [Configure Windi CSS](/custom/config-windicss)
-- [Configure Monaco](/custom/config-monaco)
-- [Configure KaTeX](/custom/config-katex)
-- [Configure Mermaid](/custom/config-mermaid)
+- [ハイライター](/custom/highlighters)
+- [Vueの設定](/custom/config-vue)
+- [Viteの設定](/custom/config-vite)
+- [Windi CSSの設定](/custom/config-windicss)
+- [Monacoの設定](/custom/config-monaco)
+- [KaTeXの設定](/custom/config-katex)
+- [Mermaidの設定](/custom/config-mermaid)
