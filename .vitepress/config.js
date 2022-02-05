@@ -142,7 +142,7 @@ const Customizations = [
     link: '/custom/config-monaco',
   },
   {
-    text: 'Configure KaTeX',
+    text: 'KaTeXの設定',
     link: '/custom/config-katex',
   },
   {
