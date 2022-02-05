@@ -114,7 +114,7 @@ const Customizations = [
     link: '/custom/',
   },
   {
-    text: 'Directory Structure',
+    text: 'ディレクトリ構造',
     link: '/custom/directory-structure',
   },
   {
