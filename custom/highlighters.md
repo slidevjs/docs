@@ -1,22 +1,22 @@
-# Highlighters
+# シンタックスハイライト
 
-Slidev comes with two syntax highlighter for you to choose from:
+Slidevには2種類のシンタックスハイライトが付属しており、好みに合わせて選択できます：
 
 - [Prism](https://prismjs.com/)
 - [Shiki](https://github.com/shikijs/shiki)
 
-**Prism** is one of the most popular syntax highlighters. The highlighting is done by adding token classes to the code and it's colored using CSS. You can browse through their [official themes](https://github.com/PrismJS/prism-themes), or create/customize one yourself very easily using [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars).
+**Prism**は最も人気のあるシンタックスハイライトの1つです。ハイライトはトークンクラスにコードを追加することで行われ、CSSによって色付けされます。[オフィシャルテーマ](https://github.com/PrismJS/prism-themes)を確認したり、[`prism-theme-vars`](https://github.com/antfu/prism-theme-vars)を使用して簡単にテーマを作成/カスタマイズすることができます。
 
-**Shiki**, on the other hand, is a TextMate grammar-powered syntax highlighter. It generates colored tokens, so there is no additional CSS needed. Since it has great grammar support, the generated colors are very accurate, just like what you will see in VS Code. Shiki also comes with [a bunch of built-in themes](https://github.com/shikijs/shiki/blob/master/docs/themes.md). The downside of Shiki is that it also requires TextMate themes (compatible with VS Code theme) to do the highlighting, which can be a bit harder to customize.
+一方で**Shiki**はTextMateの文法に対応したシンタックスハイライトです。色付きのトークンを生成するため、追加のCSSは必要ありません。充実した文法サポートにより、生成された色はVS Codeで見るのと同じように非常に正確です。またShikiには[多くのビルトインテーマ](https://github.com/shikijs/shiki/blob/master/docs/themes.md)が付属しています。Shikiの欠点は、ハイライトを行うためにTextMateのテーマ（VS Codeのテーマと互換性あり）も必要で、カスタマイズが少し難しくなることです。
 
-Slidev themes usually support both Prism and Shiki, but depending on the theme you are using, it might only support one of them.
+Slidevのテーマは通常PrismとShikiの双方をサポートしていますが、使用するテーマによっては、どちらか一方しかサポートしていない場合があります。
 
-When you have the choice, the tradeoff is basically:
+選択肢がある場合、基本的にトレードオフです：
 
-- **Prism** for easier customization
-- **Shiki** for more accurate highlighting
+- **Prism**はカスタマイズが容易です。
+- **Shiki**はより正確にハイライトできます。
 
-By default, Slidev uses Prism. You can change it by modifying your frontmatter:
+デフォルトでは、SlidevはPrismを使用します。フロントマターを修正することで、この設定を変更できます：
 
 ```yaml
 ---
@@ -24,15 +24,15 @@ highlighter: shiki
 ---
 ```
 
-## Configure Prism
+## Prismの設定
 
-To configure your Prism, you can just import the theme css or use [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars) to configure themes for both light and dark mode. Refer to its docs for more details.
+Prismを設定する場合には、テーマのCSSをインポートするか、[`prism-theme-vars`](https://github.com/antfu/prism-theme-vars)を使用してテーマを設定することで、ライトモードとダークモードの両方のテーマを設定することができます。詳しくはドキュメントを参照してください。
 
-## Configure Shiki
+## Shikiの設定
 
 <Environment type="node" />
 
-Create `./setup/shiki.ts` file with the following content
+以下の内容で`./setup/shiki.ts`ファイルを作成します。
 
 ```ts
 /* ./setup/shiki.ts */
@@ -48,9 +48,9 @@ export default defineShikiSetup(() => {
 })
 ```
 
-Refer to [Shiki's docs](https://github.com/shikijs/shiki/blob/master/docs/themes.md#all-themes) for available theme names.
+利用可能なテーマの名前については、[Shikiのドキュメント](https://github.com/shikijs/shiki/blob/master/docs/themes.md#all-themes)を参照してください。
 
-Or if you want to use your own theme:
+自身のテーマを使用したい場合は次のようにします：
 
 ```ts
 /* ./setup/shiki.ts */

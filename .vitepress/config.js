@@ -122,7 +122,7 @@ const Customizations = [
     link: '/custom/fonts',
   },
   {
-    text: 'Highlighters',
+    text: 'シンタックスハイライト',
     link: '/custom/highlighters',
   },
   {
