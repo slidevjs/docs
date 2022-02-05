@@ -150,7 +150,7 @@ const Customizations = [
     link: '/custom/config-mermaid',
   },
   {
-    text: 'Configure Shortcuts',
+    text: 'ショートカットの設定',
     link: '/custom/config-shortcuts',
   },
   {
