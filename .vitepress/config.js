@@ -146,7 +146,7 @@ const Customizations = [
     link: '/custom/config-katex',
   },
   {
-    text: 'Configure Mermaid',
+    text: 'Mermaidの設定',
     link: '/custom/config-mermaid',
   },
   {
