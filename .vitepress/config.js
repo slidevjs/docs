@@ -158,7 +158,7 @@ const Customizations = [
     link: '/custom/vue-context',
   },
   {
-    text: 'Global Layers',
+    text: 'グローバルレイヤー',
     link: '/custom/global-layers',
   }
 ]
