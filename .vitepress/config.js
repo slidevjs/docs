@@ -138,7 +138,7 @@ const Customizations = [
     link: '/custom/config-windicss',
   },
   {
-    text: 'Configure Monaco',
+    text: 'Monacoの設定',
     link: '/custom/config-monaco',
   },
   {

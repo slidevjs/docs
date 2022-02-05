@@ -1,22 +1,22 @@
-# Configure Monaco
+# Monacoの設定
 
 <Environment type="client" />
 
-Create `./setup/monaco.ts` with the following content:
+以下の内容で`./setup/monaco.ts`を作成します。
 
 ```ts
 import { defineMonacoSetup } from '@slidev/types'
 
 export default defineMonacoSetup(async (monaco) => {
-  // use `monaco` to configure
+  // 設定するためには`monaco`を使用します
 })
 ```
 
-Learn more about [configuring Monaco](https://github.com/Microsoft/monaco-editor).
+詳細は[configuring Monaco](https://github.com/Microsoft/monaco-editor)を参照してください。
 
-## Usage
+## 使い方
 
-To use Monaco in your slides, simply append `{monaco}` to your code snippets:
+スライドでMonacoを使用するには、コードスニペットに`{monaco}`を追加するだけです：
 
 ~~~js
 //```js
@@ -29,7 +29,7 @@ plusOne.value++ // error
 //```
 ~~~
 
-To
+これを以下のように変更します
 
 ~~~js
 //```js {monaco}
@@ -42,19 +42,19 @@ plusOne.value++ // error
 //```
 ~~~
 
-## Exporting
+## エクスポート
 
-By default, Monaco will ONLY work on `dev` mode. If you would like to have it available in the exported SPA, configure it in your frontmatter:
+デフォルトでは、Monacoは`開発者`モードのみで動作します。エクスポートされたSPAでMonacoを使用したい場合は、フロントマターで設定してください：
 
 ```yaml
 ---
-monaco: true # default "dev"
+monaco: true # デフォルト "dev"
 ---
 ```
 
-## Types Auto Installing
+## 型の自動インストール
 
-When use TypeScript with Monaco, types for dependencies will be installed to the client-side automatically.
+MonacoでTypeScriptを使用する場合、依存関係のある型は自動的にクライアントサイドにインストールされます。
 
 ~~~ts
 //```ts {monaco}
@@ -65,11 +65,11 @@ const counter = ref(0)
 //```
 ~~~
 
-In the example above, make sure `vue` and `@vueuse/core` are installed locally as dependencies / devDependencies, Slidev will handle the rest to get the types working for the editor automatically!
+上記の例では、`vue`と`@vueuse/core`はdependencies / devDependenciesとしてローカルにインストールされています。あとはSlidevが自動的にエディタに対応した型を作成します。
 
-## Configure Themes
+## テーマの設定
 
-The theme is controlled by Slidev based on the light/dark theme. If you want to customize it, you can pass the theme id to the setup function:
+テーマはライトテーマ/ダークテーマをベースにSlidevで制御されています。テーマをカスタマイズしたい場合は、テーマのIDをsetup関数に指定します：
 
 ```ts
 // ./setup/monaco.ts
@@ -85,7 +85,7 @@ export default defineMonacoSetup(() => {
 })
 ```
 
-If you want to load custom themes:
+カスタムテーマを使用する場合には次のようにします：
 
 ```ts
 import { defineMonacoSetup } from '@slidev/types'
@@ -107,4 +107,4 @@ export default defineMonacoSetup((monaco) => {
 })
 ```
 
-> If you are creating a theme for Slidev, use dynamic `import()` inside the setup function to get better tree-shaking and code-splitting results.
+> Slidev用のテーマを作成する場合は、setup関数内で動的`import()`を使用すると、より良いtree-shakingとcode-splittingの結果を得ることができます。
