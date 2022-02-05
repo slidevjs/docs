@@ -1,30 +1,30 @@
-# Directory Structure
+# ディレクトリ構造
 
-Slidev employs some directory structure conventions to minimize the configuration surface and to make the functionality extensions flexible and intuitive.
+Slidevは設定面を最小化し、機能拡張を柔軟かつ直感的に行うために、いくつかのディレクトリ構造の規約を採用しています。
 
-The basic structure is as follows:
+基本的な構造は以下の通りです：
 
 ```bash
 your-slidev/
-  ├── components/       # custom components
-  ├── layouts/          # custom layouts
-  ├── public/           # static assets
-  ├── setup/            # custom setup / hooks
-  ├── styles/           # custom style
-  ├── index.html        # injections to index.html
-  ├── slides.md         # the main slides entry
-  └── vite.config.ts   # extending vite config
+  ├── components/       # カスタムコンポーネント
+  ├── layouts/          # カスタムレイアウト
+  ├── public/           # 静的アセット
+  ├── setup/            # カスタムセットアップ/フック
+  ├── styles/           # カスタムスタイル
+  ├── index.html        # index.htmlへのインジェクション
+  ├── slides.md         # メインスライド
+  └── vite.config.ts   # 拡張されたviteの設定
 ```
 
-All of them are optional.
+すべてオプションです。
 
-## Components
+## コンポーネント
 
-Conventions: `./components/*.{vue,js,ts,jsx,tsx,md}`
+規約： `./components/*.{vue,js,ts,jsx,tsx,md}`
 
-Components inside this directory can be directly used in the slides Markdown with the same component name as the file name.
+このディレクトリ内のコンポーネントは、ファイル名と同じコンポーネント名で、スライドのMarkdownで直接使用することができます。
 
-For example:
+例：
 
 ```bash
 your-slidev/
@@ -48,13 +48,13 @@ your-slidev/
 </hello-world>
 ```
 
-This feature is powered by [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components), learn more there.
+この機能は[`vite-plugin-components`](https://github.com/antfu/vite-plugin-components)によって提供されています。詳細はこちらを参照してください。
 
-Slidev also provides some [built-in components](/builtin/components) for you to use.
+またSlidevはいくつかの[built-in components](/builtin/components)を提供していますので、それを利用することもできます。
 
-## Layouts
+## レイアウト
 
-Conventions: `./layouts/*.{vue,js,ts,jsx,tsx}`
+規約： `./layouts/*.{vue,js,ts,jsx,tsx}`
 
 ```
 your-slidev/
@@ -64,7 +64,7 @@ your-slidev/
       └── my-cool-theme.vue
 ```
 
-You can use any filename for your layout. You then reference your layout in you YAML header using the filename.
+レイアウトには任意のファイル名を使用することができます。そしてファイル名を使用して、YAMLヘッダでレイアウトを参照します。
 
 ```yaml
 ---
@@ -72,9 +72,9 @@ layout: my-cool-theme
 ---
 ```
 
-If the layout you provide has the same name as a built-in layout or a theme layout, your custom layout will take precedence over the built-in/theme layout. The priority order is `local > theme > built-in`.
+作成したレイアウトがビルトインのレイアウトやテーマと同じ名前の場合、カスタムレイアウトがビルトイン/テーマレイアウトより優先されます。優先順位は`ローカル > テーマ > ビルトイン`の順です。
 
-In the layout component, use `<slot/>` for the slide content. For example:
+レイアウトコンポーネントでは、スライドのコンテンツに対して`<slot />`を使用します。例：
 
 ```html
 <!-- default.vue -->
@@ -85,17 +85,17 @@ In the layout component, use `<slot/>` for the slide content. For example:
 </template>
 ```
 
-## Public
+## 静的アセット
 
-Conventions: `./public/*`
+規約： `./public/*`
 
-Assets in this directory will be served at root path `/` during dev, and copied to the root of the dist directory as-is. Read more about [Vite's `public` directory](https://vitejs.dev/guide/assets.html#the-public-directory).
+このディレクトリに配置されているアセットは、開発中はルートパス`/`で提供され、そのままdistディレクトリのルートにコピーされます。詳細は[Vite's `public` directory](https://vitejs.dev/guide/assets.html#the-public-directory)を参照してください。
 
-## Style
+## スタイル
 
-Conventions: `./style.css` | `./styles/index.{css,js,ts}`
+規約： `./style.css` | `./styles/index.{css,js,ts}`
 
-Files following this convention will be injected to the App root. If you need to import multiple css entries, you can create the following structure and managing the import order yourself.
+この規約に従って配置されたファイルは、Appのルートに注入されます。複数のCSSをインポートする必要がある場合は、以下のような構造を作成し、インポートの順序を自分で管理することができます。
 
 ```bash
 your-slidev/
@@ -115,7 +115,7 @@ import './code.css'
 import './layouts.css'
 ```
 
-Styles will be processed by [Windi CSS](http://windicss.org/) and [PostCSS](https://postcss.org/), so you can use css nesting and [at-directives](https://windicss.org/features/directives.html) out-of-box. For example:
+スタイルは[Windi CSS](http://windicss.org/)と[PostCSS](https://postcss.org/)で処理されるため、CSSのネストや[at-directives](https://windicss.org/features/directives.html)をそのまま使用することができます。例：
 
 ```less
 .slidev-layout {
@@ -135,15 +135,15 @@ Styles will be processed by [Windi CSS](http://windicss.org/) and [PostCSS](http
 }
 ```
 
-[Learn more about the syntax](https://windicss.org/features/directives.html).
+[シンタックスについて詳しく学ぶ](https://windicss.org/features/directives.html)
 
 ## `index.html`
 
-Conventions: `index.html`
+規約： `index.html`
 
-The `index.html` provides the ability to inject meta tags and/or scripts to the main `index.html`
+`index.html`はメインの`index.html`にmeteタグやscriptを注入する機能を提供します。
 
-For example, for the following custom `index.html`:
+例えば、次のようなカスタム`index.html`の場合：
 
 ```html
 <!-- ./index.html -->
@@ -157,7 +157,7 @@ For example, for the following custom `index.html`:
 </body>
 ```
 
-The final hosted `index.html` will be:
+最終的にホストされる`index.html`は次のようになります。
 
 ```html
 <!DOCTYPE html>
@@ -179,9 +179,9 @@ The final hosted `index.html` will be:
 </html>
 ```
 
-## Global Layers
+## グローバルレイヤー
 
-Conventions: `global-top.vue` | `global-bottom.vue`
+規約： `global-top.vue` | `global-bottom.vue`
 
-Learn more: [Global Layers](/custom/global-layers)
+詳細： [グローバルレイヤー](/custom/global-layers)
 
