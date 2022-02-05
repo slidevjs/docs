@@ -126,7 +126,7 @@ const Customizations = [
     link: '/custom/highlighters',
   },
   {
-    text: 'Configure Vue',
+    text: 'Vueの設定',
     link: '/custom/config-vue',
   },
   {
