@@ -1,10 +1,10 @@
-# Vue Global Context
+# Vueグローバルコンテキスト
 
-Slidev injected a [global Vue context](https://v3.vuejs.org/api/application-config.html#globalproperties) `$slidev` for advanced conditions or navigation controls.
+Slidevは高度な条件やナビゲーションのコントロールのために、[グローバルVueコンテキスト](https://v3.ja.vuejs.org/api/application-config.html#globalproperties) `$slidev`を注入しています。
 
-## Usage
+## 使い方
 
-You can access it anywhere in your markdown and Vue template, with the ["Mustache" syntax](https://v3.vuejs.org/guide/template-syntax.html#interpolations).
+MarkdownやVueテンプレートのどこでも、["Mustache"タグ](https://v3.ja.vuejs.org/guide/template-syntax.html)を使ってアクセスできます。
 
 ```md
 <!-- slides.md -->
@@ -23,11 +23,11 @@ Current page is: {{ $slidev.nav.currentPage }}
 </template>
 ```
 
-## Properties
+## プロパティ
 
 ### `$slidev.nav`
 
-A reactive object holding the properties and controls of the slides navigation. For examples:
+スライドナビゲーションのプロパティとコントロールを保持するリアクティブオブジェクトです。 例：
 
 ```js
 $slidev.nav.next() // go next step
@@ -45,11 +45,11 @@ $slidev.nav.currentLayout // current layout id
 $slidev.nav.clicks // current clicks count
 ```
 
-For more properties available, refer to the [nav.ts](https://github.com/slidevjs/slidev/blob/main/packages/client/logic/nav.ts) exports.
+利用できるプロパティの詳細については、[nav.ts](https://github.com/slidevjs/slidev/blob/main/packages/client/logic/nav.ts)のエクスポートを参照してください。
 
 ### `$slidev.configs`
 
-A reactive object holding the parsed [configurations in the first frontmatter](/custom/#frontmatter-configures) of your `slides.md`. For example
+`slides.md`の[フロントマターの設定](/custom/#フロントマターの設定)をパースしたものを保持するリアクティブオブジェクトです。 例：
 
 ```yaml
 ---
@@ -63,7 +63,7 @@ title: My First Slidev!
 
 ### `$slidev.themeConfigs`
 
-A reactive object holding the parsed theme configurations.
+テーマの設定をパースしたものを保持するリアクティブオブジェクトです。
 
 ```yaml
 ---

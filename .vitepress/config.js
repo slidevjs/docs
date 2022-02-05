@@ -154,7 +154,7 @@ const Customizations = [
     link: '/custom/config-shortcuts',
   },
   {
-    text: 'Vue Global Context',
+    text: 'Vueグローバルコンテキスト',
     link: '/custom/vue-context',
   },
   {
