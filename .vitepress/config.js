@@ -130,7 +130,7 @@ const Customizations = [
     link: '/custom/config-vue',
   },
   {
-    text: 'Configure Vite',
+    text: 'Viteの設定',
     link: '/custom/config-vite',
   },
   {

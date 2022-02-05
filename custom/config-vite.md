@@ -1,12 +1,12 @@
-# Configure Vite
+# Viteの設定
 
 <Environment type="node" />
 
-Slidev is powered by [Vite](http://vitejs.dev/) under the hood. This means you can leverage Vite's great plugin system to customize your slides even further.
+Slidevは[Vite](http://vitejs.dev/)を搭載しています。つまり、Viteの素晴らしいプラグインシステムを利用して、スライドをさらにカスタマイズすることができます。
 
-The `vite.config.ts` will be respected if you have one.
+`vite.config.ts`があれば、それが採用されます。
 
-Slidev has the following plugins preconfigured:
+Slidevには以下のプラグインがあらかじめ設定されています：
 
 - [@vitejs/plugin-vue](https://github.com/vitejs/vite/tree/main/packages/plugin-vue)
 - [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
@@ -15,13 +15,13 @@ Slidev has the following plugins preconfigured:
 - [vite-plugin-windicss](https://github.com/windicss/vite-plugin-windicss)
 - [vite-plugin-remote-assets](https://github.com/antfu/vite-plugin-remote-assets)
 
-Learn more about the [pre-configurations here](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/plugins/preset.ts).
+詳細は[pre-configurations here](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/plugins/preset.ts)を参照してください。
 
-## Configure Internal Plugins
+## 内部プラグインの設定
 
-> Available since v0.21
+> v0.21から使用可能です
 
-To configure the built-in plugins list above, create `vite.config.ts` with the following content. Please note Slidev has some preconfigure options for those plugins, this usage will override some of them, which could potentially cause the app to break. Please treat this as **an advanced feature**, make sure you know what you are doing before moving on.
+上記のビルトインプラグインのリストを設定するために、以下の内容で`vite.config.ts`を作成します。Slidevはこれらのプラグインに対して、いくつかあらかじめ設定されたオプションを保持していることに注意してください。この使い方はそれらの設定を上書きし、アプリケーションが潜在的に壊れる原因になる可能性があります。これは**高度な機能**として扱い、何を行っているのかを確認してから次に進んでください。
 
 ```ts
 import { defineConfig } from 'vite'
@@ -43,4 +43,4 @@ export default defineConfig({
 })
 ```
 
-See the [type declarations](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/options.ts#L50) for more options.
+その他のオプションについては[type declarations](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/options.ts#L50)を参照してください。
