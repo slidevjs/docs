@@ -1,8 +1,8 @@
-# Configure KaTeX
+# KaTeXの設定
 
 <Environment type="node" />
 
-Create `./setup/katex.ts` with the following content:
+以下の内容で`./setup/katex.ts`を作成します：
 
 ```ts
 import { defineKatexSetup } from '@slidev/types'
@@ -14,4 +14,4 @@ export default defineKatexSetup(() => {
 })
 ```
 
-With the setup, you can provide the custom setting for [KaTex Options](https://katex.org/docs/options.html). Refer to the type definitions and their documentation for more details.
+この設定により、[KaTex Options](https://katex.org/docs/options.html)のカスタム設定を提供することができます。詳細については、型の定義とドキュメントを参照してください。
