@@ -134,7 +134,7 @@ const Customizations = [
     link: '/custom/config-vite',
   },
   {
-    text: 'Configure Windi CSS',
+    text: 'Windi CSSの設定',
     link: '/custom/config-windicss',
   },
   {
