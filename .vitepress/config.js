@@ -173,7 +173,7 @@ const Resources = [
     link: '/resources/learning',
   },
   {
-    text: 'Curated Covers',
+    text: 'キュレーションカバー',
     link: '/resources/covers',
   },
 ]
