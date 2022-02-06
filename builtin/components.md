@@ -1,16 +1,16 @@
-# Components
+# コンポーネント
 
-## Built-in Components
+## ビルトインコンポーネント
 
-> The documentations of this section is still working in progress. Before that, you can take a look at the [source code](https://github.com/slidevjs/slidev/blob/main/packages/client/builtin) directly.
+> このセクションのドキュメントはまだ作成中です。完成するまでは[ソースコード](https://github.com/slidevjs/slidev/blob/main/packages/client/builtin)を直接参照してください。
 
 ### `TOC`
 
-Insert a Table Of Content.
+目次を挿入します。
 
-Titles and title levels get automatically retrieved from the first title element of each slides.
+タイトルとタイトルレベルは、各スライドの最初のタイトル要素から自動的に取得されます。
 
-You can override this automatic behaviour for a slide by using the front matter syntax:
+フロントマターの構文を使用することで、スライドに対するこの自動取得の動作をオーバーライドすることができます：
 ```yml
 ---
 title: Amazing slide title
@@ -18,36 +18,36 @@ level: 2
 ---
 ```
 
-Or if you prefer the slide to not appear in the TOC at all, you can use:
+またスライドが目次に全く表示されないようにしたい場合には、次のようにします：
 ```yml
 ---
 hideInToc: true
 ---
 ```
 
-#### Usage
+#### 使用方法
 ~~~md
 <Toc />
 ~~~
 
-Parameters:
+パラメータ:
 
-* `columns` (`string | number`, default: `1`): The number of columns of the display
-* `maxDepth` (`string | number`, default: `Infinity`): The maximum depth level of title to display
-* `minDepth` (`string | number`, default: `1`): The minimum depth level of title to display
-* `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, default: `'all'`):
-  * `'all'`: Display all items
-  * `'onlyCurrentTree'`: Display only items that are in current tree (active item, parents and children of active item)
-  * `'onlySiblings'`: Display only items that are in current tree and their direct siblings
+* `columns` (`string | number`, デフォルト: `1`): 表示する列数
+* `maxDepth` (`string | number`, デフォルト: `Infinity`): 表示する目次の階層の最大値
+* `minDepth` (`string | number`, デフォルト: `1`): 表示する目次の階層の最小値
+* `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, デフォルト: `'all'`):
+  * `'all'`: すべての項目を表示する
+  * `'onlyCurrentTree'`: 現在のページが含まれるツリーのアイテムのみを表示する（アクティブな要素、アクティブな要素の親と子）
+  * `'onlySiblings'`: 現在のページが含まれるツリーと直接の兄弟関係にある要素のみを表示する
 
-## Custom Components
+## カスタムコンポーネント
 
-Create a directory `components/` under your project root, and simply put your custom Vue components under it, then you can use it with the same name in your markdown file!
+プロジェクトルートに`components/`ディレクトリを作成し、カスタムVueコンポーネントを配置するだけで、Markdownファイル内で同じ名前を使用してコンポーネントを使用することができます！
 
-Read more in the [Customization](/custom/directory-structure#components) section.
+詳細は[コンポーネント](/custom/directory-structure#コンポーネント)を参照してください。
 
-## Theme-provided Components
+## テーマが提供するコンポーネント
 
-Themes can provide components as well. Please read their documentations for what they have provided.
+テーマはコンポーネントを提供することもできます。提供されているものについては、それぞれのテーマのドキュメントを参照してください。
 
-Check more in the [directory structure](/custom/directory-structure) section.
+詳細は[ディレクトリ構造](/custom/directory-structure)のセクションを参照してください。
