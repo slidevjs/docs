@@ -57,7 +57,7 @@ const Guide = [
 
 const Theme = [
   {
-    text: 'Use Theme',
+    text: 'テーマを使用する',
     link: '/themes/use',
   },
   {
