@@ -169,7 +169,7 @@ const Resources = [
     link: '/showcases',
   },
   {
-    text: 'Learning Resources',
+    text: '学習リソース',
     link: '/resources/learning',
   },
   {
