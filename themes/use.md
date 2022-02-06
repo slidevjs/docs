@@ -1,6 +1,6 @@
-# Use Theme
+# テーマを使用する
 
-Changing the theme in Slidev is surprisingly easy. All you need to do is to add the `theme:` field in your frontmatter.
+Slidevのテーマを変更するのは驚くほど簡単です。フロントマターに`theme:`フィールドを追加するだけです。
 
 ```yaml
 ---
@@ -8,7 +8,7 @@ theme: seriph
 ---
 ```
 
-You can start the server, which will prompt you to install the theme automatically
+サーバーを起動すると、テーマの自動インストールを促すメッセージが表示されます。
 
 <div class="language-md">
 <pre>
@@ -16,25 +16,25 @@ You can start the server, which will prompt you to install the theme automatical
 </pre>
 </div>
 
-or install the theme manually via
+あるいは以下の方法で手動でテーマをインストールします
 
 ```bash
 $ npm install @slidev/theme-seriph
 ```
 
-And that's all, enjoy the new theme! For more details about the usage, you can refer to the theme's README.
+以上、新しいテーマをお楽しみください。各テーマの使い方の詳細については、テーマのREADMEを参照してください。
 
-Want to share your theme? Learn about [how to write a theme](/themes/write-a-theme).
+あなたのテーマを共有したいですか？[テーマの書き方](/themes/write-a-theme)を参照してください。
 
-## Eject Theme
+## テーマの取り出し
 
-If you want to get full control of the current theme, you can **eject** it to your local file system and modify it as you want. By running the following command
+現在のテーマを完全に制御したい場合は、ローカルファイルシステム上に**取り出し**して好きなように変更することができます。次のコマンドを実行します。
 
 ```bash
 $ slidev theme eject
 ```
 
-It will eject the theme you are using currently into `./theme`, and changed your frontmatter to 
+現在使用しているテーマを`./theme`に出力し、フロントマターを次のように変更します。
 
 ```yaml
 ---
@@ -42,11 +42,11 @@ theme: ./theme
 ---
 ```
 
-This could also be helpful if you want to make a theme based on an existing one. If you do, remember to mention the original theme and the author :)
+また、これは既存のテーマをベースにテーマを作成するのに参考になります。その際は、元のテーマと作者について言及することを忘れないでください :)
 
-## Local Theme
+## ローカルテーマ
 
-As you probably found out from the previous section, you can have a local theme for your project. By having a **relative path** in your theme field.
+前のセクションでおわかりのように、プロジェクトにローカルテーマを指定することができます。themeフィールドに**相対パス**を指定します。
 
 ```yaml
 ---
@@ -54,4 +54,4 @@ theme: ./path/to/theme
 ---
 ```
 
-Refer to [how to write a theme](/themes/write-a-theme) for more details.
+詳細は[テーマの書き方](/themes/write-a-theme)を参照してください。
