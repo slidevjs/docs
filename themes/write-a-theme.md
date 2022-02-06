@@ -1,34 +1,34 @@
-# Write a Theme
+# テーマを作成する
 
-To get started, we recommend you use our generator for scaffolding your first theme
+最初のテーマを作成するために、ジェネレータを作成することを推奨します。
 
 ```bash
 $ npm init slidev-theme
 ```
 
-Then you can modify and play with it. You can also refer to the [official themes](/themes/gallery) as examples.
+作成されたテーマを修正し、試すことができます。例として [公式テーマ](/themes/gallery)を参照することもできます。
 
-## Capability
+## できること
 
-A theme can contribute to the following points:
+テーマでは次のことができます：
 
-- Global styles
-- Provide default configurations (fonts, color schema, highlighters, etc.)
-- Provide custom layouts or override the existing one
-- Provide custom components or override the existing one
-- Extend Windi CSS configurations
-- Configure tools like Monaco and Prism
+- グローバルスタイル
+- デフォルトの設定を指定する (フォント、 カラースキーマ、 ハイライト、など）
+- カスタムレイアウトを指定する、もしくは既存のレイアウトを上書きする
+- カスタムコンポーネントを指定する、もしくは既存のコンポーネントを上書きする
+- Windi CSSの設定を拡張する
+- MonacoやPrismのようなツールの設定をする
 
-## Conventions
+## 規約
 
-Themes are published to npm registry, and they should follow the conventions below:
+テーマはnpmレジストリに公開され、以下の規約に従います。
 
-- Package name should start with `slidev-theme-`, for example: `slidev-theme-awesome`
-- Add `slidev-theme` and `slidev` in the `keywords` field of your `package.json`
+- パッケージ名は`slidev-theme-`から始めます。例： `slidev-theme-awesome`
+- `package.json`の`keywords`フィールドに、`slidev-theme`と`slidev`を追加します。
 
-## Setup
+## セットアップ
 
-To set up the testing playground for your theme, you can create `example.md` with the following frontmatter, to tell Slidev you are using the current directory as a theme.
+テーマのテスト用プレイグラウンドをセットアップするには、以下のようなフロントマターで`example.md`を作成し、現在のディレクトリをテーマとして使用することをSlidevに伝えます。
 
 ```md
 ---
@@ -36,7 +36,7 @@ theme: ./
 ---
 ```
 
-Optionally, you can also add some scripts to your `packages.json`
+オプションで、いくつかのスクリプトを`package.json`に追加することもできます。
 
 ```json
 // package.json
@@ -50,15 +50,15 @@ Optionally, you can also add some scripts to your `packages.json`
 }
 ```
 
-To publish your theme, simply run `npm publish` and you are good to go. There is no build process required (which means you can directly publish `.vue` and `.ts` files, Slidev is smart enough to understand them).
+テーマを公開するには`npm publish`を実行すればOKです。ビルドプロセスは必要ありません（つまり、`.vue`と`.ts`ファイルを直接公開することができ、Slidevはスマートなのでそれらを読み込むことができます）。
 
-Theme contribution points follow the same conventions as local customization, please refer to [the docs for the naming conventions](/custom/). 
+テーマのコントリビューションポイントはローカルカスタマイズと同じ規約に従います。[命名規約についてはドキュメント](/custom/)を参照してください。
 
-## Default Configurations
+## デフォルトの設定
 
-> Available since v0.19
+> v0.19から使用可能です
 
-A theme can provide default [configurations](/custom/#frontmatter-configures) via `package.json`.
+テーマでは`package.json`を介して、デフォルトの[設定](/custom/#フロントマターの設定)を指定できます。
 
 ```json
 // package.json
@@ -76,15 +76,15 @@ A theme can provide default [configurations](/custom/#frontmatter-configures) vi
 }
 ```
 
-Fonts will be auto imported from [Google Fonts](https://fonts.google.com/).
+フォントは[Googleフォント](https://fonts.google.com/)から自動でインポートされます。
 
-Learn more about [fonts](/custom/fonts) and [frontmatter configurations](/custom/#frontmatter-configures).
+詳細は[フォント](/custom/fonts)と[フロントマターの設定](/custom/#frontmatter-configures)を参照してください。
 
-## Theme Metadata
+## メタデータ
 
-### Color Schema
+### カラースキーマ
 
-By default, Slidev assumes themes support both light mode and dark mode. If you only want your theme be presented in a designed color schema, you will need to specify it explicitly in `package.json`
+デフォルトでは、Slidevはライトモードとダークモードの両方をサポートするテーマを想定しています。もしデザインされたカラースキーマだけでテーマを表示したいなら、`package.json`で明示的に指定する必要があります。
 
 ```json
 // package.json
@@ -100,29 +100,29 @@ By default, Slidev assumes themes support both light mode and dark mode. If you 
 }
 ```
 
-To access the dark mode when creating your theme styles, you can wrap the dark-mode-specific css inside a `dark` class:
+テーマのスタイルを作成する際にダークモードにアクセスするには、ダークモード特有の設定を`dark`クラスで囲みます：
 
 ```css
-/* general css here */
+/* 全体に適用されるCSS */
 
 html:not(.dark) {
-  /* light mode css here */
+  /* ライトモードのCSS */
 }
 
 html.dark {
-  /* dark mode css here */
+  /* ダークモードのCSS */
 }
 ```
 
-Slidev toggles a `dark` class on the page's `html` element for switching color schema.
+SLidevはカラースキーマを切り替えるために、ページの`html`要素の`dark`クラスを切り替えます。
 
-### Highlighter
+### シンタックスハイライト
 
-Syntax highlighting colors are also provided in the theme. We support both [Prism](https://prismjs.com/) and [Shiki](https://github.com/shikijs/shiki). For more information please refer to [the syntax highlighting docs](/custom/highlighters).
+シンタックスハイライトの色もテーマで指定することができます。[Prism](https://prismjs.com/)と[Shiki](https://github.com/shikijs/shiki)の両方をサポートしています。詳細は[シンタックスハイライトについてのドキュメント](/custom/highlighters)を参照してください。
 
-You can support either one of them, or both. Refer to the default theme for configurations examples [`./styles/code.css`](https://github.com/slidevjs/slidev/blob/main/packages/create-theme/template/styles/code.css) / [`./setup/shiki.ts`](https://github.com/slidevjs/slidev/blob/main/packages/create-theme/template/setup/shiki.ts).
+どちらかだけをサポートすることもできます。サンプルとして、デフォルトテーマを参照してください [`./styles/code.css`](https://github.com/slidevjs/slidev/blob/main/packages/create-theme/template/styles/code.css) / [`./setup/shiki.ts`](https://github.com/slidevjs/slidev/blob/main/packages/create-theme/template/setup/shiki.ts) 
 
-Also, remember to specify the supported highlighters in your `package.json`
+また`package.json`でサポートしているシンタックスハイライトを指定することを忘れないでください。
 
 ```json
 // package.json
@@ -133,9 +133,9 @@ Also, remember to specify the supported highlighters in your `package.json`
 }
 ```
 
-### Slidev Version
+### Slidevのバージョン
 
-If the theme is relying on a specific feature of Slidev that are newly introduced, you can set the minimal Slidev version required to have your theme working properly:
+テーマが新しく追加されたSlidevの機能に依存している場合は、テーマが正しく動作するのに必要な最小のSlidevのバージョンを指定する必要があります。
 
 ```json
 // package.json
@@ -146,4 +146,4 @@ If the theme is relying on a specific feature of Slidev that are newly introduce
 }
 ```
 
-If users are using older versions of Slidev, an error will be thrown.
+ユーザーが指定されたバージョンよりも古いSlidevを使用している場合、例外が発生します。

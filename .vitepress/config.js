@@ -65,7 +65,7 @@ const Theme = [
     link: '/themes/gallery',
   },
   {
-    text: 'Write a Theme',
+    text: 'テーマを作成する',
     link: '/themes/write-a-theme',
   },
 ]
