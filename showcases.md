@@ -2,9 +2,9 @@
 sidebar: false
 ---
 
-# Showcases
+# ショーケース
 
-Talks / Presentations using Slidev.
+Slidevを使ったトーク / プレゼンテーションです。
 
 <!-- Edit in ./docs/.vitepress/showcases.ts -->
 <ShowCases />

@@ -165,7 +165,7 @@ const Customizations = [
 
 const Resources = [
   {
-    text: 'Showcases',
+    text: 'ショーケース',
     link: '/showcases',
   },
   {
