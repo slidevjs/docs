@@ -61,7 +61,7 @@ const Theme = [
     link: '/themes/use',
   },
   {
-    text: 'Theme Gallery',
+    text: 'テーマギャラリー',
     link: '/themes/gallery',
   },
   {
