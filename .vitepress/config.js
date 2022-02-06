@@ -199,7 +199,7 @@ const slidebars = [
         link: '/builtin/components',
       },
       {
-        text: 'Layouts',
+        text: 'レイアウト',
         link: '/builtin/layouts',
       },
     ],

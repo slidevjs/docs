@@ -1,39 +1,39 @@
-# Layouts
+# レイアウト
 
-## Built-in Layouts
+## ビルトインレイアウト
 
-> As themes may override layouts behaviour, the best way to know exactly the usage, parameters and examples is referring their documentation.
+> テーマはレイアウトの動作を上書きすることがあるため、使い方やパラメータ、サンプルを正しく知るには、各テーマのドキュメントを参照するのがよいでしょう。
 
 
 ### `center`
 
-Displays the content in the middle of the screen.
+コンテンツを画面中央に表示します。
 
 ### `cover`
 
-Used to display the cover page for the presentation, may contain the presentation title, contextualization, etc.
+プレゼンテーションの表紙を表示するために使用します。プレゼンテーションのタイトルや、コンテキストを含めることができます。
 
 ### `default`
 
-The most basic layout, to display any kind of content.
+最も基本的なレイアウトで、あらゆる種類のコンテンツを表示することができます。
 
 ### `end`
 
-The final page for the presentation.
+プレゼンテーションの最後のページです。
 
 ### `fact`
 
-To show some fact or data with a lot of prominence on the screen.
+事実やデータを画面上で大きく目立たせて見せるために使用します。
 
 ### `full`
 
-Use all the space of the screen to display the content.
+画面のすべてのスペースを使って、コンテンツを表示します。
 
 ### `image-left`
 
-Shows an image on the left side of the screen, the content will be placed on the right side.
+画面の左側に画像を表示し、右側にコンテンツを配置します。
 
-#### Usage
+#### 使い方
 
 ```yaml
 ---
@@ -49,9 +49,9 @@ class: my-cool-content-on-the-right
 
 ### `image-right`
 
-Shows an image on the right side of the screen, the content will be placed on the left side.
+画面右側に画像を表示し、左側にコンテンツを配置します。
 
-#### Usage
+#### 使い方
 
 ```yaml
 ---
@@ -67,9 +67,9 @@ class: my-cool-content-on-the-left
 
 ### `image`
 
-Shows an image as the main content of the page.
+画像をページのメインコンテンツとして表示します。
 
-#### Usage
+#### 使い方
 
 ```yaml
 ---
@@ -83,9 +83,9 @@ image: ./path/to/the/image
 
 ### `iframe-left`
 
-Shows a web page on the left side of the screen, the content will be placed on the right side.
+画面の左側にWebページを表示し、右側にコンテンツを配置します。
 
-#### Usage
+#### 使い方
 
 ```yaml
 ---
@@ -101,9 +101,9 @@ class: my-cool-content-on-the-right
 
 ### `iframe-right`
 
-Shows a web page on the right side of the screen, the content will be placed on the left side.
+画面の右側にWebページを表示し、左側にコンテンツを配置します。
 
-#### Usage
+#### 使い方
 
 ```yaml
 ---
@@ -119,9 +119,9 @@ class: my-cool-content-on-the-left
 
 ### `iframe`
 
-Shows a web page as the main content of the page.
+Webページをメインコンテンツとして表示します。
 
-#### Usage
+#### 使い方
 
 ```yaml
 ---
@@ -135,29 +135,29 @@ url: https://github.com/slidevjs/slidev
 
 ### `intro`
 
-To introduce the presentation, usually with the presentation title, a short description, the author, etc.
+プレゼンテーションの始まりに使用します。一般的にはプレゼンテーションのタイトル、簡潔な説明、著者などです。
 
 ### `none`
 
-A layout without any existent styling.
+スタイルなしのレイアウトです。
 
 ### `quote`
 
-To display a quotation with prominience.
+引用文を目立つように表示します。
 
 ### `section`
 
-Used to mark the beginning of a new presentation section.
+新しいプレゼンテーションのセクションの開始を示すために使用します。
 
 ### `statement`
 
-Make an affirmation/statement as the main page content.
+断言/宣言をメインページのコンテンツとして表示します。
 
 ### `two-cols`
 
-Separates the page content in two columns.
+ページのコンテンツを2列に分割します。
 
-#### Usage
+#### 使い方
 
 
 ```md
@@ -165,23 +165,23 @@ Separates the page content in two columns.
 layout: two-cols
 ---
 
-# Left
+# 左
 
-This shows on the left
+これは左側に表示されます。
 
 ::right::
 
-# Right
+# 右
 
-This shows on the right
+これは右側に表示されます。
 ```
 
-## Custom Layouts
+## カスタムレイアウト
 
-Create a directory `layouts/` under your project root, and simply put your custom Vue layout components under it.
+プロジェクトルートの配下に`layouts/`というディレクトリを作成し、そこにカスタムしたVueのレイアウトコンポーネントを配置します。
 
-Read more in the [Customization](/custom/directory-structure#layouts) section.
+詳細は[レイアウト](/custom/directory-structure#レイアウト)のセクションを参照してください。
 
-## Theme-provided Layouts
+## テーマが提供するレイアウト
 
-Themes can provide layouts or override existing ones. Please read their documentation for what they have provided.
+テーマはレイアウトを提供したり、既存のレイアウトを上書きすることができます。テーマが提供するレイアウトについては、各テーマのドキュメントを参照してください。
