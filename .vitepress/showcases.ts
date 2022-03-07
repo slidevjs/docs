@@ -110,7 +110,7 @@ export const showcases: ShowCaseInfo[] = [
   },
   {
     title: 'Git\'s Most Wanted',
-    cover: 'https://raw.githubusercontent.com/alexanderdavide/git-most-wanted/assets/slides-export/01.png',
+    cover: 'https://cdn.jsdelivr.net/gh/alexanderdavide/git-most-wanted@assets/slides-export/01.png',
     author: {
       name: 'Alexander Eble',
       link: 'https://github.com/alexanderdavide',
