@@ -19,27 +19,27 @@ Learn more about [configuring Monaco](https://github.com/Microsoft/monaco-editor
 To use Monaco in your slides, simply append `{monaco}` to your code snippets:
 
 ~~~js
-//```js
+```js
 const count = ref(1)
 const plusOne = computed(() => count.value + 1)
 
 console.log(plusOne.value) // 2
 
 plusOne.value++ // error
-//```
+```
 ~~~
 
 To
 
 ~~~js
-//```js {monaco}
+```js {monaco}
 const count = ref(1)
 const plusOne = computed(() => count.value + 1)
 
 console.log(plusOne.value) // 2
 
 plusOne.value++ // error
-//```
+```
 ~~~
 
 ## Exporting
@@ -57,12 +57,12 @@ monaco: true # default "dev"
 When use TypeScript with Monaco, types for dependencies will be installed to the client-side automatically.
 
 ~~~ts
-//```ts {monaco}
+```ts {monaco}
 import { ref } from 'vue'
 import { useMouse } from '@vueuse/core'
 
 const counter = ref(0)
-//```
+```
 ~~~
 
 In the example above, make sure `vue` and `@vueuse/core` are installed locally as dependencies / devDependencies, Slidev will handle the rest to get the types working for the editor automatically!
