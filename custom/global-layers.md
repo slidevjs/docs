@@ -25,6 +25,9 @@ Layers relationship:
 
 The text `Your Name` will appear to all your slides.
 
+> **Note:**
+> If Slidev is currently running in the background, then you will need to restart it in order to pick up on the new global file that was added.
+
 ```html
 <!-- custom-nav-controls -->
 <template>
