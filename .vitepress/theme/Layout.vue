@@ -56,13 +56,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, defineAsyncComponent } from 'vue'
+import { ref, computed, watch, defineAsyncComponent, nextTick } from 'vue'
 import {
   useRoute,
   useSiteData,
   useSiteDataByRoute,
 } from 'vitepress'
 import type { DefaultTheme } from './config'
+import { useCopyCode } from './composables/copy-code'
 
 // components
 import NavBar from './components/NavBar.vue'
@@ -79,6 +80,13 @@ const theme = computed(() => siteData.value.themeConfig)
 const AlgoliaSearchBox = defineAsyncComponent(
   () => import('./components/AlgoliaSearchBox.vue'),
 )
+
+// reload window after init
+nextTick(useCopyCode)
+// route change after init
+watch(() => route.path, () => {
+  nextTick(useCopyCode)
+})
 
 // custom layout
 const isCustomLayout = computed(() => !!route.data.frontmatter.customLayout)
