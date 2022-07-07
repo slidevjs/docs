@@ -297,4 +297,16 @@ module.exports = {
       '/': slidebars,
     },
   },
+  markdown: {
+    config: (md) => {
+      md.use(md_ => {
+        const fence = md_.renderer.rules.fence
+        if (fence)
+          md_.renderer.rules.fence = (...args) => {
+            const rawCode = fence(...args)
+            return `<div class="languages-box"><span class="copy">copy</span>${rawCode}</div>`
+          }
+      })
+    },
+  },
 }
