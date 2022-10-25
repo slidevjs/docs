@@ -53,7 +53,7 @@ See [Static Hosting](/guide/hosting).
 
 > Available since v0.36.8
 
-Export presenter notes in a PDF file.
+Export only the presenter notes (the last comment block for each slide) into a text document in PDF.
 
 ```bash
 $ slidev export-notes
