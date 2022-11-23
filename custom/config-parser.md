@@ -12,25 +12,27 @@ Configuring the markdown parser used in step 2 can be done by [configuring Vite 
 
 ## Preparser Extensions
 
-> Available since v0.36.0
+> Available since v0.37.0
+
+:::warning
+Important: when modifying the preparser configuration, you need to stop and start slidev again (restart might not be sufficient).
+:::
 
 The preparser (step 1 above) is highly extensible and allows to implement custom syntaxes for your md files. Extending the preparser is considered **an advanced feature** and is susceptible to break [editor integrations](/guide/editors) due to implicit changes in the syntax.
 
-To customize it, create `./setup/preparser.ts` file with the following content:
+To customize it, create a `./setup/preparser.ts` file with the following content:
 
 
 ```ts
-import type { SlidevPreparserState } from '@slidev/types'
 import { definePreparserSetup } from '@slidev/types'
 
 export default definePreparserSetup((filepath) => {
   return [
     {
-      // disabled: true, // to disable
-      handle(s) {
-        if (s.mode === 'content' && s.lines[s.i] === '@@@') {
-          s.lines[s.i] = 'hello'
-          return true
+      transformRawLines(lines) {
+        for (const i in lines) {
+          if (lines[i] === '@@@')
+            lines[i] = 'HELLO'
         }
       },
     }
@@ -42,18 +44,16 @@ This example systematically replaces any `@@@` line by a line with `hello`. It i
 - `definePreparserSetup` must be called with a function as parameter.
 - The function receives the file path (of the root presentation file) and could use this information (e.g., enable extensions based on the presentation file).
 - The function must return a list of preparser extensions.
-- An extension usually defines a `handle(s)` function that receives a preparser state and can mutate it.
-- The `handle` function must return true in case it modified the state. 
-- Part of the state `s` is most often used:
-  - `lines`: the list of lines, that can modified, spliced, etc
-  - `i`: the current cursor position in the list of lines
-  - `mode`: notable values include `content`, `frontmatter`, `codeblock` to distinguish what the preparser is currently parsing
-
-Check out the [type definitions](https://github.com/slidevjs/slidev/blob/main/packages/types/src/types.ts) for more details about the `SlidevPreparserExtension` and `SlidevPreparserState` interfaces, and the modes predefined in `SlidevPreparserMode`.
+- An extension can contain:
+  - a `transformRawLines(lines)` function that runs just after parsing the headmatter of the md file and receives a list of all lines (from the md file). The function can mutate the list arbitrarily.
+  - a `transformSlide(content, frontmatter)` function that is called for each slide, just after splitting the file, and receives the slide content as a string and the frontmatter of the slide as an object. The function can mutate the frontmatter and must return the content string (possibly modified, possibly `undefined` if no modifications have been done).
+  - a `name`
 
 ## Example Preparser Extensions
 
-Considering a use case where (part of) your presentation is mainly showing cover images and including other md files. You might want a compact notation where for instance (part of) `slides.md` is as follows:
+### Use case 1: compact syntax top-level presentation
+
+Imagine a situation where (part of) your presentation is mainly showing cover images and including other md files. You might want a compact notation where for instance (part of) `slides.md` is as follows:
 
 ```md
 
@@ -69,37 +69,107 @@ see you next time
 
 ```
 
-To allow these `@src:` and `@cover` syntaxes, create a `./setup/preparser.ts` file with the following content:
+To allow these `@src:` and `@cover:` syntaxes, create a `./setup/preparser.ts` file with the following content:
 
 
 ```ts
-import type { SlidevPreparserState } from '@slidev/types'
 import { definePreparserSetup } from '@slidev/types'
 
 export default definePreparserSetup((filepath) => {
   return [
     {
-      handle(s) {
-        const l = s.lines[s.i]
-        if (s.mode === 'content' && l.match(/^@cover:/i)) {
-          s.lines.splice(s.i, 1, // remove a line and add 5 new ones
-            '---',
-            'layout: cover',
-            `background: ${l.replace(/^@cover: */i, '')}`,
-            '---',
-            '')
-          return true
+      transformRawLines(lines) {
+        let i = 0
+        while (i < lines.length) {
+          const l = lines[i]
+          if (l.match(/^@cover:/i)) {
+            lines.splice(i, 1,
+              '---',
+              'layout: cover',
+              `background: ${l.replace(/^@cover: */i, '')}`,
+              '---',
+              '')
+            continue
+          }
+          if (l.match(/^@src:/i)) {
+            lines.splice(i, 1,
+              '---',
+              `src: ${l.replace(/^@src: */i, '')}`,
+              '---',
+              '')
+            continue
+          }
+          i++
         }
-        if (s.mode === 'content' && l.match(/^@src:/i)) {
-          s.lines.splice(s.i, 1,
-            '---',
-            `src: ${l.replace(/^@src: */i, '')}`,
-            '---',
-            '')
-          return true
+      }
+    },
+  ]
+})
+```
+
+And that's it.
+
+
+### Use case 2: using custom frontmatter to wrap slides
+
+Imagine a case where you often want to scale some of your slides but still want to use a variety of existing layouts so create a new layout would not be suited.
+For instance, you might want to write your `slides.md` as follows:
+
+```md
+
+
+
+---
+layout: quote
+_scale: 0.75
+---
+
+# Welcome
+
+> great!
+
+---
+_scale: 4
+---
+# Break
+
+---
+
+# Ok
+
+---
+layout: center
+_scale: 2.5
+---
+# Questions?
+see you next time
+
+```
+
+Here we used an underscore in `_scale` to avoid possible conflicts with existing frontmatter properties (indeed, the case of `scale`, without underscore would cause potential problems).
+
+
+To handle this `_scale: ...` syntax in the frontmatter, create a `./setup/preparser.ts` file with the following content:
+
+
+```ts
+import { definePreparserSetup } from '@slidev/types'
+
+export default definePreparserSetup((filepath) => {
+  return [
+    {
+      transformSlide(content, frontmatter) {
+        if ('_scale' in frontmatter) {
+          return [
+            `<Transform :scale=${frontmatter['_scale']}>`,
+            '',
+            content,
+            '',
+            '</Transform>'
+          ].join('\n')
         }
       },
-    }
+    },
   ]
 })
 ```
