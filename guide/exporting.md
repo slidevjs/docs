@@ -45,9 +45,6 @@ When passing in the `--format png` option, Slidev will export PNG images for eac
 $ slidev export --format png
 ```
 
-### Single-Page Application (SPA)
-
-See [Static Hosting](/guide/hosting).
 
 ## Presenter notes
 
@@ -58,3 +55,7 @@ Export only the presenter notes (the last comment block for each slide) into a t
 ```bash
 $ slidev export-notes
 ```
+
+## Single-Page Application (SPA)
+
+See [Static Hosting](/guide/hosting).
