@@ -115,7 +115,7 @@ export const showcases: ShowCaseInfo[] = [
       name: 'Alexander Eble',
       link: 'https://github.com/alexanderdavide',
     },
-    slidesLink: 'https://git-most-wanted.alex-eble.de',
+    slidesLink: 'https://alexeble.de/talks/git-most-wanted/',
     sourceLink: 'https://github.com/alexanderdavide/git-most-wanted',
     at: 'Internal Tech Talk',
     datetime: '2022-03-11',
