@@ -154,6 +154,18 @@ export const showcases: ShowCaseInfo[] = [
     cover: 'https://github.com/godkun/ppt-template/raw/main/public/show.gif',
     datetime: '2022-10-24',
   },
+  {
+    title: 'Dev Environment as Code',
+    cover: 'https://cdn.jsdelivr.net/gh/alexanderdavide/dev-environment-as-code@assets/slides-export/001.png',
+    author: {
+      name: 'Alexander Eble',
+      link: 'https://github.com/alexanderdavide',
+    },
+    slidesLink: 'https://alexeble.de/talks/dev-environment-as-code/',
+    sourceLink: 'https://github.com/alexanderdavide/dev-environment-as-code',
+    at: 'Internal Tech Talk',
+    datetime: '2022-12-01',
+  },
   // Add yours here!
   {
     title: 'Yours?',
