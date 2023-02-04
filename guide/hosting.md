@@ -97,32 +97,97 @@ Then go to your Vercel dashboard and create a new site with the repository.
 - [GitHub Pages](https://pages.github.com/)
 
 To deploy your slides on GitHub Pages:
-- upload all the files of the project in your repo (i.e. named `name_of_repo`)
-- create `.github/workflows/deploy.yml` with following content to deploy your slides to GitHub Pages via GitHub Actions. In this file, replace `<name_of_repo>` with `name_of_repo`.
+- Push your Slidev project to your repository.
+- Create `.github/workflows/deploy.yml` with following content to deploy your slides to GitHub Pages via GitHub Actions:
 
 ```yaml
-name: Deploy pages
-on: push
+name: Deploy slides to Github Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: [main]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
 jobs:
-  deploy:
+  # Build job
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Detect package manager
+        id: detect-package-manager
+        run: |
+          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
+            echo "manager=yarn" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
+            exit 0
+          elif [ -f "${{ github.workspace }}/package.json" ]; then
+            echo "manager=npm" >> $GITHUB_OUTPUT
+            echo "command=ci" >> $GITHUB_OUTPUT
+            exit 0
+          else
+            echo "Unable to determine packager manager"
+            exit 1
+          fi
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: "18"
+          cache: ${{ steps.detect-package-manager.outputs.manager }}
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v2
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            dist
+            .cache
+          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('dist') }}
+          restore-keys: |
+            ${{ runner.os }}-gatsby-build-
       - name: Install dependencies
-        run: npm install
-      - name: Install slidev
-        run:  npm i -g @slidev/cli
-      - name: Build
-        run: slidev build --base <name_of_repo>
-      - name: Deploy pages
-        uses: crazy-max/ghaction-github-pages@v2
-        with:
-          build_dir: dist
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Build with Slidev
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PREFIX_PATHS: 'true'
+        run: ${{ steps.detect-package-manager.outputs.manager }} run build --base ${{ github.event.repository.name }}
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./dist
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
 ```
-- In your repository, go to Settings>Pages. Under "Build and deployment", select "Deploy from a branch", select "gh-pages" and "root". Click on save.
-- Finally, after all workflows are executed, a link to the slides should appear under Settings>Pages.
+- In your repository, go to Settings>Pages. Under "Build and deployment", select "Github Actions". Click on save.
+- Finally, after the workflow is executed, when you push to your `main` branch, a link to the slides should appear under Settings>Pages.
