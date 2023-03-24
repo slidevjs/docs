@@ -81,6 +81,11 @@ drawings:
   persist: false
   presenterOnly: false
   syncAll: true
+
+# HTML tag attributes
+htmlAttrs:
+  dir: 'ltr'
+  lang: 'en'
 ---
 ```
 
