@@ -1,122 +1,39 @@
-# Getting Started
+# 如何經營youtube頻道
 
-## Overview
+## 一、開設頻道
+- 需要有Gmail帳號，進入YouTube開啟創作者功能
+- 設定頻道名稱、圖示、封面、簡介、關鍵字等基本資料
+- 開啟延伸功能，如較長影片、營利、自訂縮圖等
+- 品牌化頻道，讓觀眾一眼就能認出你的風格和特色
 
-Slidev <sup>(slide + dev, **/slaɪdɪv/**)</sup> is a web-based slides maker and presenter. It's designed for developers to focus on writing content in Markdown while also having the power of HTML and Vue components to deliver pixel-perfect layouts and designs with embedded interactive demos in your presentations.
+![頻道設定範例](https://i.imgur.com/1Z0w8Qa.png)
 
-It uses a feature-rich markdown file to generate beautiful slides with an instant reloading experience, along with many built-in integrations such as live coding, PDF exporting, presentation recording, and so on. Since it's powered by the web, you can do anything with Slidev - the possibilities are endless.
+## 二、製作影片
+- 圍繞著單一關鍵字或主題來拍攝影片，讓影片更容易被搜尋到
+- 在影片標題、說明、標籤中加入關鍵字，提升曝光度
+- 製作精彩的影片縮圖，吸引觀眾點擊
+- 製作播放清單，讓觀眾可以自動播放相關影片
+- 善用片尾畫面，引導觀眾進行下一步動作，如訂閱、觀看其他影片等
 
-You can learn more about the rationale behind the project in the [Why Slidev](/guide/why) section.
+![影片製作範例](https://i.imgur.com/2fR4l9S.png)
 
-### Features
+## 三、互動推廣
+- 回覆所有留言，鼓勵觀眾留言、提問、討論或分享想法
+- 在其他社群管道推廣你的YouTube影片，如FB、IG、部落格等
+- 和自己做連結，在影片中分享你其他的社群檔案或產品連結
+- 在頻道中加入合作或推薦的頻道，建立互惠關係
 
-- 📝 [**Markdown-based**](/guide/syntax.html) - use your favorite editors and workflow
-- 🧑‍💻 [**Developer Friendly**](/guide/syntax.html#code-blocks) - built-in syntax highlighting, live coding, etc.
-- 🎨 [**Themable**](/themes/gallery.html) - theme can be shared and used with npm packages
-- 🌈 [**Stylish**](/guide/syntax.html#embedded-styles) - on-demand utilities via [UnoCSS](https://github.com/unocss/unocss) or [Windi CSS](https://windicss.org/).
-- 🤹 [**Interactive**](/custom/directory-structure.html#components) - embedding Vue components seamlessly
-- 🎙 [**Presenter Mode**](/guide/presenter-mode.html) - use another window, or even your phone to control your slides
-- 🎨 [**Drawing**](/guide/drawing.html) - draw and annotate on your slides
-- 🧮 [**LaTeX**](/guide/syntax.html#latex) - built-in LaTeX math equations support
-- 📰 [**Diagrams**](/guide/syntax.html#diagrams) - creates diagrams with textual descriptions 
-- 🌟 [**Icons**](/guide/syntax.html#icons) - Access to icons from any iconset directly
-- 💻 [**Editors**](/guide/editors.html) - integrated editor, or [extension for VS Code](https://github.com/slidevjs/slidev-vscode)
-- 🎥 [**Recording**](/guide/recording.html) - built-in recording and camera view
-- 📤 [**Portable**](/guide/exporting.html) - export into PDF, PNGs, or even a hostable SPA
-- ⚡️ [**Fast**](https://vitejs.dev) - instant reloading powered by [Vite](https://vitejs.dev)
-- 🛠 [**Hackable**](/custom/config-vite.html) - using Vite plugins, Vue components, or any npm packages
+![互動推廣範例](https://i.imgur.com/7B1yq9o.png)
 
-### Tech Stack
+## 四、分析優化
+- 利用YouTube提供的數據後台，了解你每一支影片的成效和狀態
+- 觀察觀眾的喜好、行為、反饋等指標，找出你的優勢和弱點
+- 根據數據調整你的影片內容、風格、時長、發布時間等策略
+- 持續上傳影片，保持頻道的活力和吸引力
 
-Slidev is made possible by combining these tools and technologies.
+![分析優化範例](https://i.imgur.com/6tKzX0v.png)
 
-- [Vite](https://vitejs.dev) - An extremely fast frontend tooling
-- [Vue 3](https://v3.vuejs.org/) powered [Markdown](https://daringfireball.net/projects/markdown/syntax) - Focus on the content while having the power of HTML and Vue components whenever needed
-- [Windi CSS](https://github.com/windicss/windicss) or [UnoCSS](https://github.com/unocss/unocss) - On-demand utility-first CSS framework, style your slides at ease
-- [Prism](https://github.com/PrismJS/prism), [Shiki](https://github.com/shikijs/shiki), [Monaco Editor](https://github.com/Microsoft/monaco-editor) - First-class code snippets support with live coding capability
-- [RecordRTC](https://recordrtc.org) - Built-in recording and camera view
-- [VueUse](https://vueuse.org) family -  [`@vueuse/core`](https://github.com/vueuse/vueuse), [`@vueuse/head`](https://github.com/vueuse/head), [`@vueuse/motion`](https://github.com/vueuse/motion), etc.
-- [Iconify](https://iconify.design/) - Iconsets collection.
-- [Drauu](https://github.com/antfu/drauu) - Drawing and annotations support
-- [KaTeX](https://katex.org/) - LaTeX math rendering.
-- [Mermaid](https://mermaid-js.github.io/mermaid) - Textual Diagrams.
-
-### Scaffolding Your First Presentation
-
-<br>
-
-#### Try it Online
-
-[sli.dev/new](https://sli.dev/new)
-
-[![](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://sli.dev/new)
-
-#### Create Locally
-
-With NPM:
-
-```bash
-$ npm init slidev
-```
-
-With Yarn:
-
-```bash
-$ yarn create slidev
-```
-
-With pnpm:
-
-```bash
-$ pnpm create slidev
-```
-
-Follow the prompts and start making your slides now! For more details about the markdown syntax, read through the [syntax guide](/guide/syntax).
-
-### Command Line Interface
-
-In a project where Slidev is installed, you can use the `slidev` binary in your npm scripts.
-
-```json
-{
-  "scripts": {
-    "dev": "slidev", // start dev server
-    "build": "slidev build", // build for production SPA
-    "export": "slidev export" // export slides to pdf
-  }
-}
-```
-
-Otherwise, you can use it with [`npx`](https://www.npmjs.com/package/npx)
-
-```bash
-$ npx slidev
-```
-
-Run `slidev --help` for more options available.
-
-### Markdown Syntax
-
-Slidev reads your `slides.md` file under your project root and converts them into slides. Whenever you made changes to it, the content of the slides will be updated immediately. For example:
-
-~~~md
-# Slidev
-
-Hello World
-
----
-
-# Page 2
-
-Directly use code blocks for highlighting
-
-//```ts
-console.log('Hello, World!')
-//```
-
----
-
-# Page 3
-~~~
-
-Read more about the Slidev Markdown syntax in the [syntax guide](/guide/syntax).
+## 結語
+- YouTube是一個充滿機會和挑戰的平台，要在這裡成功並不容易。
+- 但是只要你有明確的目標和方向，並且努力學習和改進，你就有可能成為下一個YouTube紅人！
+- 謝謝大家的聆聽！
