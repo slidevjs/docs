@@ -178,6 +178,18 @@ export const showcases: ShowCaseInfo[] = [
     at: 'Internal Tech Talk',
     datetime: '2022-12-01',
   },
+  {
+    title: 'AGI Tutorials Collection',
+    cover: 'https://s2.loli.net/2023/07/02/4VupIDT6AeKtcZs.jpg',
+    author: {
+      name: 'Haili Zhang',
+      link: 'https://github.com/webup',
+    },
+    slidesLink: 'https://agi-talks.vercel.app/',
+    sourceLink: 'https://github.com/webup/agi-talks',
+    at: 'AGI Tech Sharings',
+    datetime: '2023-07-12',
+  },
   // Add yours here!
   {
     title: 'Yours?',
