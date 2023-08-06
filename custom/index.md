@@ -15,11 +15,11 @@ theme: 'default'
 title: 'Slidev'
 # titleTemplate for the webpage, `%s` will be replaced by the page's title
 titleTemplate: '%s - Slidev'
-# information for your slides, can be a markdown string.  Also used as the PDF Title
+# information for your slides, can be a markdown string.
 info: false
-# Populates the PDF Author field
+# author field for exported PDF
 author: Your Name Here
-# Populates the PDF Keywords field. Comma-delimited
+# keywords field for exported PDF, comma-delimited.
 keywords: keyword1,keyword2
 
 # enable presenter mode, can be boolean, 'dev' or 'build'
