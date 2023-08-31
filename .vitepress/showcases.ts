@@ -178,6 +178,18 @@ export const showcases: ShowCaseInfo[] = [
     at: 'Internal Tech Talk',
     datetime: '2022-12-01',
   },
+  {
+    title: 'Semver Sermon',
+    cover: `https://semver-slidev.vercel.app/cover.png`,
+    author: {
+      name: 'Wayne',
+      link: 'https://github.com/vvizden',
+    },
+    slidesLink: 'https://semver-slidev.vercel.app',
+    sourceLink: 'https://github.com/vvizden/semver-slidev',
+    at: 'Personal Sharing',
+    datetime: '2023-08-31',
+  },
   // Add yours here!
   {
     title: 'Yours?',
