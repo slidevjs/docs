@@ -442,6 +442,8 @@ Learn more: [Demo](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.org/)
 
 ### LaTex line highlighting
 
+> Available since v0.43.1
+
 To highlight specific lines, simply add line numbers within bracket `{}`. Line numbers start counting from 1 by default.
 
 ```md
