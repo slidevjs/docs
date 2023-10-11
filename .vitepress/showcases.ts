@@ -178,15 +178,16 @@ export const showcases: ShowCaseInfo[] = [
     at: 'Internal Tech Talk',
     datetime: '2022-12-01',
   },
-  // Add yours here!
   {
-    title: 'Yours?',
+    title: 'What\'s like to use Postman to visualise data',
     author: {
-      name: '',
+      name: 'Teri Eyenike',
+      link: 'https://github.com/terieyenike'
     },
-    at: 'Submit your talk/presentation to be list here!',
-    slidesLink: 'https://github.com/slidevjs/docs/edit/main/.vitepress/showcases.ts',
-    cover: `${import.meta.env.BASE_URL}theme-placeholder.png`,
-    datetime: '2021-04-29',
+    at: 'Infobip Devs Talk 2023',
+    slidesLink: 'https://postman-visualizer-talk.vercel.app/',
+    sourceLink: 'https://github.com/Terieyenike/postman-visualizer-talk',
+    cover: 'https://github-production-user-asset-6210df.s3.amazonaws.com/25850598/274102810-5b4266f9-e4f1-498a-9f4f-8493fdfcc741.jpg',
+    datetime: '2023-10-12',
   },
 ]
