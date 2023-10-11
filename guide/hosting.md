@@ -139,7 +139,7 @@ Create `vercel.json` in your project root with the following content.
 
 Then go to your Vercel dashboard and create a new site with the repository.
 
-## GitHub Pages
+### GitHub Pages
 
 - [GitHub Pages](https://pages.github.com/)
 
