@@ -132,7 +132,19 @@ export const showcases: ShowCaseInfo[] = [
     at: 'OpenFunction Tutorial Sharing',
     datetime: '2022-05-08',
   },
-    {
+  {
+    title: 'Diablo Health Orb Shader',
+    author: {
+      name: 'SuneBear',
+      link: 'https://github.com/sunebear',
+    },
+    at: 'rctAI Sessions',
+    slidesLink: 'https://rct-ai.github.io/frontend-slides/diablo-health-orb-shader/',
+    sourceLink: 'https://github.com/rct-ai/frontend-slides',
+    cover: 'https://github-production-user-asset-6210df.s3.amazonaws.com/7693264/284304324-db973b4c-a043-4644-932c-826169a1b4d8.gif',
+    datetime: '2022-09-01',
+  },
+  {
     title: 'Is it Okay to Pursue Functional Programming on Frontend?',
     author: {
       name: 'Minsu Kim , Changhui Lee',
