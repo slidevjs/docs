@@ -190,6 +190,18 @@ export const showcases: ShowCaseInfo[] = [
     at: 'Presentation on Social Engineering in Computers in Society class',
     datetime: '2023-10-20',
   },
+  {
+    title: 'AntfuViteConf-2023',
+    cover: 'https://cdn.jsdelivr.net/npm/slidev-theme-antfu-vite-conf-2023/public/case-1.png',
+    author: {
+      name: 'Qingyun119',
+      link: 'https://github.com/LQYld',
+    },
+    slidesLink: 'https://slidev-theme-antfu-vite-conf-2023.fe-ecosphere.com/',
+    sourceLink: 'https://github.com/LQYld/slidev-theme-antfuViteConf-2023',
+    at: 'The template style is taken from the PPT presented by Antfu at viteConf 2023',
+    datetime: '2023-11-21',
+  },
   // Add yours here!
   {
     title: 'Yours?',
