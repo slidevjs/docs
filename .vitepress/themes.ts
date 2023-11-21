@@ -446,6 +446,29 @@ export const community: ThemeInfo[] = [
       'light',
     ],
   },
+  {
+    id: 'slidev-theme-antfu-vite-conf-2023',
+    name: 'AntfuViteConf-2023',
+    description: 'The template style is taken from the PPT presented by Antfu at viteConf 2023',
+    author: {
+      name: 'Qingyun119',
+      link: 'https://github.com/LQYld',
+    },  
+    repo: 'https://github.com/LQYld/slidev-theme-antfuViteConf-2023',
+    previews: [
+      'https://cdn.jsdelivr.net/npm/slidev-theme-antfu-vite-conf-2023/public/case-1.png',
+      'https://cdn.jsdelivr.net/npm/slidev-theme-antfu-vite-conf-2023/public/case-2.png',
+      'https://cdn.jsdelivr.net/npm/slidev-theme-antfu-vite-conf-2023/public/case-3.png',
+      'https://cdn.jsdelivr.net/npm/slidev-theme-antfu-vite-conf-2023/public/case-4.png',
+      'https://cdn.jsdelivr.net/npm/slidev-theme-antfu-vite-conf-2023/public/case-5.png',
+      'https://cdn.jsdelivr.net/npm/slidev-theme-antfu-vite-conf-2023/public/case-6.png',
+      'https://cdn.jsdelivr.net/npm/slidev-theme-antfu-vite-conf-2023/public/case-7.png',
+      'https://cdn.jsdelivr.net/npm/slidev-theme-antfu-vite-conf-2023/public/case-8.png',
+    ],
+    tags: [
+      'dark',
+    ],
+  }
   // Add yours here!
   {
     id: '',
