@@ -468,7 +468,7 @@ export const community: ThemeInfo[] = [
     tags: [
       'dark',
     ],
-  }
+  },
   // Add yours here!
   {
     id: '',
