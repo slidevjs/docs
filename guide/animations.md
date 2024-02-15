@@ -6,7 +6,8 @@ outline: deep
 
 ## Click Animations
 
-> Has breaking changes in v0.48.0-beta.0
+> [!NOTE]
+> Since v0.48.0, we are rewritten the click animations system with much more consistent behaviors. It might change the behaviors of your existing slides in edge cases. While this page is showing the new click system, you can find more details about the refactor in [#1279](https://github.com/slidevjs/slidev/pull/1279).
 
 ### `v-click`
 
@@ -107,17 +108,27 @@ This actual position of relative elements are calculated based on the previous r
 <div v-click> visible after 1 click </div>
 <v-click at="+2"><div> visible after 3 clicks </div></v-click>
 <div v-click.hide="'-1'"> hidden after 2 clicks </div>
+
 ```js {none|1|2}{at:'+5'}
 1  // highlighted after 7 clicks
 2  // highlighted after 8 clicks
 ```
 ~~~
 
+> [!NOTE]
+> The default value of `v-click` is `'+1'` when you don't specify it.
+
 In fact, `v-after` are just shortcuts for `v-click` with `at` prop:
 
 ```md
-<img v-after /> === <img v-click="'+0'" />
-<img v-click /> === <img v-click="'+1'" /> === <v-click-gap size="1" /><img v-after />
+<!-- The following 2 usages are equivalent -->
+<img v-after />
+<img v-click="'+0'" />
+
+<!-- The following 3 usages are equivalent -->
+<img v-click />
+<img v-click="'+1'" />
+<v-click-gap size="1" /><img v-after />
 ```
 
 :::info
@@ -140,6 +151,7 @@ The given value is the exact click count to show the element:
 <div v-click="3"> visible after 3 clicks </div>
 <v-click at="2"><div> visible after 2 clicks </div></v-click>
 <div v-click.hide="1"> hidden after 1 click </div>
+
 ```js {none|1|2}{at:3}
 1  // highlighted after 3 clicks
 2  // highlighted after 4 clicks
