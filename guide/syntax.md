@@ -316,6 +316,12 @@ For local assets, put them into the [`public` folder](/custom/directory-structur
 ![Local Image](/pic.png)
 ```
 
+In the case want to include an **SVG image** you need to add `?skipsvgo` to the image path.
+
+```md
+![Local Image](/pic.svg?skipsvgo)
+```
+
 For you want to apply custom sizes or styles, you can convert them to the `<img>` tag
 
 ```html
