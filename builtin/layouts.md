@@ -4,7 +4,6 @@
 
 > As themes may override layouts behaviour, the best way to know exactly the usage, parameters and examples is referring their documentation.
 
-
 ### `center`
 
 Displays the content in the middle of the screen.
@@ -80,6 +79,23 @@ image: ./path/to/the/image
 ---
 ```
 
+You can change the default background size (`cover`) by adding the `backgroundSize` attribute:
+
+```yaml
+---
+layout: image
+image: ./path/to/the/image
+backgroundSize: contain
+---
+```
+
+```yaml
+---
+layout: image-left
+image: ./path/to/the/image
+backgroundSize: 20em 70%
+---
+```
 
 ### `iframe-left`
 
@@ -132,7 +148,6 @@ url: https://github.com/slidevjs/slidev
 ---
 ```
 
-
 ### `intro`
 
 To introduce the presentation, usually with the presentation title, a short description, the author, etc.
@@ -159,7 +174,6 @@ Separates the page content in two columns.
 
 #### Usage
 
-
 ```md
 ---
 layout: two-cols
@@ -181,7 +195,6 @@ This shows on the right
 Separates the upper and lower lines of the page content, and the second line separates the left and right columns.
 
 #### Usage
-
 
 ```md
 ---

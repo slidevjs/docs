@@ -1,4 +1,3 @@
-
 # Static Hosting
 
 ## Build Single Page Applications (SPA)
@@ -107,18 +106,18 @@ We recommend to use `npm init slidev@latest` to scaffold your project, which con
 
 Create `netlify.toml` in your project root with the following content.
 
-```ts
-[build.environment]
-  NODE_VERSION = "14"
-
+```toml
 [build]
-  publish = "dist"
-  command = "npm run build"
+publish = 'dist'
+command = 'npm run build'
+
+[build.environment]
+NODE_VERSION = '20'
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+from = '/*'
+to = '/index.html'
+status = 200
 ```
 
 Then go to your Netlify dashboard and create a new site with the repository.
@@ -170,9 +169,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'
 
@@ -182,15 +181,15 @@ jobs:
       - name: Build
         run: npm run build -- --base /<name_of_repo>/
 
-      - uses: actions/configure-pages@v3
+      - uses: actions/configure-pages@v4
 
-      - uses: actions/upload-pages-artifact@v1
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
 ```
 - In your repository, go to Settings>Pages. Under "Build and deployment", select "Github Actions".
 - Finally, after all workflows are executed, a link to the slides should appear under Settings>Pages.

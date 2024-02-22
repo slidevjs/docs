@@ -6,23 +6,21 @@
 
 The best way to get started is using our official starter template.
 
-With NPM:
+::: code-group
 
-```bash
-$ npm init slidev@latest
+```bash [npm]
+npm init slidev@latest
 ```
 
-With Yarn:
-
-```bash
-$ yarn create slidev
+```bash [yarn]
+yarn create slidev
 ```
 
-With PNPM:
-
-```bash
-$ pnpm create slidev
+```bash [pnpm]
+pnpm create slidev
 ```
+
+:::
 
 Follow the prompts and it will open up the slideshow at `http://localhost:3030/` automatically for you.
 
@@ -33,20 +31,14 @@ It also contains the basic setup and a short demo with instructions on how to ge
 If you still prefer to install Slidev manually or would like to integrate it into your existing projects, you can do:
 
 ```bash
-$ npm install @slidev/cli @slidev/theme-default
+npm install @slidev/cli @slidev/theme-default
 ```
 ```bash
-$ touch slides.md
+touch slides.md
 ```
 ```bash
-$ npx slidev
+npx slidev
 ```
-
-> Please note if you are using [pnpm](https://pnpm.io), you will need to enable [shamefully-hoist](https://pnpm.io/npmrc#shamefully-hoist) option for Slidev to work properly:
->
-> ```bash
-> echo 'shamefully-hoist=true' >> .npmrc
-> ```
 
 ## Install Globally
 
@@ -55,13 +47,13 @@ $ npx slidev
 You can install Slidev globally with the following command
 
 ```bash
-$ npm i -g @slidev/cli
+npm i -g @slidev/cli
 ```
 
 And then use `slidev` everywhere without creating a project every time.
 
 ```bash
-$ slidev
+npx slidev
 ```
 
 This command will also try to use local `@slidev/cli` if it has been found in the `node_modules`.
@@ -87,7 +79,6 @@ If your work folder is empty, it will generate a template `slides.md` and other 
 
 You can access your slides from http://localhost:3030/
 
-
 ### Build deployable image
 
 Or you can create your own slidev project to a docker image with Dockerfile:
@@ -105,19 +96,17 @@ And run the container: `docker run --name myslides --rm --user node -p 3030:3030
 
 You can visit your slides from http://localhost:3030/
 
-
 ### Build hostable SPA (Single Page Application)
 
 Run command `docker exec -i slidev npx slidev build` on the running container `slidev`. It will generate static HTML files under `dist` folder.
 
 #### Host on Github Pages
 
-You can host `dist` in a static web site such as [Github Pages](https://tangramor.github.io/slidev_docker/) or Gitlab Pages. 
+You can host `dist` in a static web site such as [Github Pages](https://tangramor.github.io/slidev_docker/) or Gitlab Pages.
 
 Because in Github pages the url may contain subfolder, so you need to modify the generated `index.html` to change `href="/assets/xxx` to `href="./assets/xxx`. Or you may use `--base=/<subfolder>/` option during the build process, such as: `docker exec -i slidev npx slidev build --base=/slidev_docker/`.
 
 And to avoid Jekyll build process, you need to add an empty file `.nojekyll`.
-
 
 #### Host by docker
 
@@ -178,8 +167,9 @@ Options:
 * `--port`, `-p` (`number`, default: `3030`): port number.
 * `--open`, `-o` (`boolean`, default: `false`): open in browser.
 * `--remote [password]` (`string`): listen to public host and enable remote control, if a value is passed then the presenter mode is private and only accessible by passing the given password in the URL query `password` parameter.
+* `--bind` (`string`, default: `0.0.0.0`): specify which IP addresses the server should listen on in the remote mode.
 * `--log` (`'error', 'warn', 'info', 'silent'`, default: `'warn'`): Log level.
-* `--force`, `-f` (`boolean`, default `false`): force the optimizer to ignore the cache and re-bundle.
+* `--force`, `-f` (`boolean`, default: `false`): force the optimizer to ignore the cache and re-bundle.
 * `--theme`, `-t` (`string`): override theme.
 
 ### `slidev build [entry]`

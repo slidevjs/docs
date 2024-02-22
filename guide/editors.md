@@ -6,7 +6,7 @@ If you want some high-level management to your slides, we have provided the foll
 
 ## Integrated Editor
 
-Slidev comes with an integrated [CodeMirror](https://codemirror.net/) editor that will instantly reload and save the changes to your file. 
+Slidev comes with an integrated [CodeMirror](https://codemirror.net/) editor that will instantly reload and save the changes to your file.
 
 Click the <carbon-edit class="inline-icon-btn"/> button to open it.
 
@@ -40,4 +40,4 @@ The VS Code extension provides some features to help you better organize your sl
 
 ![](https://user-images.githubusercontent.com/11247099/116809994-cc2caa00-ab73-11eb-879f-60585747c3c9.png)
 
-<Tweet id="1395333405345148930" />
+<TheTweet id="1395333405345148930" />

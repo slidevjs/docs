@@ -75,12 +75,12 @@ You can provide markdown in the slots, but you will need to surround the content
 ~~~md
 <LightOrDark>
   <template #dark>
-  
+
 ![dark](/dark.png)
 
   </template>
   <template #light>
-  
+
 ![light](/light.png)
 
   </template>
@@ -112,7 +112,6 @@ routeAlias: solutions
 ---
 # Now some solutions!
 ~~~
-
 
 ### `RenderWhen`
 
@@ -242,6 +241,7 @@ Parameters:
 * `id` (`number | string`, required): id of the tweet
 * `scale` (`number | string`, default `1`): transform scale value
 * `conversation` (`string`, default `'none'`): [tweet embed parameter](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
+* `cards` (`'hidden' | 'visible'`, default `'visible'`): [tweet embed parameter](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
 
 ### `VAfter`, `VClick` and `VClicks`
 
@@ -261,6 +261,8 @@ Parameters:
 * `id` (`string`, required): id of the youtube video
 * `width` (`number`): width of the video
 * `height` (`number`): height of the video
+
+You can also make the video start at specific time if you add `?start=1234` to the id value (where 1234 are seconds),
 
 ## Custom Components
 

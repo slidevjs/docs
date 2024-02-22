@@ -10,11 +10,11 @@ In your frontmatter, configure as following
 ---
 fonts:
   # basically the text
-  sans: 'Robot'
-  # use with `font-serif` css class from windicss
-  serif: 'Robot Slab'
+  sans: Robot
+  # use with `font-serif` css class from UnoCSS
+  serif: Robot Slab
   # for code blocks, inline code, etc.
-  mono: 'Fira Code'
+  mono: Fira Code
 ---
 ```
 
@@ -24,7 +24,7 @@ Fonts will be **imported automatically from [Google Fonts](https://fonts.google.
 
 ## Local Fonts
 
-By default, Slidev assumes all the fonts specified via `fonts` configurations come from Google Fonts. If you want to use local fonts, specify the `fonts.local` to opt-out the auto-importing. 
+By default, Slidev assumes all the fonts specified via `fonts` configurations come from Google Fonts. If you want to use local fonts, specify the `fonts.local` to opt-out the auto-importing.
 
 ```yaml
 ---
@@ -32,7 +32,7 @@ fonts:
   # like font-family in css, you can use `,` to separate multiple fonts for fallback
   sans: 'Helvetica Neue,Robot'
   # mark 'Helvetica Neue' as local font
-  local: 'Helvetica Neue'
+  local: Helvetica Neue
 ---
 ```
 
@@ -43,7 +43,7 @@ By default, Slidev imports three weights `200`,`400`,`600` for each font. You ca
 ```yaml
 ---
 fonts:
-  sans: 'Robot'
+  sans: Robot
   # default
   weights: '200,400,600'
   # import italic fonts, default `false`
@@ -60,13 +60,13 @@ For most of the scenarios, you only need to specify the "special font" and Slide
 ```yaml
 ---
 fonts:
-  sans: 'Robot'
-  serif: 'Robot Slab'
-  mono: 'Fira Code'
+  sans: Robot
+  serif: Robot Slab
+  mono: Fira Code
 ---
 ```
 
-will result in 
+will result in
 
 ```css
 .font-sans {
@@ -86,7 +86,7 @@ If you want to disable the fallback fonts, configure as following
 ---
 fonts:
   mono: 'Fira Code, monospace'
-  fallback: false
+  fallbacks: false
 ---
 ```
 
@@ -100,8 +100,6 @@ Currently, only Google Fonts is supported, we are planned to add more providers 
 ```yaml
 ---
 fonts:
-  provider: 'none'
+  provider: none
 ---
 ```
-
-
