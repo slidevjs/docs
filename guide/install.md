@@ -77,7 +77,7 @@ docker run --name slidev --rm -it \
 
 If your work folder is empty, it will generate a template `slides.md` and other related files under your work folder, and launch the server on port `3030`. 
 
-You can access your slides from http://localhost:3030/
+You can access your slides from `http://localhost:3030/`
 
 ### Build deployable image
 
@@ -94,7 +94,7 @@ Create the docker image: `docker build -t myppt .`
 
 And run the container: `docker run --name myslides --rm --user node -p 3030:3030 myppt`
 
-You can visit your slides from http://localhost:3030/
+You can visit your slides from `http://localhost:3030/`
 
 ### Build hostable SPA (Single Page Application)
 
