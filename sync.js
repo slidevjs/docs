@@ -12,9 +12,9 @@ await $`git remote rm slidev`
 await $`git remote add slidev https://github.com/slidevjs/slidev`
 await $`git fetch slidev main`
 
-console.log('Timestamp of last commit:')
+console.log('\nTimestamp of last commit:')
 const { stdout: timestamp } = await $`git log -1 --format="%at" main`
-console.log('Commits since last time:')
+console.log('\nCommits since last time:')
 const { stdout: hashes } = await $`git log --since="${+(timestamp.toString()) + 1}" slidev/main --format="%H"`
 
 const firstHash = hashes.toString().trim().split('\n').at(-1)
@@ -24,5 +24,5 @@ if (!firstHash) {
 }
 
 const command = `git format-patch -k --stdout ${firstHash}...slidev/main --remove-empty -- docs | git am -3 -k --empty=drop`
-console.log('Running command:', command)
-await $(command)
+console.log('\nRunning command:', command)
+await $`git format-patch -k --stdout ${firstHash}...slidev/main --remove-empty -- docs | git am -3 -k --empty=drop`
