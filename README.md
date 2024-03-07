@@ -1,12 +1,17 @@
 # [sli.dev](https://sli.dev)
 
-Documentation for [Slidev](https://github.com/slidevjs/slidev)
+> [!IMPORTANT]
+> This repository is a mirror of the `docs/` directory in [slidevjs/slidev](https://github.com/slidevjs/slidev/tree/main/docs). Mainly for other translations repositories to sync.
+>
+> **‼️ Please DO NOT submit pull requests here ‼️**. Instead, send them to the [main repository](https://github.com/slidevjs/slidev), and they will be synced here automatically.
+
+Mirrored documentation site for [Slidev](https://github.com/slidevjs/slidev)
 
 ## Translations
 
 |                | Repo                                           |                             Site | Maintainers                                                           |
 | -------------- | ---------------------------------------------- | -------------------------------: | --------------------------------------------------------------------- |
-| English        | [docs](https://github.com/slidevjs/docs)       |       [sli.dev](https://sli.dev) | [@antfu](https://github.com/antfu)                                    |
+| English        | [docs](https://github.com/slidevjs/slidev/tree/main/docs)       |       [sli.dev](https://sli.dev) | [@antfu](https://github.com/antfu)                                    |
 | 简体中文       | [docs-cn](https://github.com/slidevjs/docs-cn) | [cn.sli.dev](https://cn.sli.dev) | [@QC-L](https://github.com/QC-L) [@Ivocin](https://github.com/Ivocin) |
 | Français       | [docs-fr](https://github.com/slidevjs/docs-fr) | [fr.sli.dev](https://fr.sli.dev) | [@ArthurDanjou](https://github.com/ArthurDanjou)                      |
 | Español        | [docs-es](https://github.com/slidevjs/docs-es) | [es.sli.dev](https://es.sli.dev) | [@owlnai](https://github.com/owlnai)                                  |
