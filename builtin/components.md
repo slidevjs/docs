@@ -1,3 +1,7 @@
+---
+outline: [2, 3]
+---
+
 # Components
 
 ## Built-in Components
@@ -254,6 +258,48 @@ Parameters:
 ### `VAfter`, `VClick` and `VClicks`
 
 See https://sli.dev/guide/animations.html
+
+### `SlidevVideo`
+
+Embed a video.
+
+#### Usage
+
+```md
+<SlidevVideo>
+  <!-- Anything that can go in a HTML video element. -->
+  <source src="myMovie.mp4" type="video/mp4" />
+  <source src="myMovie.webm" type="video/webm" />
+  <p>
+    Your browser does not support videos. You may download it
+    <a href="myMovie.mp4">here</a>.
+  </p>
+</SlidevVideo>
+```
+
+Check [HTML video element's doc](https://developer.mozilla.org/docs/Web/HTML/Element/Video) to see what can be included in this component's slot.
+
+Parameters:
+
+- `controls` (`boolean`, default: `false`): show the video controls
+- `autoplay` (`boolean | 'once'`, default: `false`):
+  - `true` or `'once'`: start the video only once and does not restart it once ended or paused
+  - `false`: never automatically start the video (rely on `controls` instead)
+- `autoreset` (`'slide' | 'click'`, default: `undefined`):
+  - `'slide'`: go back to the start of the video when going back to the slide
+  - `'click'`: go back to the start of the video when going back to the component's click turn
+- `poster` (`string | undefined`, default: `undefined`):
+  - The source of the image to print when the video is not playing.
+- `printPoster` (`string | undefined`, default: `undefined`):
+  - The override for `poster` when printing.
+- `timestamp` (`string | number`, default: `0`):
+  - The starting time of the video in seconds.
+- `printTimestamp` (`string | number | 'last' | undefined`, default: `undefined`):
+  - The override for `timestamp` when printing.
+
+::: warning
+When exporting, the video may fail to load because Chromium does not support some video formats. In this case, you can specify the executable path of the browser. See [Chromium executable path](/guide/exporting.html#executable-path) for more information.
+:::
 
 ### `Youtube`
 
