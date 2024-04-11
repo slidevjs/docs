@@ -292,6 +292,26 @@ This line is removed on the left.
 ```
 ````
 
+It will provide the editor with a "Run" button, and shows the result right below the code block. You many also modify the code and the result will be re-evaluated on the fly.
+
+By default it will automatically runs the code when the slide is loaded, if you want to always explicitly trigger the run, you can set `{autorun:false}`.
+
+````md
+```ts {monaco-run} {autorun:false}
+console.log('Click the play button to run me')
+```
+````
+
+If you want to only show the output in certain clicks, you can use the `showOutputAt` prop. The value is the same as `v-click`.
+
+````md
+```ts {monaco-run} {showOutputAt:'+1'}
+console.log('Shown after 1 click')
+```
+````
+
+Currently Slidev supports running JavaScript and TypeScript code out-of-box. Refer to [Custom Code Runners](/custom/config-code-runners) for custom languages support.
+
 ## Embedded Styles
 
 You can use `<style>` tag in your Markdown directly to override styles for the **current slide**.
