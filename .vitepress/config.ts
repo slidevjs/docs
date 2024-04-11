@@ -158,6 +158,14 @@ const Customizations: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildr
     link: '/custom/config-shortcuts',
   },
   {
+    text: 'Configure Code Runners',
+    link: '/custom/config-code-runners',
+  },
+  {
+    text: 'Configure Context Menu',
+    link: '/custom/config-context-menu',
+  },
+  {
     text: 'Vue Global Context',
     link: '/custom/vue-context',
   },
