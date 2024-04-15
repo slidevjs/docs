@@ -254,7 +254,7 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.svg',
     editLink: {
-      pattern: 'https://github.com/slidevjs/docs/edit/main/:path',
+      pattern: 'https://github.com/slidevjs/slidev/edit/main/docs/:path',
       text: 'Suggest changes to this page',
     },
 
