@@ -497,7 +497,7 @@ This shows on the left
 This shows on the right
 ```
 
-You can also explicitly specify the default slot and provide in the custom order
+You can also explicitly specify the default slot and provide in the custom order.
 
 ```md
 ---
@@ -666,7 +666,7 @@ This page is from another file
 
 ### Frontmatter Merging
 
-You can provide frontmatters from both your main entry and external markdown pages. If there are the same keys in them, the ones from the **main entry have the higher priority**. For example
+You can provide frontmatters from both your main entry and external markdown pages. If there are the same keys in them, the ones from the **main entry have the higher priority**. For example:
 
 `slides.md` :
 
@@ -750,4 +750,4 @@ The **default** slot
 ::
 ```
 
-Learn more about [the syntax](https://content.nuxt.com/guide/writing/mdc).
+Learn more about [MDC Syntax](https://content.nuxt.com/guide/writing/mdc).
