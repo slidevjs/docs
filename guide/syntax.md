@@ -100,7 +100,7 @@ This is a page with the layout `center` and a background image.
 
 ## Code Blocks
 
-One big reason I am building Slidev is needing to make my code look just right in the slides. So just as you expected, you can use Markdown flavored code block to highlight your code.
+One big reason that led to the creation of Slidev is the need to make code look just right in slides. Accordingly, you can use Markdown-flavored code blocks to highlight your code.
 
 ````md
 ```ts
@@ -108,11 +108,11 @@ console.log('Hello, World!')
 ```
 ````
 
-We have [Shiki](https://github.com/shikijs/shiki) builtin as the syntax highlighter. Refer to [the highlighters section](/custom/highlighters) for more details.
+Slidev has [Shiki](https://github.com/shikijs/shiki) built in as the syntax highlighter. Refer to [the highlighters section](/custom/highlighters) for more details.
 
 ### Line Highlighting
 
-To highlight specific lines, simply add line numbers within bracket `{}`. Line numbers start counting from 1 by default.
+To highlight specific lines, simply add line numbers within brackets `{}`. Line numbers start counting from 1 by default.
 
 ````md
 ```ts {2,3}
@@ -125,7 +125,7 @@ function add(
 ```
 ````
 
-To change the highlight in multiple clicks, you can use `|` to separate them:
+To change what's highlighted with multiple clicks, you can use `|` to separate each stage:
 
 ````md
 ```ts {2-3|5|all}
@@ -154,12 +154,12 @@ function add(
 ````
 
 ::: tip
-Learn more in the [clicks animations guide](./animations#positioning).
+Learn more in the [click animations guide](./animations#positioning).
 :::
 
 ### Line Numbers
 
-You can enable line number to all slides by setting `lineNumbers: true` on the config or enable each code block individually by setting `lines: true`. You can also set the starting line for each code block and highlight the lines accordingly, defaults to 1:
+You can enable line numbers for all slides by setting `lineNumbers: true` in the global config or enable each code block individually by setting `lines: true`. You can also set the starting line for each code block and highlight the lines accordingly; it defaults to 1:
 
 ````md
 ```ts {6,7}{lines:true,startLine:5}
@@ -226,7 +226,9 @@ const count = ref(0)
 
 [Shiki Magic Move](https://github.com/shikijs/shiki-magic-move) enables you to have granular transition between code changes, similar to Keynote's Magic Move. You can check [the playground](https://shiki-magic-move.netlify.app/) to see how it works.
 
-In Slidev, we bind it to the [clicks system](/guide/animations#click-animations). The syntax is wrap multiple code blocks representing each steps with <code>````md magic-move</code> (mind it's **4** backticks), this will be transformed into one code block, that morphing to each steps as you click.
+<video src="https://github.com/slidevjs/slidev/assets/11247099/79927794-27ba-4342-9911-9996cec889d6" controls rounded shadow w-full></video>
+
+In Slidev, we bind the magic-move to the [clicks system](/guide/animations#click-animations). The syntax is to wrap multiple code blocks representing each step with <code>````md magic-move</code> (mind it's **4** backticks), this will be transformed into one code block, that morphs to each step as you click.
 
 `````md
 ````md magic-move
@@ -296,9 +298,9 @@ This line is removed on the left.
 ```
 ````
 
-It will provide the editor with a "Run" button, and shows the result right below the code block. You many also modify the code and the result will be re-evaluated on the fly.
+It provides the editor with a "Run" button, and shows the result of the code execution right below the code block. You may also modify the code and the result will be re-evaluated on the fly.
 
-By default it will automatically runs the code when the slide is loaded, if you want to always explicitly trigger the run, you can set `{autorun:false}`.
+By default it will automatically run the code when the slide is loaded; if you want to instead explicitly trigger the run, you can set `{autorun:false}`.
 
 ````md
 ```ts {monaco-run} {autorun:false}
@@ -326,7 +328,7 @@ You can also use the [Import Code Snippets](#import-code-snippets) syntax combin
 <<< ./some-file.ts {monaco-write}
 ```
 
-When using this, make sure to back up of your files beforehand, as the changes will be saved directly to the file.
+When using this, be sure to back up your files beforehand, as the changes will be saved directly to the file.
 
 ## Embedded Styles
 
@@ -346,7 +348,7 @@ h1 {
 # Next slide is not affected
 ```
 
-`<style>` tag in Markdown is always [scoped](https://vuejs.org/api/sfc-css-features.html#scoped-css). As an outstanding result, a selector with the child combinator (`.a > .b`) is unusable as such; see the previous link. To have global style overrides, check out the [customization section](/custom/directory-structure#style).
+The `<style>` tag in Markdown is always [scoped](https://vuejs.org/api/sfc-css-features.html#scoped-css). As a result, a selector with a child combinator (`.a > .b`) is unusable as such; see the previous link. To have global style overrides, check out the [customization section](/custom/directory-structure#style).
 
 Powered by [UnoCSS](/custom/config-unocss), you can directly use nested css and [directives](https://unocss.dev/transformers/directives) (e.g. `--uno:` or `@apply`)
 
@@ -368,7 +370,7 @@ blockquote {
 
 Just like you would do in markdown, you can use images pointing to a remote or local url.
 
-For remote assets, the built-in [`vite-plugin-remote-assets`](https://github.com/antfu/vite-plugin-remote-assets) will cache them into the disk at the first run so you can have instant loading even for large images later on.
+For remote assets, the built-in [`vite-plugin-remote-assets`](https://github.com/antfu/vite-plugin-remote-assets) will cache them onto disk at first run so you can have instant loading--even for large images later on.
 
 ```md
 ![Remote Image](https://sli.dev/favicon.png)
@@ -388,7 +390,7 @@ For you want to apply custom sizes or styles, you can convert them to the `<img>
 
 ## Notes
 
-You can also take notes for each slide. They will show up in [Presenter Mode](/guide/presenter-mode) for you to reference during presentations.
+You can also create presenter notes for each slide. They will show up in [Presenter Mode](/guide/presenter-mode) for you to reference during presentations.
 
 In Markdown, the last comment block in each slide will be treated as a note.
 
@@ -416,21 +418,21 @@ This is another note
 -->
 ```
 
-Basic Markdown and HTML are also supported in notes on Presenter renderering.
+Basic Markdown and HTML are also supported in notes when the Presenter renders note content.
 
 ### Click Markers
 
 > Available since v0.48
 
-For some slides you might have longer notes that might be hard to find where you are looking at, we introduced the click markers that allows highlighting and auto-scrolling to the section of notes of your corresponding content. Put `[click]` markers in your notes for the timming you need to go to another [click](/guide/animations#click-animations), Slidev divide the content between the click markers and highlight them in presenter notes, synchronized with your slide progress.
+For some slides you might have longer notes that could be hard to find your place. Slidev supports click markers that allow highlighting and auto-scrolling to the section of notes from your corresponding content. Put `[click]` markers in your notes for the timing you need to go to another [click](/guide/animations#click-animations), Slidev divides the content between the click markers and highlights it in presenter notes, synchronized with your slide progress.
 
 <!-- TODO: add a video -->
 
 ## Icons
 
-Slidev allows you to have the accessing to almost all the popular open-source iconsets **directly** in your markdown after installing the corresponding package. Powered by [`unplugin-icons`](https://github.com/antfu/unplugin-icons) and [Iconify](https://iconify.design/).
+Slidev allows you to have access to virtually all open-source icon sets **directly** in your markdown after installing the corresponding package. Powered by [`unplugin-icons`](https://github.com/antfu/unplugin-icons) and [Iconify](https://iconify.design/).
 
-The naming follows [Iconify](https://iconify.design/)'s conversion `{collection-name}-{icon-name}`. For example:
+The naming follows [Iconify](https://iconify.design/)'s convention of `{collection-name}-{icon-name}`. For example:
 
 - `<mdi-account-circle />` - <mdi-account-circle /> from [Material Design Icons](https://github.com/Templarian/MaterialDesign) - [`@iconify-json/mdi`](https://npmjs.com/package/@iconify-json/mdi)
 - `<carbon-badge />` - <carbon-badge /> from [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons) - [`@iconify-json/carbon`](https://npmjs.com/package/@iconify-json/carbon)
@@ -495,7 +497,7 @@ This shows on the right
 </div>
 </div>
 
-We also provide a shorthand syntax sugar `::name::` for slot name. The following example works exactly the same as the previous one.
+We also provide a shorthand syntactical sugar `::name::` for slot name. The following works exactly the same as the previous example.
 
 ```md
 ---
@@ -551,7 +553,7 @@ This feature is vendored from VitePress, learn more about it in [VitePress's doc
 
 ## Configurations
 
-All configurations needed can be defined in the Markdown file. For example:
+All configurations can be defined in the Markdown file. For example:
 
 ```md
 ---
@@ -653,7 +655,7 @@ Learn more: [Demo](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-j
 
 > Available since v0.15
 
-You can split your `slides.md` into multiple files and organize them as you want.
+You can split your `slides.md` into multiple files and organize them however you'd like.
 
 `slides.md` :
 
@@ -682,7 +684,7 @@ This page is from another file
 
 ### Frontmatter Merging
 
-You can provide frontmatters from both your main entry and external markdown pages. If there are the same keys in them, the ones from the **main entry have the higher priority**. For example:
+You can provide frontmatter instructions from both your main entry and external markdown pages. If there are duplicate keys in them, the ones from the **main entry have the higher priority**. For example:
 
 `slides.md` :
 
@@ -721,7 +723,7 @@ class: text-center
 Cover Page
 ```
 
-### Page Reusing
+### Page Reuse
 
 With the multi-entries support, reusing pages could be straightforward. For example:
 
