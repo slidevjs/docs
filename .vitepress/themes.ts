@@ -445,6 +445,27 @@ export const community: ThemeInfo[] = [
       'light',
     ],
   },
+  {
+    id: 'slidev-theme-rich',
+    name: 'rich',
+    description: 'A Slidev theme that offers rich UI components and stunning visual effects.',
+    author: {
+      name: 'Aaron Yang',
+      link: 'https://github.com/zillionare'
+    },
+    repo: 'https://github.com/zillionare/slidev-theme-rich',
+    previews: [
+      'https://zillionare.github.io/slidev-theme-rich/1',
+      'https://zillionare.github.io/slidev-theme-rich/2',
+      'https://zillionare.github.io/slidev-theme-rich/6',
+      'https://zillionare.github.io/slidev-theme-rich/11'
+    ],
+    tags: [
+      'light',
+      'animation',
+      'visual effect'
+    ]
+  },  
   // Add yours here!
   {
     id: '',
