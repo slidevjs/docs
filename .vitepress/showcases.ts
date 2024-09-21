@@ -223,7 +223,7 @@ export const showcases: ShowCaseInfo[] = [
     at: 'AGI Congress 2024',
     slidesLink: 'https://www.vorburger.ch/LearningMachineLearning/prez/sli.dev/dist/',
     sourceLink: 'https://github.com/vorburger/LearningMachineLearning/tree/develop/docs/prez',
-    cover: 'https://www.vorburger.ch/LearningMachineLearning/prez/sli.dev/dist/png/1.png',
+    cover: 'https://www.vorburger.ch/LearningMachineLearning/slides-export/1.png',
     datetime: '2024-09-30',
   },
   // Add yours here!
