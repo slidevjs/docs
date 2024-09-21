@@ -214,6 +214,18 @@ export const showcases: ShowCaseInfo[] = [
     cover: 'https://i.imgur.com/2eBJofY.png',
     datetime: '2024-04-10',
   },
+  {
+    title: '🔮 Artificial Intelligence <br>🏯 yesterday, 🕒 today and tomorrow 🚀',
+    author: {
+      name: 'Michael Vorburger.ch',
+      link: 'https://www.vorburger.ch',
+    },
+    at: 'AGI Congress 2024',
+    slidesLink: 'https://www.vorburger.ch/LearningMachineLearning/prez/sli.dev/dist/',
+    sourceLink: 'https://github.com/vorburger/LearningMachineLearning/tree/develop/docs/prez',
+    cover: 'https://www.vorburger.ch/LearningMachineLearning/prez/sli.dev/dist/png/1.png',
+    datetime: '2024-09-30',
+  },
   // Add yours here!
   {
     title: 'Yours?',
